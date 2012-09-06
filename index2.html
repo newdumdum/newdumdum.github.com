@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> halloa </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="halloa.css" rel="stylesheet" type="text/css" />
+ </head>
+
+ <body scroll=no>
+ <div>
+  <!-- head begin -->
+  <div class="head" id="head">
+    <div class="zoomDiv" title="放大" onclick="zoom();"></div>
+    <div class="logo"></div>
+    <div id="menu" class="menu">
+      <div class="itemChecked" order="0" tar="photo.html">首页</div>
+      <!--<div class="item" order="1" tar="http://halloa.net/photo.html">Flash相册</div>-->
+      <div class="item" order="2" tar="demo/index.htm">Demo</div>
+      <div class="item" order="3" tar="feedback.htm">留言</div>
+    </div>
+    <div class="menuEnd"></div>
+  </div>
+  <!-- head end -->
+
+  <!-- body begin -->
+  <div class="body">
+    <div class="frameLeft">
+      <div class="lLogo"></div>
+      <div id="lbody" class="lBody">
+        <div class="leftMenu" id="leftMenu" style="display:none;">
+          <div class="itemChecked" order="0" tar="photo.html"><table height=100%><tr><td>首<br/>页</td></tr></table></div>
+          <!--<div class="item" order="1" tar="http://halloa.net/photo.html">Flash相册</div>-->
+          <div class="item" order="2" tar="demo/index.htm"><table height=100%><tr><td>D<br/>e<br/>m<br/>o</td></tr></table></div>
+          <div class="item" order="3" tar="feedback.htm"><table height=100%><tr><td>留<br/>言</td></tr></table></div>
+        </div>
+        <div class="rezoomDiv" title="还原" id="rezoomBT" style="display:none;" onclick="rezoom(this);"></div>
+      </div>
+      <div class="lFoot"></div>
+    </div>
+    <div id="frameDiv" class="frame">
+      <iframe src="photo.html" width="100%" height="100%" frameborder="0" id="mainFrame"></iframe>
+    </div>
+    <div class="bFoot"></div>
+  </div>
+  <!-- body end -->
+
+  <!-- foot begin -->
+  <div class="foot" id="foot">
+    <div class="footLogo"></div>
+    <div class="footCopy">
+        <span class="tcpIp">Get busy living or get busy dying.</span>
+        <br/>
+        <span class="copyRight">Copyright © 2006-2009 shichunhua.com All Rights Reserved. Powered by Numb.</span>
+    </div>
+  </div>
+  <!-- foot end -->
+</div>
+  <script language="javascript">
+  try{document.execCommand("BackgroundImageCache", false, true);}catch(e){};
+  $ = function(id){return document.getElementById(id);};
+  var menuOrder = 0,menuHO = {};
+  function resize(){
+      var ld = $("lbody");
+      var fd = $("frameDiv");
+      var h = document.documentElement.clientHeight;
+      //document.body.style.height = h + "px";
+      var hh = $("head").style.display == "none" ? 0 : 78;//$("head").clientHeight || $("head").offsetHeight;
+      var fh = $("foot").style.display == "none" ? 0 : 74;//$("foot").clientHeight || $("foot").offsetHeight;
+      ld.style.height = h - hh - fh - 126 + "px";
+      fd.style.height = h - hh - fh + "px";
+  }
+  window.onresize = resize;
+  resize();
+  
+  function activeMenu(menuID){
+      var ds = $(menuID).getElementsByTagName("div");
+      menuHO[menuID] = ds[0];
+      var ifr = $("mainFrame");
+      for(var i=0,iLen=ds.length;i<iLen;i++){
+          ds[i].onclick = function(){
+              if(this.className == "itemChecked") return;
+              this.className = "itemChecked";
+              menuHO[this.parentNode.getAttribute("id")].className = "item";
+              menuHO[this.parentNode.getAttribute("id")] = this;
+
+              var tar = this.getAttribute("tar");
+              ifr.setAttribute("src",tar);
+              menuOrder = this.getAttribute("order");
+          }
+      }
+  }
+  activeMenu("leftMenu");
+  activeMenu("menu");
+
+  function checkMenu(menuID){
+      var ds = $(menuID).getElementsByTagName("div");
+      for(var i=0,iLen=ds.length;i<iLen;i++){
+          ds[i].className = "item";
+          if(ds[i].getAttribute("order") == menuOrder) {
+              ds[i].className = "itemChecked";
+              menuHO[ds[i].parentNode.getAttribute("id")] = ds[i];
+          }
+      }
+  }
+
+  function zoom(){
+      $("foot").style.display = "none";
+      $("head").style.display = "none";
+      $("rezoomBT").style.display = "";
+      $("leftMenu").style.display = "";
+      resize();
+      checkMenu("leftMenu");
+  }
+  function rezoom(obj){
+      $("head").style.display = "";
+      $("foot").style.display = "";
+      $("leftMenu").style.display = "none";
+      obj.style.display = "none";
+      resize();
+      checkMenu("menu");
+  }
+  zoom();
+  </script>
+ </body>
+</html>

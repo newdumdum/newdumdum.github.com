@@ -45,8 +45,8 @@
 
     function getData(){
         var p = new ajax();
-        //p.url = "data/data.xml";
-        p.url = "../../service/scrollTab.asp";
+        p.url = "data/data.xml";
+        //p.url = "../../service/scrollTab.asp";
         p.onresult = function(){
             var data = this.data.selectSingleNode(".//ScrollTab");
             buildTab(data);

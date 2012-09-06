@@ -39,8 +39,8 @@
         simpleGrid.canResize = true;
 
         var p = new ajax();
-        //p.url = "data/grid.xml";
-        p.url = "../../service/simpleGrid.asp";
+        p.url = "data/grid.xml";
+        //p.url = "../../service/simpleGrid.asp";
         p.setContent("page",page);
         if(null != orderCol && null != orderDirection){
             p.setContent("orderCol",orderCol);

@@ -25,8 +25,8 @@
 
     function init(){
         var p = new ajax();
-        //p.url = "data/gridTree.xml";
-        p.url = "../../service/gridTree.asp";
+        p.url = "data/gridTree.xml";
+        //p.url = "../../service/gridTree.asp";
         p.onresult = function(){
             var data = this.data.selectSingleNode(".//GridTree");
             buildGrid(data);

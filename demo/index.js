@@ -23,8 +23,8 @@
 
     function loadTree(){   
         var p = new ajax();
-        //p.url = "data/tree.xml";
-        p.url = "service/index.asp";
+        p.url = "data/tree.xml";
+        //p.url = "service/index.asp";
         p.onresult = function(){
             var data = this.text;
             buildTree(data);

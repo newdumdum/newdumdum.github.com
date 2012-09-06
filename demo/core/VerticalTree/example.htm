@@ -22,8 +22,8 @@
       var tree = new VerticalTree();
       tree.showWaitingLayer();
       var p = new ajax();
-      //p.url = "data/tree.xml";
-      p.url = "../../service/verticalTree.asp";
+      p.url = "data/tree.xml";
+      //p.url = "../../service/verticalTree.asp";
       p.onresult = function(){
           var treeData = this.data.selectSingleNode(".//Tree");
           tree.data = treeData;

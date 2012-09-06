@@ -3,21 +3,34 @@
 		<Data>
 			<Tree>
 				<TreeNode id="1" name="控件列表">
-            <!--<TreeNode id="3" name="BoxLayer" src="core/boxLayer/Example.htm"></TreeNode>-->
-            <TreeNode id="4" name="Calendar" src="core/Calendar/Example.htm"></TreeNode>
-            <TreeNode id="6" name="CommonSelect" src="core/commonSelect/Example.htm"></TreeNode>
-            <TreeNode id="7" name="DragLayer" src="core/dragLayer/Example.htm"></TreeNode>
-            <TreeNode id="9" name="FlashLine" src="core/Line/Example.htm"></TreeNode>
-            <TreeNode id="10" name="FlashMeter" src="core/Meter/Example.htm"></TreeNode>
-            <TreeNode id="11" name="ScrollTab" src="core/ScrollTab/Example.htm"></TreeNode>
-            <TreeNode id="12" name="SiderBar" src="core/SiderBar/Example.htm"></TreeNode>
-            <TreeNode id="13" name="SimpleGrid" src="core/SimpleGrid/Example.htm"></TreeNode>
-            <TreeNode id="14" name="SimpleTree" src="core/SimpleTree/Example.htm"></TreeNode>
-            <TreeNode id="16" name="VerticalTree" src="core/VerticalTree/Example.htm"></TreeNode>
-            <TreeNode id="15" name="SliderPicShow" src="core/SliderPicShow/Example.htm"></TreeNode>
-            <TreeNode id="8" name="ImitateFlashMenu" src="core/imitateFlashMenu/Example.htm"></TreeNode>
-            <TreeNode id="5" name="Clock" src="core/clock/Example.htm"></TreeNode>
-        </TreeNode>
+					<!--<TreeNode id="3" name="BoxLayer" src="core/boxLayer/Example.htm"></TreeNode>-->
+					<TreeNode id="4" name="Calendar" src="core/Calendar/Example.htm"></TreeNode>
+					<TreeNode id="6" name="CommonSelect" src="core/commonSelect/Example.htm"></TreeNode>
+					<TreeNode id="7" name="DragLayer" src="core/dragLayer/Example.htm"></TreeNode>
+					<TreeNode id="19" name="DragLayer2" src="core/dragLayer2/resizePic.html"></TreeNode>
+					<TreeNode id="9" name="FlashLine" src="core/Line/Example.htm"></TreeNode>
+					<TreeNode id="10" name="FlashMeter" src="core/Meter/Example.htm"></TreeNode>
+					<TreeNode id="21" name="FlashCpu" src="core/Cpu/cpu.htm"></TreeNode>
+					<TreeNode id="20" name="FlashCpu2" src="core/cpuNode/cpu.htm"></TreeNode>
+					<TreeNode id="11" name="ScrollTab" src="core/ScrollTab/Example.htm"></TreeNode>
+					<TreeNode id="12" name="SiderBar" src="core/SiderBar/Example.htm"></TreeNode>
+					<TreeNode id="13" name="SimpleGrid" src="core/SimpleGrid/Example.htm"></TreeNode>
+					<TreeNode id="22" name="GridTree" src="core/GridTree/Example.htm"></TreeNode>
+					<TreeNode id="14" name="SimpleTree" src="core/SimpleTree/Example.htm"></TreeNode>
+					<TreeNode id="16" name="VerticalTree" src="core/VerticalTree/Example.htm"></TreeNode>
+					<TreeNode id="15" name="SliderPicShow" src="core/SliderPicShow/Example.htm"></TreeNode>
+					<TreeNode id="8" name="ImitateFlashMenu" src="core/imitateFlashMenu/Example.htm"></TreeNode>
+					<TreeNode id="18" name="ImitateFlashMenu2" src="core/flashMenu2/duoziPen.htm"></TreeNode>
+					<TreeNode id="17" name="TansferPic" src="core/flashNews/Example.htm"></TreeNode>
+					<TreeNode id="5" name="Clock" src="core/clock/Example.htm"></TreeNode>
+					<TreeNode id="23" name="Flip Ex." src="core/flip/flip.htm"></TreeNode>
+					<TreeNode id="24" name="Player" src="core/player/SoundDeal.html"></TreeNode>
+					<TreeNode id="25" name="Sina WebIM" src="core/webim/call.html"></TreeNode>
+					<TreeNode id="28" name="ChromeDrag" src="core/drag_chrome/testDrop.htm"></TreeNode>
+					<TreeNode id="29" name="Tween" src="core/tween/tween.htm"></TreeNode>
+					<TreeNode id="30" name="ScrollPane" src="core/scrollpane/scrollpane_boss.htm"></TreeNode>
+					<TreeNode id="31" name="LED effect" src="core/led/example.htm"></TreeNode>
+				</TreeNode>
 			</Tree>
 		</Data>
 	</Response>

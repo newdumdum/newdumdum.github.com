@@ -46,8 +46,8 @@
 
     function buildXml(){    
         var p = new ajax();
-        //p.url = "data.xml";
-        p.url = "../../service/sliderPicShow.asp";
+        p.url = "data.xml";
+        //p.url = "../../service/sliderPicShow.asp";
         p.onresult = function(){
             var data = this.data.selectSingleNode(".//SliderPic");
             var div = document.getElementById("sliderCon");

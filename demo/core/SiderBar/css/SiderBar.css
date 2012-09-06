@@ -11,7 +11,7 @@
     padding:0px;
     border:0px;
     text-align:left;
-    font:normal 12px Arial,宋体;
+	font:400 12px "宋体", "STHeiti", "Microsoft YaHei", "Arial";
     position:static;
     overflow:auto;
 }
@@ -21,7 +21,6 @@
 
 .siderBar .bar {
     background:#A9A9A9 url(../images/barBg.gif) repeat-x;
-    font:normal 12px Arial,宋体;
     height:20px;
     *height:22px;
     border-bottom:1px solid #545557;
@@ -53,13 +52,11 @@
 }
 .siderBar .team .title {
     background:#DAE7F7 url(../images/barBg.gif) 0px -42px repeat-x;
-    font:normal 12px Arial,宋体;
     height:22px;
     border-bottom:1px solid #545557;
     overflow:hidden;
 }
 .siderBar .team .title .teamTitle {
-    font:normal 12px Arial,宋体;
     height:22px;
     display:-moz-inline-block;
     width:150px;
@@ -70,7 +67,6 @@
     padding:5px 0px 0px 3px;
 }
 .siderBar .team .title .teamBT {
-    font:normal 12px Arial,宋体;
     background:url(../images/tool-sprites.gif) 0px -240px repeat-x;
     width:15px;
     height:15px;
@@ -80,7 +76,6 @@
     margin:4px 4px 0px 0px;
 }
 .siderBar .team .title .teamBT_Expand {
-    font:normal 12px Arial,宋体;
     background:url(../images/tool-sprites.gif) 0px -255px repeat-x;
     width:15px;
     height:15px;
@@ -92,7 +87,6 @@
 
 .siderBar .team .content {
     background:#FFF;
-    font:normal 12px Arial,宋体;
     overflow:auto;
 }
 .siderBar .hideLayer {

@@ -1,0 +1,57 @@
+<!-- Quriks Mode -->
+<!Doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>测试菜单</title>
+        <script type="text/javascript" src="ace.all.js"></script> 
+        <script type="text/javascript" src="provider.js"></script> 
+		<link rel="stylesheet" href="menu.css"/>
+		<style>
+			body {
+				font:400 12px/20px 宋体;
+			}
+		</style>
+		<script>			
+            try {
+                document.execCommand("BackgroundImageCache", false, true);
+            } catch (ex) {
+            }  		
+		</script>
+		
+	</head>
+	<body>
+		<div onclick="arrowMenu(event)" style="cursor:pointer;color:yellow;">显示菜单</div>
+		
+		<p style="color:red;">
+			点击箭头和鼠标右键试试...<br/>
+			
+			使用方法见源此HTML源文件<br/>
+			数据使用见provider.js的注释
+		</p>
+		
+		<div style="height:1500px;width:2000px;cursor:default;"></div>
+	</body>
+	<script>
+		var menu = new ace.ui.Menu(menuData);
+		function arrowMenu(e){
+			e = e || window.event;
+			menu.show(e);
+			ace.event.stop(e);
+		}
+		
+		document.body.onclick = function(){
+			menu.hide();
+		}
+		
+		document.oncontextmenu = function(e){
+			e = e || window.event;
+			menu.show(e);
+			return false;			
+		}
+		
+		menu.onclick = function(data){
+			alert(ace.json.stringify(data));
+		}
+	</script>
+</html>

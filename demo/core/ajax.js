@@ -51,10 +51,10 @@
 
       this.http.open("POST", this.url, true);
       this.http.setRequestHeader("REQUEST-TYPE","xmlhttp");
-      this.http.setRequestHeader("REFERER", this.url);
+      //this.http.setRequestHeader("REFERER", this.url);
       this.http.setRequestHeader("CONTENT-TYPE","text/xml");
       this.http.setRequestHeader("CONTENT-TYPE","application/octet-stream");   
-      this.http.setRequestHeader("CONTENT-LENGTH",params.length);
+      //this.http.setRequestHeader("CONTENT-LENGTH",params.length);
       this.http.send(params);
   }
 

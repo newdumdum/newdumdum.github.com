@@ -3,6 +3,7 @@
 		<Data>
 			<Tree>
 				<TreeNode id="1" name="控件列表">
+					<TreeNode id="33" name="Calendar for webkit" src="core/H5Calendar/calendar.htm"></TreeNode>
 					<!--<TreeNode id="3" name="BoxLayer" src="core/boxLayer/Example.htm"></TreeNode>-->
 					<TreeNode id="4" name="Calendar" src="core/Calendar/Example.htm"></TreeNode>
 					<TreeNode id="6" name="CommonSelect" src="core/commonSelect/Example.htm"></TreeNode>
@@ -30,6 +31,7 @@
 					<TreeNode id="29" name="Tween" src="core/tween/tween.htm"></TreeNode>
 					<TreeNode id="30" name="ScrollPane" src="core/scrollpane/scrollpane_boss.htm"></TreeNode>
 					<TreeNode id="31" name="LED effect" src="core/led/example.htm"></TreeNode>
+					<TreeNode id="32" name="Menu" src="core/menu/index.htm"></TreeNode>
 				</TreeNode>
 			</Tree>
 		</Data>

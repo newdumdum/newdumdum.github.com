@@ -1,0 +1,442 @@
+.ace_calendar {
+	position:relative;
+	cursor:default;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none; 
+	font:400 12px/18px "SimSun", "Arial Narrow", "STHeiti", "Microsoft YaHei", "宋体", "Arial";
+	overflow:hidden;
+}
+
+.ace_calendar .ace_calendar_calendarBox {
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head {
+	position:relative;
+	height:45px;
+	border-bottom: 1px solid #D9D9D9;
+	border-right:1px solid #CECECE;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(0.5,#F7F7F7),color-stop(0.5,#F0F0F0), to(#FEFEFE));
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainPreButton {
+	position:absolute;
+	left:50%;
+	top:4px;
+	width:15px;
+	height:15px;
+	margin-left:-65px;
+	
+	color:#656565;
+	font-family:Webdings;
+	text-align:center;
+	line-height:15px;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	
+	font-size:16px;
+	line-height: 12px;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainPreButton:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainPreButton:active {
+	color: #000;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainTitle {
+	position:absolute;
+	left:50%;
+	top:3px;
+	width:80px;
+	height:18px;
+	text-align:center;
+	
+	margin-left:-40px;
+	color:#656565;
+	text-shadow: 1px 1px 0 #FFF;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	
+	-webkit-transition:opacity .2s ease-out;
+	opacity:1;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainTitle.flip {
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainTitle:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+	text-shadow: none;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainTitle:active {
+	color: #000;
+}
+
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainNextButton {
+	position:absolute;
+	right:50%;
+	top:4px;
+	width:15px;
+	height:15px;
+	margin-right:-65px;
+	
+	color:#656565;
+	font-family:Webdings;
+	text-align:center;
+	line-height:15px;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	
+	font-size:16px;
+	line-height: 12px;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainNextButton:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_mainNextButton:active {
+	color: #000;
+}
+
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_weekBox {
+	position:absolute;
+	top:25px;
+	left:0;
+	right:0;
+	height:20px;	
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_head .ace_calendar_weekBox .ace_calendar_weekItem {
+	float:left;
+	height:20px;
+	text-align:center;
+	color:#656565;
+	text-shadow: 1px 1px 0 #FFF;
+}
+
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body {
+	overflow:hidden;
+	position: relative;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_bodyBox {
+	position: absolute;
+	top:0;
+	left:0;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_bodyBox.moving {
+	-webkit-transition: top .3s ease-in;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox {
+	overflow:hidden;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem {
+	float:left;
+	text-align:center;
+	height:32px;
+	line-height: 32px;
+	background-color:#F1F1F1;
+	border-width: 1px;
+	border-color: #FEFEFE #D9D9D9 #D9D9D9 #FEFEFE;
+	border-style:solid;
+	
+	font-family: Serif;
+	color:#656565;
+	/*text-shadow: 1px 1px 0 #EBEBED;*/
+	
+	cursor: pointer;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.otherRow {
+	background-color:#FFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem:hover {
+	/*background: -webkit-gradient(linear,0% 0%,0% 100%,from(#72B1EF),color-stop(0.5,#2B8AE7),color-stop(0.5,#0072E2),to(#0072E2));*/
+	background: #FFF;
+	border:1px solid #00A9FF;
+	box-shadow:inset 0 0 1px #00A9FF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.otherMonth {
+	color:#C7C7C7;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.current {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.now {
+	background-color:#DFE0E0;
+	border:1px solid #AAA9A9;
+	box-shadow:inset 0 2px 6px #AAA9A9;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.now:hover {
+	background: #FFF;
+	border:1px solid #00A9FF;
+	box-shadow:inset 0 0 1px #00A9FF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.hasData {
+	background-image:url(dot.png);
+	background-position: right bottom;
+	background-repeat:no-repeat;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.hasData:hover {
+	/*background-image:url(dot.png), -webkit-gradient(linear,0% 0%,0% 100%,from(#72B1EF),color-stop(0.5,#2B8AE7),color-stop(0.5,#0072E2),to(#0072E2));*/
+	background-image:url(dot.png);
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.now.hasData {
+	background-color:#DFE0E0;
+	border:1px solid #AAA9A9;
+	box-shadow:inset 0 2px 6px #AAA9A9;
+	background-image:url(dot.png);
+	background-position: right bottom;
+	background-repeat:no-repeat;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.now.hasData:hover {
+	background-color:#FFF;
+	border:1px solid #00A9FF;
+	box-shadow:inset 0 0 1px #00A9FF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.current.hasData {
+	/*background-image:url(dot.png), -webkit-gradient(linear,0% 0%,0% 100%,from(#72B1EF),color-stop(0.5,#2B8AE7),color-stop(0.5,#0072E2),to(#0072E2));*/
+	background-image:url(dot.png), -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	background-position: right bottom;
+	background-repeat:no-repeat;
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.current.hasData:hover {
+	box-shadow:inset 0 0 2px #FFFFFF;
+	border:1px solid #006CFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_body .ace_calendar_listBox .ace_calendar_dateItem.now.current {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_timebody {
+	
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_root {
+	height:24px;
+	background:#FFF;
+	overflow:hidden;
+	border-right:1px solid #CECECE;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_root .ace_calendar_todayButton {
+	width:50px;
+	height:18px;
+	margin: 2px auto 0 auto;
+	cursor: pointer;
+	text-align:center;
+	color:#656565;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_root .ace_calendar_todayButton:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_calendarBox .ace_calendar_root .ace_calendar_todayButton:active {
+	color: #000;
+}
+
+/* 年月选择图层 */
+.ace_calendar .ace_calendar_selectBox {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:2;
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(0.3,#F7F7F7),color-stop(0.7,#F0F0F0), to(#FEFEFE));
+	
+	-webkit-transition:-webkit-transform .25s ease-out, opacity .25s ease-out;
+	-webkit-transform:Scale(0);
+	opacity: 0;
+	
+	border-right: 1px solid #CECECE;
+	
+	color: #656565;
+}
+.ace_calendar .ace_calendar_selectBox.show {
+	-webkit-transform:Scale(1);
+	opacity: 1;
+}
+
+
+/* 选择图层上方容器 */
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox {
+	height:30px;
+	text-align:center;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthHead {
+	display:inline-block;
+	padding:0 10px;
+	margin:3px auto 0 auto;
+	cursor:pointer;
+	height:18px;
+	line-height:18px;
+	border-radius: 3px;
+	border:1px solid transparent;
+	text-align:center;
+	
+	-webkit-transition:-webkit-transform .2s ease-out;
+	-webkit-transform:rotateX(0deg);
+	-webkit-transform:rotateY(0deg);
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthHead.flip {
+	-webkit-transform:rotateX(90deg);
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthHead.vflip {
+	-webkit-transform:rotateY(90deg);
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthHead:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthHead:active {
+	color: #000;
+}
+
+/* 选择图层中年份前后按钮 */
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthPreButton {
+	position:absolute;
+	left:50%;
+	top:3px;
+	width:16px;
+	height:16px;
+	
+	margin-left:-65px;
+	
+	color:#545454;
+	font-family:Webdings;
+	text-align:center;
+	line-height:12px;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	
+	font-size:16px;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthPreButton:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthPreButton:active {
+	color: #000;
+}
+
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthNextButton {
+	position:absolute;
+	right:50%;
+	top:3px;
+	width:16px;
+	height:16px;
+	
+	margin-right:-65px;
+	
+	color:#545454;
+	font-family:Webdings;
+	text-align:center;
+	line-height:12px;
+	
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	
+	font-size:16px;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthNextButton:hover {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color:#FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthHeadBox .ace_calendar_yearMonthNextButton:active {
+	color: #000;
+}
+
+
+/* 选择图层内容 */
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox {
+	position:absolute;
+	left:0;
+	top:30px;
+	right:0;
+	bottom:0;
+	-webkit-transition:-webkit-transform .2s ease-out, opacity .2s ease-out;
+	-webkit-transform:Scale(1);
+	-webkit-transform:rotateY(0deg);
+	opacity: 1;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox.zoomout {
+	-webkit-transition:-webkit-transform .2s ease-out, opacity .2s ease-out;
+	-webkit-transform:Scale(2);
+	opacity: 0;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox.zoomin {
+	-webkit-transition:-webkit-transform .2s ease-out, opacity .2s ease-out;
+	-webkit-transform:Scale(.1);
+	opacity: 0;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox.flip {
+	-webkit-transform:rotateY(90deg);
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem {
+	text-align:center;
+	border-radius: 3px;
+	border:1px solid transparent;
+	cursor: pointer;
+	margin:20px 5px 10px 5px;
+	height:35px;
+	line-height:34px;
+	float:left;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem.part {
+	word-break: break-all;
+	white-space:pre-wrap;
+	line-height:18px;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem:hover {	
+	border:1px solid #00A9FF;
+	box-shadow:inset 0 0 1px #00A9FF;
+	background: #FFF;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem.current {
+	background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#11B8FF),to(#0187FF));
+	border:1px solid #006CFF;
+	color: #FFF;
+	box-shadow:inset 0 0 2px #FFFFFF;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem.now {
+	background:#DFE0E0;
+	border:1px solid #AAA9A9;
+	box-shadow:inset 0 2px 6px #AAA9A9;
+	color: #656565;
+}
+.ace_calendar .ace_calendar_selectBox .ace_calendar_yearMonthListBox .ace_calendar_selectListItem.now:hover {
+	border:1px solid #00A9FF;
+	box-shadow:inset 0 0 1px #00A9FF;
+	background: #FFF;
+}
+

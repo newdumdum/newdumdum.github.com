@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> 拖动图层 </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script language="javascript" src="../public/public.js"></script>
+  <script language="javascript" src="js/dragLayer.js"></script>
+  <link href="css/dragLayer.css"	rel="stylesheet" type="text/css"></link>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  window.onload = function(){
+      var div = $("aaa");
+      var layer = new DragLayer();
+      layer.container = div;
+      layer.title = "功能设置";
+      layer.maxWidth = 206;
+      layer.color = "pink";
+      layer.init(499,193,299,293);
+      // 回到初始位置按钮
+      layer.AddButton(0,-75,-15,-75,function(){layer.InitLayerPosition(499,193);});
+      // 刷新按钮
+      layer.AddButton(0,-225,-15,-225,function(){refresh("pink refresh");});
+
+      var div2 = $("bbb");
+      var layer2 = new DragLayer();
+      layer2.container = div2;
+      layer2.title = "功能设置";
+      layer2.maxWidth = 206;
+      layer2.color = "green";
+      layer2.init(22,133);
+      // 刷新按钮
+      layer2.AddButton(0,-225,-15,-225,function(){refresh("green refresh");});
+
+      var div3 = $("ccc");
+      var layer3 = new DragLayer();
+      layer3.container = div3;
+      layer3.title = "功能设置";
+      layer3.maxWidth = 206;
+      layer3.color = "yellow";
+      layer3.init(260,163);
+      // 刷新按钮
+      layer3.AddButton(0,-225,-15,-225,function(){refresh("yellow refresh");});
+      
+      var div4 = $("ddd");
+      var layer4 = new DragLayer();
+      layer4.container = div4;
+      layer4.title = "功能设置";
+      layer4.maxWidth = 206;
+      layer4.init(730,223);
+      // 跳转按钮
+      layer4.AddButton(0,-120,-15,-120,function(){moveDetail(123123);});
+      // 设置按钮
+      layer4.AddButton(0,-90,-15,-90,function(){setting(123123);});
+      // 刷新按钮
+      layer4.AddButton(0,-225,-15,-225,function(){refresh("default refresh");},"刷新");
+
+  }
+
+  function moveDetail(num){
+      _alert(num);
+  }
+  function setting(){
+      _alert(333);
+  }
+  function refresh(info){
+      _alert(info);
+  }
+
+  function showNewLayer(elm){
+      var rect = new BoundingRect(elm);
+      var tX = Math.floor(Math.random()*1000);
+      var tY = Math.floor(Math.random()*1000);
+      var fX = rect.left;
+      var fY = rect.top;
+
+      var div = $("eeeee");
+      var layer = new DragLayer();
+      layer.container = div;
+      layer.maxWidth = 206;
+      layer.init(tX,tY,fX,fY);
+  }
+//-->
+</SCRIPT>
+ </HEAD>
+
+ <BODY bgcolor="#FFFFFF">
+  <div id="aaa" style="display:none">
+    <img src="../SliderPicShow/images/4.jpg" width=200 height=200 />
+  </div>
+
+  <p>
+  <div id="bbb" style="display:none">
+    <img src="../SliderPicShow/images/6.jpg" width=200 height=200 />
+  </div>
+
+  
+  <p>
+  <div id="ccc" style="display:none">
+    <img src="../SliderPicShow/images/7.jpg" width=200 height=200 />
+  </div>
+  <p>
+  <div id="ddd" style="display:none">
+    <img src="../SliderPicShow/images/8.jpg" width=200 height=200 />
+  </div>
+
+  <div id="schTest" style="text-align:center">
+      <input type="button" value="show new layer" onclick="showNewLayer(this);" />
+  </div>
+  <div id="eeeee" style="display:none">
+    <img src="../SliderPicShow/images/11.jpg" width=200 height=200 />
+  </div>
+
+ </BODY>
+</HTML>

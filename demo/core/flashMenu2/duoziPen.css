@@ -1,0 +1,26 @@
+body {
+  padding:0px;
+  margin:0px;
+  font:normal 12px ËÎÌו,Arial;
+  background-color:#EEE;
+}
+.boxDiv {
+  padding-left:200px;
+  margin-top:100px;
+}
+#leftMenuDiv {
+  display:inline;
+  width:300px;
+  background-color:#FFF;
+}
+#leftMenuDiv div {
+  height:20px;
+  border-bottom:1px dotted #CCC;
+  cursor:hand;
+  padding:4px 0 0 2px;
+  text-overflow:ellipsis;
+  width:300px;
+  background:transparent;
+  overflow:hidden;
+  background:#FFF;
+}

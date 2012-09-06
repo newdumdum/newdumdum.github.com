@@ -1,0 +1,158 @@
+.box .upArrow, .box .upArrowOver, .box .upArrowUp, .box .upArrowDown,
+.box .downArrow, .box .downArrow, .box .downArrowOver, .box .downArrowDown, .box .downArrowUp,
+.box .track, .box .trackBlockTop, .box .trackBlockBody, .box .trackBlockBottom, .box .trackBarface {
+	background-color:transparent;
+	background-image:url(images/apple.gif);
+	background-repeat:no-repeat;
+	position:absolute;
+	cursor:default;
+	font-size:1px;
+	line-height:1px;
+	overflow:hidden;
+}
+
+.box {
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:7px;
+}
+
+.box .upArrow {
+	background-position:0 0;
+	width:7px;
+	height:1px;
+	left:0;
+	top:0;
+}
+.box .upArrowOver {
+	background-position:-15px 0;
+	width:7px;
+	height:1px;
+	left:0;
+	top:0;
+}
+.box .upArrowDown {
+	background-position:-30px 0;
+	width:7px;
+	height:1px;
+	left:0;
+	top:0;
+}
+.box .upArrowUp {
+	background-position:-0 0;
+	width:7px;
+	height:1px;
+	left:0;
+	top:0;
+}
+
+
+.box .downArrow {
+	background-position:0 -14px;
+	width:7px;
+	height:1px;
+	left:0;
+	bottom:0;
+}
+.box .downArrowOver {
+	background-position:-15px -14px;
+	width:7px;
+	height:1px;
+	left:0;
+	bottom:0;
+}
+.box .downArrowDown {
+	background-position:-30px -14px;
+	width:7px;
+	height:1px;
+	left:0;
+	bottom:0;
+}
+.box .downArrowUp {
+	background-position:-0 -14px;
+	width:7px;
+	height:1px;
+	left:0;
+	bottom:0;
+}
+
+.box .track {
+	background-position:-135px 0;
+	background-repeat:repeat-y;
+	width:7px;
+	top:1px;
+	bottom:1px;
+	left:0;
+}
+.box .track .trackBlock, .box .track .trackBlockOver, .box .track .trackBlockDown, .box .track .trackBlockUp {
+	position:absolute;
+}
+
+.box .trackBlockTop {
+	height:3px;
+	top:0;
+	left:0;
+	width:7px;
+}
+.box .trackBlockBody {
+	top:3px;
+	left:0;
+	bottom:3px;
+	width:7px;
+}
+.box .trackBlockBottom {
+	height:3px;
+	bottom:0;
+	left:0;
+	width:7px;
+}
+
+.box .trackBlock, .box .trackBlockOver, .box .trackBlockDown, .box .trackBlockUp {
+	overflow:hidden;
+	zoom:1;
+	width:7px;
+}
+.box .trackBlock .trackBlockTop {
+	background-position:-45px 0;
+}
+.box .trackBlock .trackBlockBody {
+	background-position:-60px 0;
+	background-repeat:repeat-y;
+}
+.box .trackBlock .trackBlockBottom {
+	background-position:-45px -25px;
+}
+.box .trackBlockOver .trackBlockTop {
+	background-position:-75px 0;
+}
+.box .trackBlockOver .trackBlockBody {
+	background-position:-90px 0;
+	background-repeat:repeat-y;
+}
+.box .trackBlockOver .trackBlockBottom {
+	background-position:-75px -25px;
+}
+.box .trackBlockDown .trackBlockTop {
+	background-position:-105px 0;
+}
+.box .trackBlockDown .trackBlockBody {
+	background-position:-120px 0;
+	background-repeat:repeat-y;
+}
+.box .trackBlockDown .trackBlockBottom {
+	background-position:-105px -25px;
+}
+.box .trackBlockUp .trackBlockTop {
+	background-position:-45px 0;
+}
+.box .trackBlockUp .trackBlockBody {
+	background-position:-60px 0;
+	background-repeat:repeat-y;
+}
+.box .trackBlockUp .trackBlockBottom {
+	background-position:-45px -25px;
+}
+
+.box .trackBarface {
+}

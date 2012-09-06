@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> DragEffect </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus"></div>
+  <meta name="author" content=""></div>
+  <meta name="keywords" content=""></div>
+  <meta name="description" content=""></div>
+  <style>
+  html {
+    height:100%;
+  }
+  body {
+    height:100%;
+	margin:0;
+    background:#FFF;
+  }
+  #dragArea {
+    margin:0px;
+    padding:0px;
+    background:#FFF;
+	width:1000px;
+	margin:0 auto;
+  }
+
+  #dragArea div {
+    float:left;
+    width:70px;
+    height:92px;
+    font:normal 12px Arial,宋体;
+  }
+  #dragArea div div {
+	margin:0px;
+  }
+
+  #dragArea div p {
+    font:normal 12px Arial,宋体;
+	height:12px;
+	text-align:center;
+	margin:0px;
+  }
+
+  #dragArea .selected {
+    background:#F1F1F1;
+    border:1px dashed #666;
+    filter:Alpha(opacity=80);
+    opacity : 0.8;
+  }
+  </style>
+  <script src="ChromeDrag.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+  <div id="dragArea">
+  </div>
+ </body>
+
+ 
+  <script>
+  var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7];
+
+  for(var i = 0 ; i < arr.length ; i ++){
+      var div = document.createElement('div');
+      div.setAttribute('data_drag','1');
+      div.innerHTML = '<div><img src="images/'+arr[i]+'.png"/><p>描述_'+i+'</p></div>';
+      document.getElementById('dragArea').appendChild(div);
+  }
+
+  var drag = new ChromeDrag();
+  drag.init({
+      render: document.getElementById('dragArea')
+	  ,width:70
+	  ,height:92
+	  ,margin:20
+      ,attribute: 'data_drag'
+  });
+  
+  
+  
+  drag.beforedrag = function(node){
+    node.className = 'selected';
+  }
+
+  drag.dragend = function(node){
+    node.className = '';
+  }
+
+  window.onresize = function(){
+	  drag.initBlock();
+  }
+
+
+  </script>
+</html>

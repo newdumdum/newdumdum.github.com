@@ -1,0 +1,152 @@
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+.commonSelect {
+}
+.commonSelect table {
+}
+.commonSelect .commonSelectInDiv {
+    height:16px !important;
+    white-space:noWrap;
+    word-break:keep-all;
+    font:normal 12px Arial,宋体;
+
+}
+.commonSelect .commonSelectLeftBT {
+    width:16px;
+    height:16px;
+    background-image:url(../Images/lrIcon.gif);
+    background-position:0px 0px;
+    background-repeat:no-repeat;
+    font-size:1px;
+    cursor:hand;
+}
+.commonSelect .commonSelectLeftBT_over {
+    width:16px;
+    height:16px;
+    background-image:url(../Images/lrIcon.gif);
+    background-position:0px -16px;
+    background-repeat:no-repeat;
+    font-size:1px;
+    cursor:hand;
+}
+.commonSelect .commonSelectRightBT {
+    width:16px;
+    height:16px;
+    background-image:url(../Images/lrIcon.gif);
+    background-position:-16px 0px;
+    background-repeat:no-repeat;
+    font-size:1px;
+    cursor:hand;
+}
+.commonSelect .commonSelectRightBT_over {
+    width:16px;
+    height:16px;
+    background-image:url(../Images/lrIcon.gif);
+    background-position:-16px -16px;
+    background-repeat:no-repeat;
+    font-size:1px;
+    cursor:hand;
+}
+
+.commonSelect .commonSelectContentDiv {
+    overflow:hidden;
+    height:16px;
+    white-space:noWrap;
+    word-break:keep-all;
+    border:1px solid #DD7915;
+    font:normal 12px Arial,宋体;
+}
+.commonSelect .commonSelectMoveDiv {
+    height:16px;
+    white-space:noWrap;
+    word-break:keep-all;
+}
+.commonSelect .commonSelectMoveDiv div{
+    display:inline-block;
+    *display:inline;
+    height:16px;
+    line-height:15px;
+    *position:relative;
+    *top:-1px;
+}
+
+.commonSelect .commonSelectLayer {
+    width:auto;
+    height:200px;
+    overflow:auto;
+    *overflow-x:hidden;
+    border:1px solid #DD7915;
+    cursor:default;
+    background:#FFF;
+    font:normal 12px Arial,宋体;
+
+    scrollbar-face-color: #fef6ea; 
+    scrollbar-highlight-color: #ffffff; 
+    scrollbar-shadow-color: #ffffff; 
+    scrollbar-3dlight-color: #f1bd7a; 
+    scrollbar-arrow-color: #D96111; 
+    scrollbar-track-color: #fef9f1;
+    scrollbar-darkshadow-color: #f1bd7a; 
+    scrollbar-base-color: #fef6ea;
+}
+.commonSelect .commonSelectMoveOption {
+    height:16px;
+    font:normal 12px Arial,宋体;
+    overflow:hidden;
+    white-space:noWrap;
+    word-break:keep-all;
+    background:#FFF;
+    color:#653800;
+    cursor:default;
+    text-align:left;
+    padding:0px 1px 2px 2px;
+}
+.commonSelect .commonSelectLayerOption {
+    height:16px;
+    font:normal 12px Arial,宋体;
+    overflow:hidden;
+    white-space:noWrap;
+    word-break:keep-all;
+    background:#FFF;
+    color:#653800;
+    cursor:default;
+    padding:2px 1px 0px 2px;
+    line-height:15px;
+}
+.commonSelect .commonSelectLayerOption_over {
+    height:16px;
+    font:normal 12px Arial,宋体;
+    overflow:hidden;
+    white-space:noWrap;
+    word-break:keep-all;
+    background:#FDF0DB;
+    color:#653800;
+    cursor:default;
+    padding:2px 1px 0px 2px;
+    line-height:15px;
+}
+.commonSelect .commonSelectLayerOption_check {
+    height:16px;
+    font:normal 12px Arial,宋体;
+    overflow:hidden;
+    white-space:noWrap;
+    word-break:keep-all;
+    background:#EF772B;
+    color:#FFFFFF;
+    cursor:default;
+    padding:2px 1px 0px 2px;
+    line-height:15px;
+}
+.dropDownBTDiv {
+    width:1px;
+    overflow:hidden;
+}
+.dropDownBT {
+    width:15px;
+    height:16px;
+    background:url(../Images/select2.gif);
+    position:absolute;
+    left:-15px;
+    top:0px;
+    z-Index:999999;
+    border:1px solid red;
+}

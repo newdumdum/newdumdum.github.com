@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+说明:
+MeterInfo下:
+  Name:表盘名称
+  Value:当前值
+  MaxValue:最大值
+  MinValue:最小值
+  ValueType:值类型 1数值 0百分比
+            无论是哪种类型的，其它值（Vale,MaxValue,MinValue,Red,Yellow,Green）都只用数字。
+            flash内部会自动加上"%"号.
+
+ColorInfo下:
+  ColorArea: 三个颜色区 生成时按顺序由左至右 颜色可自己定义 如:
+             <ColorArea color="0xABE8AB"><![CDATA[30]]></ColorArea>
+-->
+<Response>
+  <MeterInfo>
+      <Name><![CDATA[准备金上调]]></Name>
+      <Value><![CDATA[15.50]]></Value>
+      <MaxValue><![CDATA[100]]></MaxValue>
+      <MinValue><![CDATA[0]]></MinValue>
+      <ValueType><![CDATA[0]]></ValueType>
+      <Unit><![CDATA[百分比]]></Unit>
+  </MeterInfo>
+  <ColorInfo>
+      <ColorArea color="0xFF6666"><![CDATA[20]]></ColorArea>
+      <ColorArea color="0xFFE0A2"><![CDATA[90]]></ColorArea>
+      <ColorArea color="0xABE8AB"><![CDATA[30]]></ColorArea>
+  </ColorInfo>
+</Response>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> feedback </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">  
+
+  <style type="text/css">
+  html {
+    height:100%;
+  }
+  body {
+    overflow:hidden;
+    margin:0;
+    padding:0px;
+    background:#000;
+    font:normal 12px Verdana;
+    height:100%;
+  }
+  .box {
+    vertical-align:top;
+    margin-left:100px;
+    margin-top:50px;
+  }
+  .box .tt {
+    color:#ccc;
+    font:normal 12px Verdana;
+    float:left;
+  }
+  .ipt {
+    font:normal 12px Verdana,宋体;
+    border:1px solid #FFFFCC;
+    background:#FFFFCC;
+	outline:none;
+  }
+  .tar {
+    font:normal 12px Verdana,宋体;
+    color:#000;
+    background:#FFFFCC url(message.gif) repeat-y 0 0;
+    width:400px;
+    height:240px;
+    overflow:auto;
+    border:1px solid #FFFFCC;
+    line-height:16px;
+	resize: none;
+	outline:none;
+  }
+  a {
+    font:normal 12px Verdana,宋体;
+    color:#FF6600;
+    text-decoration:none;
+    position:relative;
+    top:-2px;
+  }
+  </style>
+  <!-- button control begin -->
+  <script language="javascript" src="demo/core/button/button/btn.js"></script>
+  <link href="demo/core/button/button/btn.css" type="text/css" rel="stylesheet">
+  <!-- button control end -->
+
+  <!-- MessageBox begin -->
+  <script language="javascript" src="demo/core/MessageBox/js/MessageBox.js"></script>
+  <link href="demo/core/MessageBox/css/MessageBox.css" type="text/css" rel="stylesheet">
+  <!-- MessageBox end -->
+
+ </head>
+
+ <body scroll=no>
+    <form action='demo/service/feedback.asp' method='post' id='backForm' target='hidden_frame'>
+    <div class="box">
+      <span class="tt">昵称：</span><input type='text' class='ipt' id='nickName' name='nickName' onkeypress='if(event.keyCode==13){ok(); return false;}' />&nbsp;<a href="javascript:void(0);" onclick="location.href='demo/service/feedbackshow.asp'">查看留言</a>
+      <div style="height:2px;"></div>
+      <span class="tt">内容：</span><textArea class='tar' id='backInfo' name='backInfo' />请输入内容</textArea>
+      <p/>
+      <table width=150 style="margin-left:170px;">
+        <tr>
+          <td align=left width=50%><div type="btn" img="demo/core/button/button/icon/accept.gif" onclick="ok();" value="提交"></div></td>
+          <td align=left><div type="btn" img="demo/core/button/button/icon/cancel.gif" onclick="no();" value="清空"></div></td>
+        </tr>
+      </table>
+
+    </div>
+    </form>
+    <iframe name="hidden_frame" id="hidden_frame" style="display:none"></iframe>
+    <script language="javascript">    
+    $ = function(id){return document.getElementById(id);};
+    var t = $("backInfo"),reg = /(\s*)|(\s*$)/g;
+    $("nickName").focus();
+    t.onfocus = function(){
+        if(this.value.replace(reg,"") == "请输入内容")
+            this.value = "";
+    }
+    t.onblur = function(){
+        if(this.value.replace(reg,"") == "")
+            this.value = "请输入内容";
+    }
+    function ok(){
+        var nickName = $("nickName"),backInfo = $("backInfo");
+        if(nickName.value.replace(reg,"") == ""){
+            (new MessageBox(nickName)).Show("请输入昵称");
+            nickName.focus();
+            return;
+        }
+        if(backInfo.value.replace(reg,"") == "" || backInfo.value.replace(reg,"") == "请输入内容"){
+            (new MessageBox(backInfo)).Show("请输入留言内容");
+            backInfo.focus();
+            return;
+        }
+        if(nickName.value.RelLen() > 15){
+            (new MessageBox(nickName)).Show("昵称名称太长了吧");
+            nickName.focus();
+            nickName.select();
+            return;
+        }
+        if(backInfo.value.RelLen() > 500){
+            (new MessageBox(backInfo)).Show("留言内容长度不要大于500个字符啊... 我的虚拟主机没那么大方地...");
+            backInfo.focus();
+            return;
+        }
+        var form = $("backForm");
+        //Public.showWaitingLayer();
+        form.submit();
+        
+    
+        var iframe = $("hidden_frame");
+        if(iframe.attachEvent){
+            iframe.attachEvent("onload",function(){
+                done();
+            });
+        }else{
+            iframe.onload = function(){
+                done();
+            }
+        }
+
+    }
+    function no(){
+        var nickName = $("nickName"),backInfo = $("backInfo");
+        nickName.value = "";
+        backInfo.value = "请输入内容";
+    }
+    function done(){
+        //iframe.src="about:blank";
+        document.location.href = "demo/service/feedbackshow.asp";
+    }
+
+    
+    String.prototype.RelLen = function(){
+        var str = this;
+        try{
+            var reg = /[^\x00-\xff]/g;
+            return str.replace(reg,"xx").length;
+        }catch(e){
+            return str.length;
+        }
+    }
+    </script>
+ </body>
+</html>

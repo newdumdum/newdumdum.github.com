@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Response>
+  <GridTree>
+    <data>
+      <columns>
+        <column name="名称" col="name" align="left" empty="false" />
+        <column name="地址" col="addr" align="left" />
+        <column name="电话" col="tell" align="center" />
+      </columns>
+      <rows>
+        <row name="中软集团" addr="北京市昌平区北清路90号" tell="010-80778588">
+            <row name="中软融鑫" addr="北京市海淀区学院南路55号 中软大厦D座3层" tell="010-51527500">
+               <row name="IRD" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043" >
+                  <row name="小黑" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043-1" />
+               </row>
+            </row>
+            <row name="中软国际" addr="北京市海淀区学院南路55号 中软大厦A座55层" tell="010-51526490" />
+        </row>
+        <row name="东亚银行" addr="中国香港" tell="xxxxx">
+        <row name="中软集团" addr="北京市昌平区北清路90号" tell="010-80778588">
+            <row name="中软融鑫" addr="北京市海淀区学院南路55号 中软大厦D座3层" tell="010-51527500">
+               <row name="IRD" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043" >
+                  <row name="小黑" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043-1" >
+                  
+                      <row name="中软融鑫" addr="北京市海淀区学院南路55号 中软大厦D座3层" tell="010-51527500">
+                         <row name="IRD" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043" >
+                            <row name="小黑" addr="北京市海淀区学院南路55号 中软大厦D座4层" tell="010-51527500-6043-1" />
+                         </row>
+                      </row>
+                      <row name="中软国际" addr="北京市海淀区学院南路55号 中软大厦A座55层" tell="010-51526490" />
+                  </row>
+               </row>
+            </row>
+            <row name="中软国际" addr="北京市海淀区学院南路55号 中软大厦A座55层" tell="010-51526490" />
+        </row>
+        </row>
+      </rows>
+    </data>
+  </GridTree>
+</Response>

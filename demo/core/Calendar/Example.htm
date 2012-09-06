@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> Apple Style Calendar </TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="ShiCH">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script src="js/calendar.js" language="javascript"></script>
+  <link rel="stylesheet" href="css/calendar.css" type="text/css"></link>
+  <style type="text/css">
+  body {
+      background:#FFFFFF;
+      margin:0px;
+      padding:0px;
+  }
+
+  .box {
+    padding:15px;
+  }
+
+  * {
+      font:normal 12px Arial,宋体;
+  }
+  </style>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    /*
+    window.onload = function(){
+        var c = new Calendar();
+        c.render = aa;
+        c.init();
+    }
+    */
+    var calendar = null;
+    function showCalendar(elm,srcElm){
+        if(null == calendar)
+            calendar = new Calendar();
+        calendar.render = elm;
+        calendar.caller = srcElm;
+        calendar.parten = "yyyy/MM/dd";
+        calendar.init();
+    }
+    function hideCalendar(){
+        if(null != calendar){
+            //calendar.dispose();
+            calendar = null;
+        }
+    }
+  //-->
+  </SCRIPT>
+ </HEAD>
+
+ <BODY>
+ <div class="box">
+  任务：
+  <input type=text /><br/>
+  日期：
+  <input type=text id="aa"/>
+  <img width=16 height=16 border=0 style="cursor:pointer;" onclick="showCalendar(document.getElementById('aa'),this);" title="选择日期" src="calendar.gif" />
+ </div>
+ </BODY>
+</HTML>

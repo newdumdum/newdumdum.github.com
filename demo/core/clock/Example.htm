@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> ø⁄ƒÕ ±÷” </title>
+  <meta name="generator" content="editplus">
+  <meta name="author" content="ShiCH">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    _ISIE = /msie/i.test(navigator.userAgent);
+    var rate = _ISIE ? 20 : 30;
+    $ = function(id){
+        return document.getElementById(id);
+    }
+    $C = function(tagName,className){
+        var elm = window.document.createElement(tagName);
+        if(null != attrObject && typeof(attrObject) == "object"){
+            for(var item in attrObject){
+                  if(item == "innerHTML" || item == "className")
+                      elm[item] = attrObject[item];
+                  else
+                      elm.setAttribute(item,attrObject[item]);
+            }
+        }
+        return elm;
+    }
+    $A = function(curObj,pObj){
+        return pObj ? pObj.appendChild(curObj) : document.body.appendChild(curObj);
+    }
+    function init(){
+        try{
+            document.execCommand("BackgroundImageCache", false, true);
+        }catch(e){};
+        RunTime();
+        setInterval(function(){RunTime(true);},1000);
+    }
+
+    function RunTime(changed){
+        var date = new Date();
+        var year = date.getUTCFullYear(),month = date.getMonth() + 1,day = date.getDate(),hour = date.getHours(),minute = date.getMinutes(),second = date.getSeconds(),milliSecond = date.getMilliseconds(),week = date.getDay();
+        
+        month = month < 10 ? "0" + month : month;
+        day = day < 10 ? "0" + day : day;
+        hour = hour < 10 ? "0" + hour : hour;
+        minute = minute < 10 ? "0" + minute : minute;
+        second = second < 10 ? "0" + second : second;
+        
+        var ySpan1 = $("clock_year_span1");
+        var ySpan2 = $("clock_year_span2");
+        var ySpan3 = $("clock_year_span3");
+        var ySpan4 = $("clock_year_span4");
+
+        var mSpan1 = $("clock_month_span1");
+        var mSpan2 = $("clock_month_span2");
+
+        var dSpan1 = $("clock_date_span1");
+        var dSpan2 = $("clock_date_span2");
+
+        var hSpan1 = $("clock_hour_span1");
+        var hSpan2 = $("clock_hour_span2");
+
+        var miSpan1 = $("clock_minute_span1");
+        var miSpan2 = $("clock_minute_span2");
+
+        var sSpan1 = $("clock_second_span1");
+        var sSpan2 = $("clock_second_span2");
+
+        var wSpan = $("clock_week_span");
+        
+        if(changed){
+            smoonthMoveNum(ySpan1,GetWordValue(year,0) * 25);
+            smoonthMoveNum(ySpan2,GetWordValue(year,1) * 25);
+            smoonthMoveNum(ySpan3,GetWordValue(year,2) * 25);
+            smoonthMoveNum(ySpan4,GetWordValue(year,3) * 25);
+            
+            smoonthMoveNum(mSpan1,GetWordValue(month,0) * 25);
+            smoonthMoveNum(mSpan2,GetWordValue(month,1) * 25);
+            
+            smoonthMoveNum(dSpan1,GetWordValue(day,0) * 25);
+            smoonthMoveNum(dSpan2,GetWordValue(day,1) * 25);
+            
+            smoonthMoveNum(hSpan1,GetWordValue(hour,0) * 25);
+            smoonthMoveNum(hSpan2,GetWordValue(hour,1) * 25);
+            
+            smoonthMoveNum(miSpan1,GetWordValue(minute,0) * 25);
+            smoonthMoveNum(miSpan2,GetWordValue(minute,1) * 25);
+            
+            smoonthMoveNum(sSpan1,GetWordValue(second,0) * 25);
+            smoonthMoveNum(sSpan2,GetWordValue(second,1) * 25);
+            
+            smoonthMoveNum(wSpan,(week + 4) * 25);
+        }else{
+            ySpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(year,0) * 25 + "px";
+            ySpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(year,1) * 25 + "px";
+            ySpan3.style.backgroundPosition = "0px " + "-" + GetWordValue(year,2) * 25 + "px";
+            ySpan4.style.backgroundPosition = "0px " + "-" + GetWordValue(year,3) * 25 + "px";
+     
+            mSpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(month,0) * 25 + "px";
+            mSpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(month,1) * 25 + "px";
+
+            dSpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(day,0) * 25 + "px";
+            dSpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(day,1) * 25 + "px";
+
+            hSpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(hour,0) * 25 + "px";
+            hSpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(hour,1) * 25 + "px";
+            
+            miSpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(minute,0) * 25 + "px";
+            miSpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(minute,1) * 25 + "px";
+            
+            sSpan1.style.backgroundPosition = "0px " + "-" + GetWordValue(second,0) * 25 + "px";
+            sSpan2.style.backgroundPosition = "0px " + "-" + GetWordValue(second,1) * 25 + "px";
+            
+            wSpan.style.backgroundPosition = "-25px " + "-" + (week + 4) * 25 + "px";
+        }
+    }
+
+    function smoonthMoveNum(obj,posY){
+        var oPosX = obj.style.backgroundPosition.split(" ")[0];
+        var oPosY = obj.style.backgroundPosition.split(" ")[1];
+        var oPosX_Num = oPosX.replace("px","");
+        var oPosY_Num = oPosY.replace("px","");
+        var nPosY_Num = "-" + posY;
+        if(Math.abs(oPosY_Num) != Math.abs(nPosY_Num)){
+            moveAction(obj,Number(oPosY_Num),Number(nPosY_Num),Number(oPosX_Num));
+        }
+    }
+
+    function moveAction(obj,curY,toY,x){
+        var moveStep = Math.floor((toY - curY)/2);
+        if(curY != toY && Math.abs(curY + moveStep - toY) > 1){
+            obj.style.backgroundPosition = x + "px " + (curY + moveStep) + "px";
+            setTimeout(function(){
+                moveAction(obj,curY + moveStep,toY,x);
+            },rate);
+        }else{
+            obj.style.backgroundPosition = x + "px " + toY + "px";
+        }
+    }
+
+    function GetWordValue(str,index){
+        return String(str).split("")[index];
+    }
+
+    window.onload = init;
+  //-->
+  </SCRIPT>
+  <style type="text/css">
+  #clockDiv span {
+      width:25px;
+      height:25px;
+      background-image:url(img/clock3.jpg);
+      display:inline-block;
+  }
+  </style>
+ </head>
+
+ <body bgColor="#FFFFFF" scroll=no>
+ <table width=100% height=100% cellSpacing=0 cellPadding=0 border=0>
+  <tr>
+    <td align=center height=100><!--<img src="img/mc.jpg" />--></td>
+  </tr>
+  <tr>
+    <td align=center valign=top style="padding-top:50px">
+      <div id="clockDiv">
+        <span id="clock_year_span1"></span>
+        <span id="clock_year_span2"></span>
+        <span id="clock_year_span3"></span>
+        <span id="clock_year_span4"></span>
+        <span style="background-position:-25px 0px"></span>
+
+        <span id="clock_month_span1"></span>
+        <span id="clock_month_span2"></span>
+        <span style="background-position:-25px -25px"></span>
+
+        <span id="clock_date_span1"></span>
+        <span id="clock_date_span2"></span>
+        <span style="background-position:-25px -50px"></span>
+
+        <span id="clock_hour_span1"></span>
+        <span id="clock_hour_span2"></span>
+        <span style="background-position:0px -250px"></span>
+
+        <span id="clock_minute_span1"></span>
+        <span id="clock_minute_span2"></span>
+        <span style="background-position:0px -250px"></span>
+        
+        <span id="clock_second_span1"></span>
+        <span id="clock_second_span2"></span>
+
+        <span style="background-position:-25px -75px"></span>
+        <span style="background-position:-25px -100px"></span>
+        <span id="clock_week_span"></span>  
+      </div>
+     </td>
+    </tr>
+  </table>
+ </body>
+</html>

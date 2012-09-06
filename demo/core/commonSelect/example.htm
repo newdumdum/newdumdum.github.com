@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> 模拟Select </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="IRD ShiCH">
+  <meta name="keywords" content="slider,pic,show">
+  <meta name="description" content="sliderPic webctrl example">
+
+  <script src="js/commonSelect.js" type="text/javascript"></script>
+  <link href="css/commonSelect.css" type="text/css" rel="stylesheet"></link>
+  <script language="javascript">
+  <!--
+    $ = function(id){
+        return document.getElementById(id);
+    }
+
+    function init(){
+        var cs = new commonSelect();
+        cs.wordWidth = 8;
+        cs.container = $("con");
+        cs.data = $("dataIput").value;
+        cs.init();
+        // 可以添加选中后事件
+        cs.onchange = function(){
+            var value = this.value;
+            $("con2").innerHTML = value;
+        }
+
+        
+        var cs2 = new commonSelect();
+        cs2.wordWidth = 8;
+        cs2.container = $("con3");
+        cs2.data = $("dataIput").value;
+        cs2.type = 2;
+        cs2.init();
+        // 可以添加选中后事件
+        cs2.onchange = function(){
+            var value = this.value;
+            $("con4").innerHTML = value;
+        }
+    }
+    window.onload = init;
+  //-->
+  </script>
+
+  <style type="text/css">
+  body {
+    background:#fff;
+  }
+  * {
+      font:normal 12px Arial,宋体;
+  }
+  </style>
+ </head>
+
+ <body scroll=no>
+    <div id="con"></div>
+    <input type=hidden id="dataIput" value="接口流量|1;输入流量|2;输出流量|3;I can't image, Any great fear.|4;郭德纲 - 聊斋之辛十四娘 01回|5;什么想法?|6;每一天 都会有事情感觉糟糕|7;有一些伤口 也许难以愈合完好|8;可是时光飞逝 从来那么那么快|9;原来一切 都会被风儿带走|10;就让风儿 带着我们飘|11" />
+    <p>
+    选定值:
+    <div id="con2"></div>
+
+<p>
+<p>
+    
+    <div id="con3"></div>
+    <p>
+    选定值:
+    <div id="con4"></div>
+ </body>
+</html>

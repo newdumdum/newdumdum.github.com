@@ -1,0 +1,150 @@
+<!-- Quriks Mode -->
+<!Doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>测试Tween类</title>
+        <script type="text/javascript" src="../ace.all.js"></script> 
+		<style>
+			body {
+				font:400 12px/20px 宋体;
+				background-image:url(SCBJ_030001.jpg);
+				overflow:hidden;
+			}
+		</style>
+		<script>			
+            try {
+                document.execCommand("BackgroundImageCache", false, true);
+            } catch (ex) {
+            }  		
+		</script>
+		
+	</head>
+	<body>
+		<div id='tweenBlcok' style="font-size:1px;line-height:1px;width:100px;height:100px;border:1px solid #A9B0B8;background:#EEEEF0;position:absolute;left:10px;top:10px;"></div>
+		
+		<div id='testIconBlock' style="position:absolute;left:200px;top:200px;">
+			<img src="icon.gif" />
+		</div>
+		<div style="position:absolute;left:100px;bottom:10px;">
+			<input type="button" value="移动至(700,200)" onclick='moveTo(700, 200)'>
+			<input type="button" value="移动至(100,100)" onclick='moveTo(10, 10)'>
+			<input type="button" value="果冻效果(300)" onclick='jellyEffect()'>
+			<input type="button" value="掉落效果" onclick='drop()'>
+			<input type="button" value="透明一下" onclick='opacity()'>
+			<input type="button" value="Bling Icon" onclick='bling()'>
+			<input type="button" value="Fly Icon" onclick='iconFly()'>
+		</div>
+		
+	</body>
+	<script>
+		var Easing = ace.ui.Easing, Tween = ace.ui.Tween;
+		function moveTo(x, y){
+			var d = new Date().valueOf();
+			var elm = ace.g('tweenBlcok'), pos = ace.dom.getPosition(elm);
+			new Tween(elm, 'left', pos.left, x, Easing.Bounce.easeIn, 1);
+			new Tween(elm, 'top', pos.top, y, Easing.Bounce.easeIn, 1);
+		}
+		
+		function jellyEffect(){
+			var runTime = .4, margin = 80, effect = Easing.Bounce.easeOut;
+			var elm = ace.g('tweenBlcok'), pos = ace.dom.getPosition(elm), w = elm.clientWidth, h = elm.clientHeight;
+			new Tween(elm, 'width', w, w - margin, effect, runTime, function(){
+				new Tween(elm, 'width', w - margin, w, effect, runTime);
+			});
+			new Tween(elm, 'height', h, h - margin, effect, runTime, function(){
+				new Tween(elm, 'height', h - margin, h, effect, runTime);
+			});
+			
+			new Tween(elm, 'left', pos.left, pos.left + margin/2, effect, runTime, function(){
+				new Tween(elm, 'left', pos.left + margin/2, pos.left, effect, runTime);
+			});
+			new Tween(elm, 'top', pos.top, pos.top + margin/2, effect, runTime, function(){
+				new Tween(elm, 'top', pos.top + margin/2, pos.top, effect, runTime);
+			});
+		}
+		
+		function drop(){
+			var runTime = 1, margin = 80, effect = Easing.Bounce.easeOut;
+			var elm = ace.g('tweenBlcok'), pos = ace.dom.getPosition(elm), h = elm.clientHeight;
+			new Tween(elm, 'top', pos.top, ace.page.getHeight() - h - 50, effect, runTime, function(){
+				//new Tween(elm, 'top', ace.page.getHeight() - h - 50, pos.top, effect, runTime);
+			});
+		}
+		
+		function opacity(){
+			var runTime = .5, margin = 80, effect = Easing.Linear;	
+			var elm = ace.g('tweenBlcok');		
+			new Tween(elm, 'opacity', 100, 50, effect, runTime, function(){
+				new Tween(elm, 'opacity', 50, 100, effect, runTime);
+			});
+		}
+		
+		var blingCount = 0, blingEnd = true;
+		function bling(){
+			if(!blingEnd){
+				return;
+			}
+			var box = ace.g('testIconBlock'), icon = box.getElementsByTagName('img')[0];
+			var w = icon.clientWidth, h = icon.clientHeight;
+			var effect = Easing.Linear, margin = 50, runTime = .3;
+			new Tween(icon, 'width', w, w - margin, effect, runTime, function(){
+				new Tween(icon, 'width', w - margin, w, effect, runTime);
+			});
+			new Tween(icon, 'margin-left', 0, margin / 2, effect, runTime, function(){
+				new Tween(icon, 'margin-left', margin / 2, 0, effect, runTime);
+			});
+			
+			
+			new Tween(icon, 'height', h, h - margin, effect, runTime, function(){
+				new Tween(icon, 'height', h - margin, h, effect, runTime);
+			});
+			new Tween(icon, 'margin-top', 0, margin / 2, effect, runTime, function(){
+				new Tween(icon, 'margin-top', margin / 2, 0, effect, runTime);
+			});
+			
+			if (blingCount >= 0) {
+				setTimeout(function(){
+					blingEnd = true;
+					blingCount ++;
+					bling();
+				}, 1200);
+				blingEnd = false;
+			}else{
+				blingCount = 0;
+				blingEnd = true;
+			}
+		}
+		
+		function iconFly(){
+			var box = ace.g('testIconBlock'), pos = ace.dom.getPosition(box), w = box.clientWidth, h = box.clientHeight;
+			var runTime = .8, effect = Easing.Expo.easeInOut;
+			var toX = Math.ceil(getRandom(0, ace.page.getWidth() - w)),
+			toY = Math.ceil(getRandom(0, ace.page.getHeight() - h));
+			new Tween(box, 'left', pos.left, toX, effect, runTime, function(){
+				checkFlyOk({x:'ok'});
+			});
+			new Tween(box, 'top', pos.top, toY, effect, runTime, function(){
+				checkFlyOk({y:'ok'});
+			});
+		}
+		
+		var allOkObj =  {x: 'no', y: 'no'};
+		function checkFlyOk(o){
+			o.x && (allOkObj.x = o.x);
+			o.y && (allOkObj.y = o.y);
+			
+			if(allOkObj.x == 'ok' && allOkObj.y == 'ok'){
+				setTimeout(function(){
+					allOkObj =  {x: 'no', y: 'no'};
+					iconFly();
+				}, 200)
+			}
+		}
+		
+		function getRandom(a, b){
+			return a + Math.random() * b;
+		}
+	
+	</script>
+</html>

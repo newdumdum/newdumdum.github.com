@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Response>
+  <BaseInfo>
+    <Grid> 
+      <!-- 表头信息 -->
+      <column showOrder="true"> <!-- showOrder:是否显示序号 -->
+        <label name="order" align="center" width="40">排名</label> <!-- align:数据内容放置方式,width:默认宽度 disableOrder:如果不允许排序,请加上这个属性,如:disableOrder="true" -->
+        <label name="title" align="left" width="190">标题</label>
+        <label name="c0" align="right" width="90">本期值</label>
+        <label name="c1" align="right" width="90">平均值</label>
+        <label name="c2" align="right" width="90">上期值</label>
+        <label disableOrder="true" name="c3" align="right" width="90">占比</label>
+      </column>
+      <data>
+        <row order="1" title="Time Despoit" c0="25205042.63" c1="23215001.11" c2="19332093.20" c3="20.0%"/>
+        <row order="2" title="The percentage of Non performing Loan in total loan outstanding" c0="7894358.40" c1="7000000.11" c2="7200000.20" c3="16.4%"/>        
+      </data>
+    </Grid>
+  </BaseInfo>
+  <!-- 页面信息 -->
+  <PageInfo>
+    <Page totalPage="1" curPage="1" pageSize="10" />
+  </PageInfo>
+</Response>

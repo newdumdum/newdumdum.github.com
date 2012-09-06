@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+说明:
+    TreeNode            : 节点信息
+        节点属性        :
+        name            : 节点名称
+        id              : 节点id(也是数据id，唯一)
+        maxValue        : 节点最大值 
+        minValue        : 节点最小值 
+        curValue        : 节点最当前值 
+        colorDir        : 节点值变化时，节点颜色区变化方向. (1:从红到绿. 2:从绿到红. )
+        type            : 节点类型  (1:普通数值节点. 2:百分比数值节点. 3:只显示名称的节点. 4:显示滑块的节点) 
+        _opened         : 节点默认打开情况 (true:默认打开. false:默认关闭) 
+        blockValueType  :(仅当type="4"的时候生效) 1: 数值型,其它:百分比 
+-->
+<Response>
+    <Data>
+        <Tree>
+            <TreeNode name="行内流动性风险状况" id="1" maxValue="100" minValue="0" curValue="77" colorDir="1" type="3" _opened="true">
+                <TreeNode name="流动性比率" id="2" maxValue="100" minValue="0" curValue="52.33" colorDir="1" type="2" _opened="false">
+                </TreeNode>
+                <TreeNode name="核心负债依存度" id="3" maxValue="100" minValue="0" curValue="59.12" colorDir="1" type="2" _opened="false">
+                    <TreeNode name="定期存款(总计)" id="9" maxValue="10000000" minValue="0" curValue="3399809.31" colorDir="1" type="1"/>
+                    <TreeNode name="定期存款(次日)" id="10" maxValue="1000000" minValue="0" curValue="0" colorDir="1" type="1"/>
+                    <TreeNode name="定期存款(2日~7日)" id="11" maxValue="10000" minValue="0" curValue="7514.78" colorDir="1" type="1"/>
+                    <TreeNode name="定期存款(8日~30日)" id="12" maxValue="1000000" minValue="0" curValue="102195.16" colorDir="1" type="1"/>
+                    <TreeNode name="定期存款(31日~90日)" id="13" maxValue="1000000" minValue="0" curValue="223141.69" colorDir="1" type="1"/>
+                    <TreeNode name="发行债券(总计)" id="14" maxValue="100000" minValue="0" curValue="71952.33" colorDir="1" type="1"/>
+                    <TreeNode name="发行债券(次日)" id="15" maxValue="1000000" minValue="0" curValue="0" colorDir="1" blockValueType="1" type="4"/>
+                    <TreeNode name="发行债券(2日~7日)" id="16" maxValue="10" minValue="0" curValue="4" colorDir="1" blockValueType="1" type="4"/>
+                    <TreeNode name="发行债券(8日~30日)" id="17" maxValue="1000000" minValue="0" curValue="558860" colorDir="1" blockValueType="1" type="4"/>
+                    <TreeNode name="发行债券(31日~90日)" id="18" maxValue="1000000" minValue="0" curValue="133230.11" colorDir="1" blockValueType="1" type="4"/>
+                    <TreeNode name="活期存款(剩余期限1年以上)" id="19" maxValue="10000000" minValue="0" curValue="7198927.31" colorDir="1" type="1"/>
+                    <TreeNode name="负债合计-本外币合计" id="20" maxValue="100000000" minValue="0" curValue="18179133.31" colorDir="1" type="1"/>
+                </TreeNode>
+                <TreeNode name="流动性缺口率" id="4" maxValue="100" minValue="0" curValue="8.32" colorDir="1" type="2" _opened="false">
+                    <TreeNode name="流动性缺口" id="21" maxValue="1000000" minValue="0" curValue="339349.22" colorDir="1" type="1" _opened="false">
+                        <TreeNode name="累计到期期限缺口(31日~90日)" id="22" maxValue="1000000" minValue="0" curValue="232723.11" colorDir="1" type="1"/>
+                        <TreeNode name="活期存款(次日)" id="23" maxValue="100000" minValue="0" curValue="31544.00" colorDir="1" type="1"/>
+                        <TreeNode name="附注活期存款(2日~7日)" id="24" maxValue="100000" minValue="0" curValue="12594.00" colorDir="1" type="1"/>
+                        <TreeNode name="附注活期存款(8日~30日)" id="25" maxValue="100000" minValue="0" curValue="41765.00" colorDir="1" type="1"/>
+                        <TreeNode name="附注活期存款(31日~90日)" id="26" maxValue="100000" minValue="0" curValue="20723.11" colorDir="1" type="1"/>
+                    </TreeNode>
+                    <TreeNode name="90日内到期表内外资产" id="27" maxValue="10000000" minValue="0" curValue="4078716" colorDir="1" type="1"/>
+                </TreeNode>
+                <TreeNode name="人民币超额备付金率" id="5" maxValue="100" minValue="0" curValue="6.53" colorDir="1" type="4" _opened="false">
+                </TreeNode>
+                <TreeNode name="经调整资产流动性比例" id="6" maxValue="100" minValue="0" curValue="50.47" colorDir="1" type="2" _opened="false">
+                </TreeNode>
+                <TreeNode name="存贷款比例" id="7" maxValue="100" minValue="0" curValue="57.57" colorDir="2" type="2" _opened="false">
+                </TreeNode>
+                <TreeNode name="最大十户存款比例" id="8" maxValue="100" minValue="0" curValue="95.06" colorDir="1" type="2" _opened="false">
+                </TreeNode>
+            </TreeNode>
+        </Tree>
+    </Data>
+</Response>

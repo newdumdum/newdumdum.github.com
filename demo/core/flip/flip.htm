@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> Flip Demo </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="ShiCH">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <style type="text/css">
+    body {
+        background:#FFF;
+        margin:20px;
+        overflow:auto;
+    }
+    .title {font:normal 12px "Arial";padding-left:150px;}
+    .bot {font:normal 10px "Verdana";padding-left:350px;}
+    .split {font-size:1px;height:2px;}
+  </style>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    Flip = (function(){
+        function rect(elm){
+            var absTop = 0;
+            var absLeft = 0;
+            var tempObj = elm;
+            while(tempObj != document.body){
+                absTop += tempObj.offsetTop - tempObj.offsetParent.scrollTop;
+                absLeft += tempObj.offsetLeft - tempObj.offsetParent.scrollLeft;
+                tempObj = tempObj.offsetParent;
+            }
+            return {top:absTop,left:absLeft}; 
+        };
+        DOM = {
+            $:function(id){return document.getElementById(id);},
+            $A:function(elm,pElm){return pElm ? pElm.appendChild(elm) : document.body.appendChild(elm);},
+            $C:function(tagName,att){var elm = document.createElement(tagName);if(att && typeof att == 'object'){for(var item in att){if(item != "html" || item != "className"){elm.item = att[item];}else{elm[item] = att[item];}}};return elm;},
+            $R:function(elm,pElm){return pElm ? pElm.removeChild(elm) : document.body.removeChild(elm);},
+            $T:function(tagName,pElm){return pElm ? pElm.getElementsByTagName(tagName) : document.getElementsByTagName(tagName);}
+        };
+        var ELMS = [],POS = [],CLT = [],count = 15,img = new Image(),hPara = 60;
+        img.src = "flipLayer.gif";
+
+        function setElms(elm){
+            ELMS.push(elm);
+            POS.push(rect(elm));
+        }
+
+        function addEvent(elm,type,handler,useCapture){
+            try{
+                elm.attachEvent("on"+type,function(){handler();});
+            }catch(e){
+                try{
+                    if(null == useCapture) useCapture = false;
+                    elm.addEventListener(type,handler,useCapture);
+                }catch(e1){
+                    elm["on"+type] = function(){
+                        handler;
+                    }
+                }
+            }
+        }
+
+        function init(){
+            for(var i=0,iLen=ELMS.length;i<iLen;i++){
+                ELMS[i].setAttribute("_order",i);
+                addEvent(ELMS[i],"click",show);
+                ELMS[i].style.backgroundImage = "url(flipBg.jpg)";
+                ELMS[i].style.backgroundPosition = "0px -" + (i%6)*160 + "px";
+                ELMS[i].style.backgroundRepeat = "no-repeat";
+                CLT[i] = i%6;
+            }
+        }
+
+        function show(evt){
+            var e = evt ? evt : window.event;
+            var elm = e.srcElement || e.target;
+            var order = elm.getAttribute("_order");
+            var pos = POS[order];
+            CLT[order] ++ ;
+            var d = DOM.$("layer");
+            if(!d){
+                d = DOM.$C("div",{className:"flipLayer",id:"layer"});
+                DOM.$A(d);
+            }
+            d.style.backgroundImage = "url("+img.src+")";
+            d.style.backgroundRepeat = "no-repeat";
+
+            var o = {
+                con:elm,
+                elm:d,
+                pos:pos,
+                w:Number(elm.offsetWidth),
+                h:Number(elm.offsetHeight),
+                step:0,
+                order:order
+            };
+            elm.style.visibility = "hidden";
+            move(o);
+        }
+
+        function move(o){
+            if(o.step != count){
+                var mw = Math.floor(o.w/count),mh = Math.floor((o.h + hPara)/count);
+                var imgX =  -Math.floor((o.w - mw*o.step)/2);
+                var imgY = Math.floor((o.h + mh*o.step)/2)-Math.floor(img.height/2);
+                with(o.elm.style){
+                    display = "";
+                    position = "absolute";
+                    left = o.pos.left + Math.floor(mw*o.step/2) + "px";
+                    top = o.pos.top - Math.floor(mh*o.step/2) + "px";
+                    width = o.w - mw*o.step + "px";
+                    height = o.h + mh*o.step + "px";
+                    zIndex = "10";
+                    fontSize = "1px";
+                    //border = "1px solid green";
+                    backgroundPosition = imgX + "px " + imgY + "px";
+                }
+                o.step ++;
+                setTimeout(function(){
+                    move(o);
+                },20);
+            }else{
+                moveBack(o);
+            }
+        }
+
+        function moveBack(o){
+            if(o.step != 0){
+                var mw = Math.floor(o.w/count),mh = Math.floor((o.h + hPara)/count);
+                var imgX =  Math.floor(o.w - mw*o.step)-Math.floor(img.width);
+                var imgY = Math.floor((o.h + mh*o.step)/2)-Math.floor(img.height/2);
+                with(o.elm.style){
+                    display = "";
+                    position = "absolute";
+                    left = o.pos.left + Math.floor(mw*o.step/2) + "px";
+                    top = o.pos.top - Math.floor(mh*o.step/2) + "px";
+                    width = o.w - mw*o.step + "px";
+                    height = o.h + mh*o.step + "px";
+                    zIndex = "10";
+                    fontSize = "1px";
+                    //border = "1px solid green";
+                    backgroundPosition = imgX + "px " + imgY + "px";
+                }
+                o.step --;
+                setTimeout(function(){
+                    moveBack(o);
+                },20);
+            }else{
+                o.elm.style.display = "none";
+                o.con.style.visibility = "visible";
+                o.con.style.backgroundPosition = "0px -" + (CLT[o.order]%6)*160 + "px";
+                DOM.$R(o.elm);
+            }
+        }
+
+
+        return {
+            DOM:DOM,
+            ELMS:ELMS,
+            POS:POS,
+            setElms:setElms,
+            init:init
+        }
+    })();
+
+    function flip(){
+        Flip.show;
+    }
+
+    window.onload = function(){
+        Flip.setElms(Flip.DOM.$("flipDiv"));
+        Flip.setElms(Flip.DOM.$("flipDiv1"));
+        Flip.setElms(Flip.DOM.$("flipDiv2"));
+        Flip.init();
+
+        try{
+            document.execCommand("backgroundImageCache",false,true);
+        }catch(e){};
+    }
+  //-->
+  </SCRIPT>
+
+ </head>
+
+ <body>
+  <div class="title">Test Flip Effect...</div>
+  <div id="flipDiv" style="width:400px;height:160px;border:1px solid #decafe;cursor:default;" onclick="javascript:flip();"></div><div class="split"></div>
+  <div id="flipDiv1" style="width:400px;height:160px;border:1px solid #decafe;cursor:default;" onclick="javascript:flip();"></div><div class="split"></div>
+  <div id="flipDiv2" style="width:400px;height:160px;border:1px solid #decafe;cursor:default;" onclick="javascript:flip();"></div>
+  <div class="bot">^_^</div>
+ </body>
+</html>

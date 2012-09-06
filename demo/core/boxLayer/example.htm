@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> 图层 </title>
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- 公用JS 开始 -->
+  <script language="javascript" src="../public/public.js"></script>
+  <!-- 公用JS 结束 -->
+  
+  <!-- boxLayer脚本及样式 开始 -->
+  <script language="javascript" src="js/boxLayer.js"></script>
+  <link href="css/boxLayer.css"	rel="stylesheet" type="text/css"></link>
+  <!-- boxLayer脚本及样式 结束 -->
+
+  <script language="javascript">
+  <!--
+  var layer = null;
+  function show(){
+      if(null == layer){
+          // 取到目标对象
+          var div = document.getElementById("aaa");
+
+          // 实例化
+          layer = new BoxLayer();
+          // 设定显示标题
+          layer.title = "测试";
+          // 指定目标对象
+          layer.baseTarget = div;
+          // 初始化
+          layer.init();
+      }else{
+          layer.Show();
+      }
+  }
+
+  function closeLayer(){
+      layer.close();
+  }
+
+    
+  //-->
+  </script>
+  <style type="text/css">
+  * {
+      font:normal 12px Arial,宋体;
+  }
+  </style>
+ </head>
+
+ <body>
+  <select><option>asdasdsa</option></select>
+  <p>
+  <input type="button" value="新建" onclick="show();"/>
+  <!-- 用于图层内容 开始 -->
+  <div id="aaa" style="display:none">
+    <div style="width:300px">
+      姓名:<input type=txet><br>
+      性别:<select>
+              <option>男</option>
+              <option>女</option>
+            </select><br>
+      年龄:<input type=txet><br>
+        <div style="text-align:center"><input type=button value="提交">&nbsp;<input type=button value="取消" onclick="javascript:closeLayer();"></div>
+      </div>
+  </div>
+  <!-- 用于图层内容 结束 -->
+ </body>
+</html>

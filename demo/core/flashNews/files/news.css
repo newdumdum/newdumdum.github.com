@@ -1,0 +1,80 @@
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+
+#mainDiv {
+  width:500px;
+  height:404px;
+  display:block;
+  overflow:hidden;
+  position:relative;
+}
+#layerDiv {
+  z-index:99999;
+  width:500px;
+  height:54px;
+  display:block;
+}
+#showImg {
+  width:500px;
+  height:404px;
+}
+#picDiv {
+  height:25px;
+  cursor:hand;
+  cursor:pointer;
+  background:#FFF;
+  filter:Alpha(Opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity:0;
+}
+#toolDiv {
+  height:25px;
+  padding-left:10px;
+  padding-top:4px;
+  clear:left;
+  background:#FFF;
+  filter:progid:DXImageTransform.Microsoft.Alpha(startX=0,startY=0,finishX=0,finishY=55,style=1,Opacity=80,finishOpacity=40);
+  -moz-opacity:0.8;
+  -khtml-opacity:0.8;
+}
+#toolDiv div {
+  float:left;
+}
+.toolBT {
+  width:16px;
+  height:19px;
+  background:url(images/background.gif) no-repeat -16px -29px;
+  font-family:Verdana;
+  color:#000;
+  cursor:hand;
+  cursor:pointer;
+  margin-left:3px;
+  text-align:center;
+  padding-top:3px;
+  font:normal 12px Verdana;
+}
+.toolBT_Over {
+  width:16px;
+  height:19px;
+  background:url(images/background.gif) no-repeat 0px -29px;
+  font-family:Verdana;
+  color:#FFF;
+  cursor:hand;
+  cursor:pointer;
+  margin-left:3px;
+  text-align:center;
+  padding-top:3px;
+  font:normal 12px Verdana;
+}
+
+#picInfoDiv {
+  position:relative;
+  left:0px;
+  height:20px;
+  text-align:center;
+  padding-top:5px;
+  font:bold 12px Arial,ËÎÌו;
+  background:#FFF;
+  filter:Alpha(Opacity=50);
+  -moz-opacity:0.5;
+  -khtml-opacity:0.5;
+}

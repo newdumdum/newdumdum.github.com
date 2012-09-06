@@ -1,0 +1,180 @@
+.boxLayer {
+    position:absolute;
+    left:0px;
+    top:0px;
+    filter:Alpha(opacity=70);
+    -moz-opacity:0.7;
+    z-index:999999;
+    background:#F1F1F1;
+}
+.boxLayer .boxLayerTable {
+    cursor:default;
+    background:#C6D4E6 url(../images/top-bottom.gif) repeat-x;
+}
+.boxLayer .boxLayerTable .mainTD {
+    border-top:1px solid #7E9ABE;
+    border-bottom:1px solid #7E9ABE;
+}
+.boxLayer .boxLayerTable .left-top {
+    width:8px;
+    height:8px;
+    background:url(../images/corners.gif) 0px 0px no-repeat;
+    font-size:1px;
+}
+.boxLayer .boxLayerTable .left-center {
+    width:8px;
+    height:expression(this.offsetParent.offsetHeight-16);
+    border-left:1px solid #7E9ABE;
+}
+.boxLayer .boxLayerTable .left-down {
+    width:8px;
+    height:8px;
+    background:url(../images/corners.gif) 0px -16px no-repeat;
+    font-size:1px;
+}
+.boxLayer .boxLayerTable .right-top {
+    width:8px;
+    height:8px;
+    background:url(../images/corners.gif) 0px -8px no-repeat;
+    font-size:1px;
+}
+.boxLayer .boxLayerTable .right-center {
+    width:8px;
+    height:expression(this.offsetParent.offsetHeight-16);
+    border-right:1px solid #7E9ABE;
+}
+.boxLayer .boxLayerTable .right-down {
+    width:8px;
+    height:8px;
+    background:url(../images/corners.gif) 0px -24px no-repeat;
+    font-size:1px;
+}
+.boxLayer .boxLayerTable .titleLeft{
+    float:left;
+    font:normal 12px Arial,宋体;
+    width:150px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    word-break:keep-all;
+    white-space:noWrap;
+    padding-top:4px;
+    color:#264390;
+}
+.boxLayer .boxLayerTable .titleRight{
+    float:right;
+    padding:2px 0px 0px 0px;
+}
+.boxLayer .boxLayerTable .titleRight  div{
+    width:15px;
+    height:15px;
+    background:url(../images/tool-sprites.gif) 0px 0px no-repeat;
+    font-size:1px;
+}
+.boxLayer .cooTD {
+    padding:3px 0px 3px 0px;
+} 
+.boxLayer .contentTD {
+    padding:5px 0px 5px 0px;
+}
+.boxLayer .contentTD .content {
+    font:normal 12px Arial,宋体;
+}
+
+
+.boxLayer .boxLayerTable .infoInco {
+    float:left;
+    width:32px;
+    height:32px;
+    background:url(../images/infoIcon.gif) no-repeat;
+    font-size:1px;
+}
+.boxLayer .boxLayerTable .infoContent {
+    margin-left:32px;
+    padding:3px;
+    width:200px;
+    >height:50px;
+    font:normal 12px Arial,宋体;
+    word-break:break-word;
+    letter-spacing:1px;
+    line-height:120%;
+    color:#264390;
+}
+
+/* 按钮样式 开始 */
+.boxLayer .pageBT {
+    display:inline;
+    width:56px;
+    height:21px;
+    border:0px;
+    font-size:1px;
+    cursor:hand;
+    height:21px;
+}
+.boxLayer .pageBT .left {
+    display:inline;
+    width:3px;
+    font-size:1px;
+    height:21px;
+    background:url(../images/btn-sprite.gif) repeat-x 0px 0px;
+}
+.boxLayer .pageBT .con {
+    display:inline;
+    width:50px;
+    font:normal 12px Arial,宋体;
+    background:url(../images/btn-sprite.gif) repeat-x 0px -42px;
+    height:21px;
+    padding-top:5px;
+    color:#264390;
+    position:relative;
+    left:0px;
+    top:-4px;
+}
+.boxLayer .pageBT .right {
+    display:inline;
+    width:3px;
+    font-size:1px;
+    height:21px;
+    background:url(../images/btn-sprite.gif) repeat-x 0px -21px;
+}
+.boxLayer .pageBT_over {
+    display:inline;
+    width:56px;
+    height:21px;
+    border:0px;
+    font-size:1px;
+    height:21px;
+    cursor:hand;
+}
+.boxLayer .pageBT_over .left {
+    display:inline;
+    width:3px;
+    font-size:1px;
+    height:21px;
+    background:url(../images/btn-sprite.gif) repeat-x 0px -63px;
+}
+.boxLayer .pageBT_over .con {
+    display:inline;
+    width:50px;
+    font:normal 12px Arial,宋体;
+    background:url(../images/btn-sprite.gif) repeat-x 0px -105px;
+    height:21px;
+    padding-top:5px;
+    color:#264390;
+    position:relative;
+    left:0px;
+    top:-4px;
+}
+.boxLayer .pageBT_over .right {
+    display:inline;
+    width:3px;
+    font-size:1px;
+    height:21px;
+    background:url(../images/btn-sprite.gif) repeat-x 0px -84px;
+}
+/* 按钮样式 结束 */
+
+.boxLayer .spaceDiv{
+    font-size:1px;
+    display:inline;
+    width:3px;
+}

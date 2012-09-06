@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CPU监控</title>
+<style>
+body{
+	margin: 10px;
+	font-size: 12px;
+	background-color:#EFF2FA;
+	overflow:hidden;
+	border:0px;
+}
+.mainBox {
+	background-color:white;
+	border:1px solid #D5E1F0;
+	padding:5px;
+  overflow:hidden;
+  zoom:1;
+}
+</style>
+</head>
+<body>
+<div class="mainBox">
+  <div style="display:inline;" id="objContainer">
+  </div>
+<script type="text/javascript">
+  var url = "../../service/cpu.asp";//"data.xml"; //初始数据的请求地址
+  var str = [];
+  str[str.length] = "<object classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0\" id=\"cpuShow\" width=\"361\" height=\"88\" align=\"middle\">";
+  str[str.length] = "  <param name=\"wmode\" value=\"transparent\" />";
+  str[str.length] = "  <param name=\"allowScriptAccess\" value=\"sameDomain\" />";
+  str[str.length] = "  <param name=\"movie\" value=\"cpu.swf\" />";
+  str[str.length] = "  <param name=\"quality\" value=\"high\" />";
+  str[str.length] = "  <param name=\"bgcolor\" value=\"#E9E9EE\" />";
+  str[str.length] = "  <param name=\"flashvars\" value=\"datasrc=" + url + "\">";
+  str[str.length] = "  <embed src=\"cpu.swf\" flashvars=\"datasrc=" + url + "\" quality=\"high\" bgcolor=\"#E9E9EE\" width=\"361\" height=\"88\" swLiveConnect=true id=\"cpuShow\" name=\"workFlow\" align=\"middle\" allowScriptAccess=\"sameDomain\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" />"
+  str[str.length] = "</object>";
+  var div = document.getElementById("objContainer");
+  div.innerHTML = str.join("\n");
+</script>
+</div>
+</body>
+</html>

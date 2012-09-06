@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>测试UiEffect</title>
+		<script src="UiEffect.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.onload = init;
+			$ = function(id){ return document.getElementById(id); }
+			
+			function init(){
+				$('testBling').onclick = function(){
+					UiEffect.bling(this);
+				}
+				
+				
+				var p = UiEffect.getPosition($('testMove'));
+				$('testMove').onclick = function(){
+					var oThis = this;
+					UiEffect.move(this, {x:700, y:300}, function(){
+						UiEffect.move(oThis, {x:p.left, y:p.top});
+					});
+				}
+			}
+		</script>
+		
+		<style type="text/css">
+			body {
+				font: 400 12px/12px Arial, Helvetica, sans-serif;
+				padding:0;
+				margin:0;
+			}
+			
+			#testBling {
+				position:absolute;
+				left:100px;
+				top:100px;
+				background:red;
+				color:#FFF;
+				width:50px;
+				height:20px;
+				cursor:default;
+			}
+			#testMove {
+				position:absolute;
+				left:100px;
+				top:150px;
+				background:red;
+				color:#FFF;
+				width:50px;
+				height:20px;
+				cursor:default;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="testBling">bling</div>
+		<div id="testMove">move</div>
+	</body>
+</html>

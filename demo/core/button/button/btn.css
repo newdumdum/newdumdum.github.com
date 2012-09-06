@@ -1,0 +1,68 @@
+/* 开启背景图片缓存功能 */
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+.BTN {
+    cursor:pointer;
+    height:22px;
+    display:inline-block;
+    *display:inline;
+    font-size:1px;
+}
+
+.BTN div {
+    overflow:hidden;
+}
+.BTN img {
+    margin-right:3px;
+    position:relative;
+    left:0px;
+    top:3px;
+}
+.BTN .main .left {
+    width:3px;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px 0px no-repeat;
+}
+.BTN .main .center {
+    text-indent:0;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px -22px repeat-x;
+    padding:0 5;
+}
+.BTN .main .center span {
+    font:normal 12px Arial,Verdana,宋体;
+    line-height:22px;
+    white-space:nowrap;
+}
+.BTN .main .right {
+    width:3px;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px -44px no-repeat;
+}
+
+.BTN .mainOver .left {
+    width:3px;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px -66px no-repeat;
+}
+.BTN .mainOver .center {
+    text-indent:0;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px -88px repeat-x;
+    padding:0 5;
+}
+.BTN .mainOver .center span {
+    font:normal 12px Arial,Verdana,宋体;
+    white-space:nowrap;
+    line-height:22px;
+}
+.BTN .mainOver .right {
+    width:3px;
+    float:left;
+    height:22px;
+    background:url(buttonBg.gif) 0px -110px no-repeat;
+}

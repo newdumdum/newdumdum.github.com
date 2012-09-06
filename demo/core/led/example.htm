@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>HTML5 LED Board</title>
+		<style>
+			html, body {
+				width:100%;
+				height:100%;
+				overflow:hidden;
+				margin:0;
+				padding:0;
+				background:#000 url(led.gif);
+			}
+			
+			.bot {
+				position:absolute;
+				bottom:20px;
+				padding-left:20px;
+			}
+			#ledBaord {
+				position:relative;
+				margin:20px;
+			}
+			.block {
+				font-size:1px;
+				width:10px;
+				height:10px;
+				background:green;
+				overflow:hidden;
+				position:absolute;
+			}
+		
+		</style>
+		<script src="../SchAIM-mini.js"></script>
+		<script>
+	        var text2points = function(){
+	        };
+	        (function(){
+	            function format(template, json){
+	                if (!json) 
+	                    return template;
+	                return template.replace(/#\{(.+?)\}/g, function(){
+	                    return json[arguments[1]];
+	                });
+	            }
+	            var canvas = document.createElement("canvas");
+	            if (!canvas || !canvas.getContext) 
+	                return;
+	            var context = canvas.getContext('2d');
+				/**
+				 * 文字转换成点阵
+				 * @param {String} text
+				 * @param {Object} options
+				 * 	{Integer} width 宽度
+				 *  {Integer} height 高度
+				 *  {Object} data 点阵 通过["x,y"]访问
+				 */
+	            text2points = function(text, options){
+	                if (!text) 
+	                    return;
+	                options = options || {};
+	                options.size = options.size || 12;
+	                options.name = options.name || "sans-serif";
+	                // 绘制文字
+	                var font = format('#{size}px #{name}', options);
+	                context.font = font;
+	                canvas.width = context.measureText(text).width;
+	                canvas.height = options.size;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+	                context.font = font;
+	                context.textAlign = 'left';
+	                context.textBaseline = 'top';
+	                context.fillText(text, 0, 0);
+	                
+	                var data = context.getImageData(0, 0, canvas.width, canvas.height).data, p = 0, results = {
+	                    width: canvas.width,
+	                    height: canvas.height,
+	                    data: {}
+	                };
+	                for (var y = 0, h = results.height; y < h; y++) {
+	                    for (var x = 0, w = results.width; x < w; x++) {
+	                        if (data[p + 3]) 
+	                            results.data[[x, y]] = true;
+	                        p += 4;
+	                    }
+	                }
+	                return results;
+	            }
+	        })();
+	        
+			
+			
+			var pointsArr, Tween = SchAIM.Tween, Easing = SchAIM.Easing, xOK = false, yOK = false, marginTop = 200;
+			var runEnd = true;
+			
+			function draw(){
+				if(!runEnd){
+					return;	
+				}
+				
+				pointsArr = [];
+				stop();
+				
+				runEnd = false;
+				
+				var text = document.getElementById('t').value, led = document.getElementById('ledBaord');
+				var points = text2points(text);
+				if(!points){
+					runEnd = true;
+					return;
+				}
+				var width = points.width, height = points.height, data = points.data;
+				
+				
+				var c = 0, l = 0, cX = Math.floor(document.body.clientWidth / 2);
+				for(var y = 0 ; y < height ; y ++){
+					for(var x = 0 ; x < width ; x ++){
+						if(!data[[x,y]]) continue;
+						
+						
+						if(c * 10 > cX){
+							c = 0;
+							l ++;
+						}
+						var b = addBlock(x * 10, y * 10 + marginTop, led);
+						
+						pointsArr.push({
+							x: x,
+							y : y,
+							b : b,
+							l : x * 10,
+							t : y * 10 + marginTop
+						});
+						c ++;
+					}
+				}
+				
+				setTimeout(function(){
+					run();
+				}, 500);
+				
+			}
+			
+			
+			function stop(){
+				xOK = false;
+				yOK = false;
+				
+				var led = document.getElementById('ledBaord');
+				led.innerHTML = '';
+			}
+			
+			function run(){
+				var led = document.getElementById('ledBaord');
+				
+				if (!pointsArr.length) {
+					runEnd = true;
+					return;
+				}
+				
+				var o = pointsArr.shift();
+			
+				new Tween(o.b, 'left', o.l, o.x * 10, Easing.Bounce.easeOut, .2, function(){
+					//callnext('x');
+				});					
+				new Tween(o.b, 'top', o.t, o.y * 10, Easing.Bounce.easeOut, .2,function(){
+					//callnext('y');
+				});
+				
+				setTimeout(function(){
+					run();
+				}, 10);
+			}
+			
+			function callnext(p){
+				if(p == 'x'){
+					xOK = true;
+				}
+				if(p == 'y'){
+					yOK = true;
+				}
+				
+				if(xOK && yOK){
+					xOK = yOK = false;
+					
+					run();
+				}
+			}
+			
+			function addBlock(x, y, con){
+				var b = document.createElement('div');
+				b.className = 'block';
+				con.appendChild(b);
+				
+				b.style.left = x + 'px';
+				b.style.top = y + 'px';
+				
+				return b;
+			}
+	    </script>
+	</head>
+	<body>
+		<div class="box">
+			<div id="ledBaord">
+				
+			</div>
+			
+			<div class="bot">
+				<input type="text" id="t" maxlength="10" value="I AM ACE" /><input type="button" value="draw" onclick="draw()" />
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>测试跨域Ajax请求</title>
+        <script src="crossDomainAjax.js" type="text/javascript"></script>
+        <script src="jquery-1.4.4.js" type="text/javascript"></script>
+        <script src="jQuery.windowName.plugin.0.9.0.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div style="font:400 12px/20px 宋体">
+            测试跨域Ajax请求
+        </div>
+        <input type="button" value="开始请求" onclick="postData()"/>
+        <input type="button" value="jQuery开始请求" onclick="queryData()"/>
+    </body>
+    <script>
+        function postData(){
+            BdIMCrossDomainAjax.ajax({
+                url: 'http://localhost/demo/service/indexTestDomain.asp',
+				type: 'post',
+                data:'username=xxx&type=2',
+				localfile: 'crossDomain.htm',
+				success: function(data, status){
+					alert(data);
+				},
+				complete: function(xhr, status){
+					alert(xhr.responseText);
+				}
+            });
+        }
+
+		function queryData(){
+			$.ajax({
+                url: 'http://localhost/demo/service/indexTestDomain.asp',
+				type: 'post',
+                data:'username=xxx&type=2',
+				localfile: 'crossDomain.htm',
+				success: function(data, status){
+					alert(data);
+				},
+				complete: function(xhr, status){
+					alert(xhr.responseText);
+				}
+			});
+		}
+    </script>
+</html>

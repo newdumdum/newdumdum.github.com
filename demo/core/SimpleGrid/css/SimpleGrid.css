@@ -1,0 +1,255 @@
+.simpleGridTable {
+    font:normal 10px Arial,宋体;
+    color:#000;
+    width:auto;
+    table-layout:fixed;
+}
+.simpleGridTable * {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    font:normal 12px Arial,宋体;
+    position:static;
+}
+/* 头部样式 开始 */
+.simpleGridTable .simpleGridTitleTr {
+    font:normal 10px Arial,宋体;
+    color:#000;
+}
+.simpleGridTable .simpleGridTitleTr_Fiexed {
+    font:normal 10px Arial,宋体;
+    color:#000;
+    position:relative;
+    top:expression(this.offsetParent.scrollTop);
+    z-index:10;
+}
+.simpleGridTable .simpleGridTitleTd {
+    border-top:1px solid #EDEDED;
+    border-right:1px solid #D0D0D0;
+    *border-bottom:1px solid #D0D0D0;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    padding-right:2px;
+    background:url(../images/title.gif) repeat-x;
+    word-break:keep-all;
+    white-space:noWrap;
+}
+.simpleGridTable .simpleGridTitleOrderTd {
+    border-left:1px solid #EDEDED;
+    border-top:1px solid #EDEDED;
+    border-right:1px solid #D0D0D0;
+    border-bottom:1px solid #D0D0D0;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    padding-right:2px;
+    background:url(../images/title.gif) repeat-x;
+    word-break:keep-all;
+    white-space:noWrap;
+}
+.simpleGridTable .simpleGridTitleFirstTd {    
+    border-left:1px solid #EDEDED;   
+    border-top:1px solid #EDEDED;
+    border-right:1px solid #D0D0D0;
+    border-bottom:1px solid #D0D0D0;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    padding-right:2px;
+    background:url(../images/title.gif) repeat-x;
+    word-break:keep-all;
+    white-space:noWrap;
+}
+
+.simpleGridTable div {
+    padding:4px 5px 0px 3px;
+    height:20px;
+    cursor:default;
+    text-align:center;
+}
+.simpleGridTable .simpleGridTitleDiv_Normal {
+    background:url();
+    display:block;
+}
+.simpleGridTable .simpleGridTitleDiv_Down {
+    background:url(../images/columnOrder_Down.gif) right 2px no-repeat;
+    display:block;
+}
+.simpleGridTable .simpleGridTitleDiv_Up {
+    background:url(../images/columnOrder_Up.gif) right 2px no-repeat;
+    display:block;
+}
+/* 头部样式 结束 */
+
+
+
+.simpleGridTable .simpleGridBodyTr {
+}
+.simpleGridTable .simpleGridBodyTrOver {
+    background:url(../images/row-over.gif) repeat-x;
+}
+.simpleGridTable .simpleGridBodyTrHighLight .simpleGridBodyTd {
+    background:#DFE8F6;
+    border-top:1px dotted #A3BAE9;
+    border-bottom:1px dotted #A3BAE9;
+    border-right:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    height:20px;
+    padding-bottom:0px;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+
+.simpleGridTable .simpleGridBodyTd {
+    border-right:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    height:20px;
+    padding-bottom:0px;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+.simpleGridTable .simpleGridBodyTrHighLight .simpleGridOrderTd {
+    background:#DFE8F6;
+    border-top:1px solid #FFFFFF;
+    border-bottom:1px solid #EDEDED;
+    border-right:1px solid #EDEDED;
+    border-left:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+    background:#F9F9F9;
+}
+.simpleGridTable .simpleGridOrderTd {
+    border-top:1px solid #FFFFFF;
+    border-left:1px solid #EDEDED;
+    border-right:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+    background:#F9F9F9;
+}
+
+.simpleGridTable .simpleGridTotalTr {
+    background:#CFDDF1;
+}
+.simpleGridTable .simpleGridTotalTd {
+    border-right:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    height:20px;
+    padding-bottom:0px;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+
+.simpleGridPageDiv {
+    text-align:center;
+    padding-top:5px;
+}
+.simpleGridPageDiv .selectPageSpan {
+    padding:0px 10px 0px 10px;
+}
+.simpleGridPageDiv .goPageSpan {
+    font:normal 12px Webdings;
+    padding:0px 10px 0px 10px;
+}
+.simpleGridPageDiv .gridPageSelect {
+    font:normal 10px Verdana;
+}
+
+
+.simpleGridTable .simpleGridBodyTrHighLight .simpleGridBodyFirstTd {
+    border-left:1px solid #EDEDED;
+    border-right:1px solid #EDEDED;
+    border-top:1px dotted #A3BAE9;
+    border-bottom:1px dotted #A3BAE9;
+    background:#DFE8F6;
+
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+
+.simpleGridTable .simpleGridBodyFirstTd {
+    border-left:1px solid #EDEDED;
+    border-right:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+.simpleGridTable .simpleGridBodyFirstTotalTd {
+    border-left:1px solid #EDEDED;
+    border-right:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+    padding:3px;
+    font:normal 12px Arial,宋体;
+    color:#000;
+    text-align:center;
+    word-break:keep-all;
+    white-space:noWrap;
+    cursor:default;
+}
+.simpleGridTable .simpleGridBodyDiv {
+    padding:0 3 0 0;
+    cursor:default;
+    overflow:hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font:normal 12px Arial,宋体;
+}
+
+
+
+
+.simpleGridTable .GridCheckBox {
+    width:13px;
+    height:13px;
+}
+.simpleGridTable .GridInput {
+    height:18px;
+    border:1px solid #99BBE8;
+    font:normal 12px Arial,宋体;
+}
+.simpleGridTable .GridRadio {
+    width:13px;
+    height:13px;
+}
+
+.GridStaticPageTable {
+}
+.GridStaticPageTable tr td {
+    font:normal 12px Arial,宋体;
+}
+.GridStaticPageTable tr td span {
+    font:normal 12px Arial,宋体;
+    cursor:pointer;
+}

@@ -1,0 +1,86 @@
+/* ¿ªÆô±³¾°Í¼Æ¬»º´æ¹¦ÄÜ */
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+
+#outDiv {
+  overflow:hidden;
+  background:url(images/top-bottom.gif) repeat-x;
+}
+
+#barDiv {
+  background:url(images/top-bottom.gif) repeat-x;
+  height:18px;
+  padding-top:2px;
+  clear:none;
+}
+.goBt {
+  cursor:hand;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(images/tool-sprites.gif) -15px -180px;
+  float:right;
+}
+.goBt_B {
+  cursor:hand;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(images/tool-sprites.gif) -15px -165px;
+  float:right;
+}
+.goBt_C {
+  cursor:hand;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(images/tool-sprites.gif) 0px -165px;
+  float:right;
+}
+.goBt_D {
+  cursor:hand;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(images/tool-sprites.gif) 0px -165px;
+  float:right;
+}
+.inConDiv {
+    padding:2px;
+    width:auto;
+    border:1px solid #99BBE8;
+    background:#FFF;
+    overflow:hidden;
+}
+.leftBg {
+  float:left;
+  width:10px;
+  height:18px;
+  font-size:1px;
+  background:url(images/corners-sprite.gif) 0px 0px no-repeat #FFFFFF;
+}
+.rightBg {
+  clear:right;
+  float:right;
+  width:10px;
+  height:18px;
+  font-size:1px;
+  background:url(images/corners-sprite.gif) -2px 0px no-repeat #FFFFFF;
+}
+.chooseDiv {
+    float:right;
+    cursor:hand;
+    cursor:pointer;
+    font:normal 12px ËÎÌå;
+    display:none;
+}
+.chooseBt {
+    font:normal 12px ËÎÌå;
+}
+.filterDiv {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+	opacity:0.5;
+}

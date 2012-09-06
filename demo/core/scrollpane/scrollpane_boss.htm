@@ -1,0 +1,142 @@
+<!-- Quriks Mode -->
+<!Doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>测试模拟滚动条</title>
+        <script type="text/javascript" src="../ace.all.js"></script> 
+		<link rel="stylesheet" href="scrollpane_boss.css"/>
+		<style>
+			body {
+				font:400 12px/20px 宋体;
+				background-color:#BFC3CC;
+			}
+			
+			* {
+				font:400 12px/18px Arial,宋体;
+			}
+			#scrollPaneBox {
+				width:300px;
+				height:300px;
+				overflow:hidden;
+				border:1px solid #FCFFFF;
+				position:relative;
+				float:left;
+				background-color:#E9EAEC;
+			}
+			#scrollPane {
+				height:300px;
+				overflow:hidden;
+			}
+			#showBox {
+				padding:5px;
+				font:400 12px/20px 宋体;
+				cursor:default;
+				zoom:1;
+			}
+		</style>
+		<script>			
+            try {
+                document.execCommand("BackgroundImageCache", false, true);
+            } catch (ex) {
+            }  		
+		</script>
+		
+	</head>
+	<body>
+		<!-- 模拟滚动条DOM基本结构 开始 -->
+		<div id="scrollPaneBox">
+			<div id="scrollPane">
+				<div id="showBox">
+				</div>
+			</div>
+		</div>
+		<!-- 模拟滚动条DOM基本结构 结束 -->
+		
+		
+		
+		<div style='position:absolute;top:370px;'>
+			<input type="button" value="增加记录" onclick="addRecord()" />
+			<input type="button" value="减少记录" onclick="delRecord()" />
+			<input type="button" value="改变窗口" onclick="resize()" />
+			<input type="button" value="dispose" onclick="dispose()" />
+			<input type="button" value="renew" onclick="renew()" />
+			<input type="button" value="滚动至顶" onclick="toTop()" />
+			<input type="button" value="滚动至底" onclick="toBottom()" />
+		</div>
+		<div style='position:absolute;top:400px;'>
+			<a href="scrollpane.htm" target="_self" style="color:#FFF">苹果效果的滚动条</a>
+		</div>
+	</body>
+	<script>
+		var str = '李清照的成长，与她所处的自然环境也是分不开的。李清照幼年，大部分时间是在风景如画，人文荟萃的家乡历城渡过的。大约在她五六岁时，因父亲李格非作了京官，她便也随父母迁居东京汴梁(今河南省开封市)。她是在东京长大的。那时候，北宋统治阶级享乐成风，东京表面上仍极繁荣。李清照作为一个士大夫阶层的大家闺秀，由于封建礼教的禁锢，不可能像男子一样走出家门。接触整个社会。但她毕竟出身于城市，不像乡村地主家里的女子那样闭塞。她不仅可以划着小船，嬉戏于藕花深处，而且可以跟着家人到东京街头，观赏奇巧的花灯和繁华的街景、这一切，陶冶了她的性情。丰富了她的精神生活。李清照爱好自然的性格和描摹的自然的能力，说明了她曾经受过故乡山东的涵育。而她在爱情描写上的"毫无顾藉"，显示了都市社会风气和文学气氛对她的熏染。';
+		
+		//ace.ui.Easing.Bounce.easeOut
+		var box = ace.g('scrollPaneBox'), pane = ace.g('scrollPane'), showbox = ace.g('showBox');
+		var scrollpane = new ace.ui.ScrollPane(pane, box, null, null, true);
+		
+		ace.on(box, 'mouseover', function(){
+			//scrollpane && scrollpane.showScroll();
+		});
+		ace.on(box, 'mouseout', function(){
+			//scrollpane && scrollpane.hideScroll();
+		});
+		//scrollpane.hideScroll();
+		
+		
+		var count = 1, arr = [];
+		for(var i = 0 ; i < 1 ; i ++){
+			arr.push('<div style="margin:5px 0;font:400 12px/20px normal">' + str + '<font color="red">[order '+(i+1)+']</font></div>');
+		}
+		
+		showbox.innerHTML = arr.join('');
+		
+		function addRecord(){
+			count += 3;
+			var tArr = new Array(count);
+			for(var i = 0 ; i < tArr.length; i ++){
+				tArr[i] = arr.join('');
+			}
+			showbox.innerHTML = tArr.join('');	
+		}
+		function delRecord(){
+			count -= 3;
+			if(count < 0){count = 0;}
+			var tArr = new Array(count);
+			for(var i = 0 ; i < tArr.length; i ++){
+				tArr[i] = arr.join('');
+			}
+			showbox.innerHTML = tArr.join('');		
+		}
+		
+		function dispose(){
+			scrollpane.dispose();
+			scrollpane = null;
+		}
+		
+		function renew(){
+			if(scrollpane) return;
+			scrollpane = new ace.ui.ScrollPane(pane, box, null, null, true);
+		}
+		var x = 300;
+		function resize(){
+			if (x == 300) {
+				box.style.height = '350px';
+				box.style.width = '350px';
+				x = 350;
+			}else{
+				box.style.height = '300px';	
+				box.style.width = '300px';
+				x = 300;			
+			}
+			scrollpane.onresze();
+		}
+		
+		function toTop(){
+			scrollpane && scrollpane.scrollToTop();
+		}
+		function toBottom(){
+			scrollpane && scrollpane.scrollToBottom();
+		}
+	</script>
+</html>

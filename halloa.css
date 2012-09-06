@@ -1,0 +1,169 @@
+body {
+  overflow:hidden;
+  margin:0px;
+  padding:0px;
+  background:#000;
+  width:100%;
+  height:100%;
+}
+* {
+  font-size:1px;
+  line-height:100%;
+}
+
+.head {
+  background:#000000 url(halloa.gif) 0px -422px repeat-x;
+  height:78px;
+  overflow:hidden;
+}
+.head .zoomDiv {
+  float:right;
+  background:url(halloa.gif) -169px -158px no-repeat;
+  width:35px;
+  height:35px;
+  margin:20px 10px 0 0;
+  cursor:pointer;
+}
+.head .logo {
+  background:url(halloa.gif) 0px -0px no-repeat;
+  height:78px;
+  width:299px;
+  float:left;
+}
+.head .menu {
+  background:url(halloa.gif) 0px -342px repeat-x;
+  height:78px;
+  float:left;
+}
+.head .menu div {
+  float:left;
+}
+.head .menu .itemChecked {
+  background:url(halloa.gif) -169px -127px no-repeat;
+  width:84px;
+  height:30px;
+  margin-top:48px;
+  margin-left:10px;
+  display:block;
+  text-align:center;
+  font:normal 12px Verdana;
+  color:#FF6600;
+  cursor:default;
+  padding-top:5px;
+}
+.head .menu .item {
+  background:url(halloa.gif) -169px -83px no-repeat;
+  width:84px;
+  height:30px;
+  margin-top:48px;
+  margin-left:10px;
+  display:block;
+  text-align:center;
+  font:normal 12px Verdana;
+  color:#999;
+  cursor:pointer;
+  padding-top:5px;
+}
+.head .menuEnd {
+  background:url(halloa.gif) 0px -262px no-repeat;
+  height:78px;
+  width:308px;
+  float:left;
+}
+
+.body {
+  height:100%;
+}
+.body .frameLeft {
+  width:40px;
+  float:left;
+}
+.body .frameLeft .lLogo {
+  background:url(halloa.gif) 0px -78px no-repeat;
+  width:40px;
+  height:89px;
+}
+.body .frameLeft .lBody {
+  background:url(halloa2.gif) 0px 0px repeat-y;
+  width:40px;
+  height:89px;
+}
+.body .lBody .rezoomDiv {
+  background:url(halloa.gif) -166px -193px no-repeat;
+  width:35px;
+  height:35px;
+  cursor:pointer;
+  position:absolute;
+  left:-2px;
+  bottom:2px;
+}
+.body .lBody .leftMenu {
+}
+.body .lBody .leftMenu td {
+  vertical-align:middle;
+  font:normal 12px Verdana;
+  padding-left:6px;
+}
+.body .lBody .leftMenu .itemChecked {
+  background:url(halloa.gif) -89px -160px no-repeat;
+  height:84px;
+  width:30px;
+  margin-left:7px;
+  margin-bottom:10px;
+  display:block;
+  font:normal 12px Verdana;
+  color:#FF6600;
+  cursor:default;
+  overflow:hidden;
+}
+.body .lBody .leftMenu .item {
+  background:url(halloa.gif) -55px -160px no-repeat;
+  height:84px;
+  width:30px;
+  margin-left:7px;
+  margin-bottom:10px;
+  display:block;
+  font:normal 12px Verdana;
+  color:#999;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.body .frameLeft .lFoot {
+  background:url(halloa.gif) 0px -170px no-repeat;
+  width:40px;
+  height:43px;
+}
+.body .frame {
+  margin-left:40px;
+  height:214px;
+}
+.body .bFoot {
+  margin-left:38px;
+  height:6px;
+  background:url(halloa.gif) 0px -248px repeat-x;
+}
+
+.foot {
+  height:74px;
+  width:auto;
+  overflow:hidden;
+}
+.foot .footLogo {
+  background:url(halloa.gif) -55px -85px no-repeat;
+  float:right;
+  height:74px;
+  width:86px;
+}
+.foot .footCopy {
+  padding-left:50px;
+  padding-top:30px;
+}
+.foot .footCopy .tcpIp {
+  font:normal 12px Verdana;
+  color:#FF6600;
+}
+.foot .footCopy .copyRight {
+  font:normal 12px Verdana;
+  color:#666;
+}

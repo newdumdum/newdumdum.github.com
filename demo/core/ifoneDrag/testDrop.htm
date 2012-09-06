@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> DragEffect </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus"></div>
+  <meta name="author" content=""></div>
+  <meta name="keywords" content=""></div>
+  <meta name="description" content=""></div>
+  <style>
+  html {
+    height:100%;
+  }
+  body {
+    height:100%;
+    background:#FFF;
+	margin:0px;
+	padding:0px;
+  }
+  #dragArea {
+    margin:0px;
+    padding:0px;
+    background:#FFF;
+    overflow:hidden;
+    zoom:1;
+  }
+
+  #dragArea div {
+    float:left;
+    width:70px;
+    height:92px;
+	background:#FFF;
+    margin:10px;
+    font:normal 12px Arial,宋体;
+  }
+  #dragArea div div {
+	margin:0px;
+  }
+
+  #dragArea div p {
+    font:normal 12px Arial,宋体;
+	height:12px;
+	text-align:center;
+	margin:0px;
+  }
+  </style>
+  <script src="DragBlock.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+  <div id="dragArea">
+  </div>
+  <div id='test'></div>
+ </body>
+
+ 
+  <script>
+  var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13,1,2,3,4,5,6,7,8,9,10,11,12,13];
+  for(var i = 0 ; i < arr.length ; i ++){
+      var div = document.createElement('div');
+      div.setAttribute('data_drag','1');
+      div.innerHTML = '<div><img src="images/'+arr[i]+'.png"/><p>描述_'+i+'</p></div>';
+      document.getElementById('dragArea').appendChild(div);
+  }
+
+  var drag = new DragBlock();
+  drag.init({
+      render: document.getElementById('dragArea')
+      ,attribute: 'data_drag'
+  });
+  
+  /*
+  drag.beforedrag = function(){
+      console.log('drag start');
+  }
+
+  drag.dragend = function(){
+      console.log('drag end');
+  }
+  */
+
+  </script>
+</html>

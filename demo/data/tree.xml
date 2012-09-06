@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Response>
+		<Data>
+			<Tree>
+				<TreeNode id="1" name="控件列表">
+            <!--<TreeNode id="3" name="BoxLayer" src="core/boxLayer/Example.htm"></TreeNode>-->
+            <TreeNode id="4" name="Calendar" src="core/Calendar/Example.htm"></TreeNode>
+            <TreeNode id="6" name="CommonSelect" src="core/commonSelect/Example.htm"></TreeNode>
+            <TreeNode id="7" name="DragLayer" src="core/dragLayer/Example.htm"></TreeNode>
+            <TreeNode id="9" name="FlashLine" src="core/Line/Example.htm"></TreeNode>
+            <TreeNode id="10" name="FlashMeter" src="core/Meter/Example.htm"></TreeNode>
+            <TreeNode id="11" name="ScrollTab" src="core/ScrollTab/Example.htm"></TreeNode>
+            <TreeNode id="12" name="SiderBar" src="core/SiderBar/Example.htm"></TreeNode>
+            <TreeNode id="13" name="SimpleGrid" src="core/SimpleGrid/Example.htm"></TreeNode>
+            <TreeNode id="14" name="SimpleTree" src="core/SimpleTree/Example.htm"></TreeNode>
+            <TreeNode id="16" name="VerticalTree" src="core/VerticalTree/Example.htm"></TreeNode>
+            <TreeNode id="15" name="SliderPicShow" src="core/SliderPicShow/Example.htm"></TreeNode>
+            <TreeNode id="8" name="ImitateFlashMenu" src="core/imitateFlashMenu/Example.htm"></TreeNode>
+            <TreeNode id="5" name="Clock" src="core/clock/Example.htm"></TreeNode>
+        </TreeNode>
+			</Tree>
+		</Data>
+	</Response>

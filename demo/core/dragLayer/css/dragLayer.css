@@ -1,0 +1,331 @@
+/* 开启背景图片缓存功能 */
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+
+.moveContentsDiv {
+  overflow:hidden;
+  background:url(../images/top-bottom.gif) repeat-x;
+}
+.moveContentsDiv * {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    text-align:left;
+    font:normal 12px Arial,宋体;
+    position:static;
+    overflow:auto;
+}
+
+.moveContentsDiv .barDiv {
+  background:url(../images/top-bottom.gif) repeat-x;
+  height:18px;
+  padding-top:2px;
+  clear:none;
+}
+.moveContentsDiv .moveDiv_leftBg {
+  float:left;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite.gif) 0px 0px no-repeat;
+}
+.moveContentsDiv .moveDiv_rightBg {
+  clear:right;
+  float:right;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite.gif) -9px 0px no-repeat;
+}
+.moveContentsDiv .inConDiv {
+    padding:2px;
+    width:auto;
+    border:1px solid #99BBE8;
+    background:#FFF;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+}
+.moveContentsDiv .moveBlockTitle {
+    float:left;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+    color:#264390;
+    word-break:keep-all;
+    white-space:noWrap;
+    text-overflow:ellipsis;
+    width:120px;
+    height:16px;
+    cursor:default;
+    z-index:0;
+    padding-top:1px;
+}
+.moveContentsDiv .buttonContainer {
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  height:15px;
+  float:right;
+}
+.moveContentsDiv .blockButton {
+  display:inline;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites.gif) no-repeat;
+  margin-left:2px;
+}
+.moveContentsDiv .Moz_blockButton {
+  display:inline-block;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites.gif) no-repeat;
+  margin-left:2px;
+}
+
+/* PINK STYLE */
+.moveContentsDiv_pink {
+  overflow:hidden;
+  background:url(../images/top-bottom_pink.gif) repeat-x;
+}
+
+.moveContentsDiv_pink .barDiv_pink {
+  background:url(../images/top-bottom_pink.gif) repeat-x;
+  height:18px;
+  padding-top:2px;
+  clear:none;
+}
+.moveContentsDiv_pink .moveDiv_leftBg_pink {
+  float:left;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_pink.gif) 0px 0px no-repeat;
+}
+.moveContentsDiv_pink .moveDiv_rightBg_pink {
+  clear:right;
+  float:right;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_pink.gif) -9px 0px no-repeat;
+}
+.moveContentsDiv_pink .inConDiv_pink {
+    padding:2px;
+    width:auto;
+    border:1px solid #E198E7;
+    background:#FFF;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+}
+.moveContentsDiv_pink .moveBlockTitle_pink {
+    float:left;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+    color:#8F2687;
+    word-break:keep-all;
+    white-space:noWrap;
+    text-overflow:ellipsis;
+    width:120px;
+    height:16px;
+    cursor:default;
+    z-index:0;
+    padding-top:1px;
+}
+.moveContentsDiv_pink .buttonContainer_pink {
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  height:15px;
+  float:right;
+}
+.moveContentsDiv_pink .blockButton {
+  display:inline;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_pink.gif) no-repeat;
+  margin-left:2px;
+}
+.moveContentsDiv_pink .Moz_blockButton {
+  display:inline-block;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_pink.gif) no-repeat;
+  margin-left:2px;
+}
+
+/* GREEN STYLE */
+.moveContentsDiv_green {
+  overflow:hidden;
+  background:url(../images/top-bottom_green.gif) repeat-x;
+}
+
+.moveContentsDiv_green .barDiv_green {
+  background:url(../images/top-bottom_green.gif) repeat-x;
+  height:18px;
+  padding-top:2px;
+  clear:none;
+}
+.moveContentsDiv_green .moveDiv_leftBg_green {
+  float:left;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_green.gif) 0px 0px no-repeat;
+}
+.moveContentsDiv_green .moveDiv_rightBg_green {
+  clear:right;
+  float:right;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_green.gif) -9px 0px no-repeat;
+}
+.moveContentsDiv_green .inConDiv_green {
+    padding:2px;
+    width:auto;
+    border:1px solid #98E79D;
+    background:#FFF;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+}
+.moveContentsDiv_green .moveBlockTitle_green {
+    float:left;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+    color:#268F3F;
+    word-break:keep-all;
+    white-space:noWrap;
+    text-overflow:ellipsis;
+    width:120px;
+    height:16px;
+    cursor:default;
+    z-index:0;
+    padding-top:1px;
+}
+.moveContentsDiv_green .buttonContainer_green {
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  height:15px;
+  float:right;
+}
+.moveContentsDiv_green .blockButton {
+  display:inline;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_green.gif) no-repeat;
+  margin-left:2px;
+}
+.moveContentsDiv_green .Moz_blockButton {
+  display:inline-block;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_green.gif) no-repeat;
+  margin-left:2px;
+}
+
+/* YELLOW STYLE */
+.moveContentsDiv_yellow {
+  overflow:hidden;
+  background:url(../images/top-bottom_yellow.gif) repeat-x;
+}
+
+.moveContentsDiv_yellow .barDiv_yellow {
+  background:url(../images/top-bottom_yellow.gif) repeat-x;
+  height:18px;
+  padding-top:2px;
+  clear:none;
+}
+.moveContentsDiv_yellow .moveDiv_leftBg_yellow {
+  float:left;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_yellow.gif) 0px 0px no-repeat;
+}
+.moveContentsDiv_yellow .moveDiv_rightBg_yellow {
+  clear:right;
+  float:right;
+  width:3px;
+  height:18px;
+  font-size:1px;
+  background:url(../images/corners-sprite_yellow.gif) -9px 0px no-repeat;
+}
+.moveContentsDiv_yellow .inConDiv_yellow {
+    padding:2px;
+    width:auto;
+    border:1px solid #E7C198;
+    background:#FFF;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+}
+.moveContentsDiv_yellow .moveBlockTitle_yellow {
+    float:left;
+    overflow:hidden;
+    font:normal 12px Verdana,宋体;
+    color:#8F6E26;
+    word-break:keep-all;
+    white-space:noWrap;
+    text-overflow:ellipsis;
+    width:120px;
+    height:16px;
+    cursor:default;
+    z-index:0;
+    padding-top:1px;
+}
+.moveContentsDiv_yellow .buttonContainer_yellow {
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  height:15px;
+  float:right;
+}
+.moveContentsDiv_yellow .blockButton {
+  display:inline;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_yellow.gif) no-repeat;
+  margin-left:2px;
+}
+.moveContentsDiv_yellow .Moz_blockButton {
+  display:inline-block;
+  cursor:default;
+  cursor:pointer;
+  font:normal 10px Arial;
+  width:15px;
+  height:15px;
+  background:url(../images/tool-sprites_yellow.gif) no-repeat;
+  margin-left:2px;
+}
+.moveContentsDiv .waitingLayer {
+    background:#F1F1F1;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity:0.7;
+}
+
+.DragLayerFilterDiv {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    cursor:move;
+}

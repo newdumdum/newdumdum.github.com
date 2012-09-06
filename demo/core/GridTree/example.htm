@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> GridTree </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!-- ajax js 开始 -->
+  <script language="javascript" src="../ajax.js"></script>
+  <!-- ajax js 结束 -->
+
+  <!-- pulic Css 开始 -->
+  <link href="../public/css/pageInfo.css" type="text/css" rel="stylesheet" />
+  <!-- pulic Css 结束 -->
+
+  <!-- GridTree JS CSS 开始 -->
+  <script language="javascript" src="js/gridTree.js"></script>
+  <link href="css/gridTree.css" type="text/css" rel="stylesheet">
+  <!-- GridTree JS CSS 结束 -->
+  <script language="javascript">
+  <!--
+    var g = null;
+
+    function init(){
+        var p = new ajax();
+        //p.url = "data/gridTree.xml";
+        p.url = "../../service/gridTree.asp";
+        p.onresult = function(){
+            var data = this.data.selectSingleNode(".//GridTree");
+            buildGrid(data);
+        }
+        p.send();
+    }
+
+    function buildGrid(data){
+        g = new GridTree("gridTreeDiv");
+        g.hasCheckBox = true;
+        g.editable = true;
+        g.load(data);
+    }
+
+    function getSelectedNode(){
+        var nodes = g.getSelectedRows();
+        alert(nodes);
+    }
+    function getEditNode(){
+        var nodes = g.getEditRows();
+        alert(nodes);
+    }
+
+    window.onload = init;
+  //-->
+  </script>
+  <style type="text/css">
+  body {
+      background:#FFFFFF;
+  }
+  * {
+      font:normal 12px Arial,宋体;
+  }
+  </style>
+ </head>
+
+ <body scroll=no>
+    <div id="gridTreeDiv">
+    </div>
+
+    <input type=button value="取选择数据" onclick="getSelectedNode()" />
+    <input type=button value="取编辑数据" onclick="getEditNode()" />
+ </body>
+</html>

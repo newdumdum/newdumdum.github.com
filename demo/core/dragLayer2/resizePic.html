@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> resizepic </title>
+<meta http-equiv="content-type" content="text/html; charset=gb2312" />
+<meta name="generator" content="editplus">
+<meta name="author" content="shich">
+<meta name="keywords" content="smooth move">
+<meta name="description" content="show the pic that can resize and move smooth">
+<link href="resizepic.css"	rel="stylesheet" type="text/css"></link>
+<script language="javascript" src="resizepic.js"></script>
+<style>
+html {
+  height:100%;
+}
+body {
+  height:100%;
+}
+</style>
+</head>
+
+<body ondragstart='return false' onselectstart ='return false' onselect='document.selection.empty()' bgcolor="#FFFFFF">
+<div class="chooseDiv" ><input type="button" value="随机选择图片" onclick="javascript:getImgInfo(1);" class="chooseBt"/></div>
+<div id="outDiv" style="display:none">
+  <div class="leftBg"></div>
+  <div class="rightBg"></div>
+  <div id="barDiv">
+    <div id="goBT" class="goBt">&nbsp;</div>
+  </div>
+  <div id="inConDiv" class="inConDiv">
+  </div>
+</div>
+
+</body>
+</html>

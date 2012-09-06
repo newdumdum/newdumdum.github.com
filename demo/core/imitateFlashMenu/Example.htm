@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> Imiate Flash Menu2 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="generator" content="editplus">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script language="JavaScript">
+__PATH = "files/";
+__RUNMINOVER = true;
+__RUNMAXOVER = true;
+__RUNRATE = 10;
+__RUNPARAMS = 8;
+__COLORARR = new Array("#FF0198","#3C3","#F30","#32CCFE","#F2BF66","#CC8DFF");
+
+$ = function (id,isTagName){
+  return isTagName ? document.getElementsByTagName(id) : document.getElementById(id);
+}
+// 开启IE背景缓存
+try{
+    document.execCommand("BackgroundImageCache",false,true);
+}catch(e){};
+
+// 数据初始化 添加图片信息到Image对象
+function init(){
+    var boxDiv = $("boxDiv");
+    var divs = boxDiv.childNodes;
+    var imgArr = new Array();
+    var count = 0;
+    for(var k=0;k<divs.length;k++){
+        if(divs[k].id != null){
+            var img = new Image();
+            img.src = __PATH + "bg"+(count+1)+".jpg";
+            imgArr[k] = img;
+            count ++;
+        }
+    }
+    for(var i=0;i<divs.length;i++){
+        var curDiv = divs[i];
+        AddDivCmd(curDiv,i,imgArr);
+    }
+}
+
+// 添加图片DIV事件
+function AddDivCmd(curDiv,i,imgArr){
+    if(curDiv.id != null){
+        if(curDiv.id == "subMenu1"){
+            curDiv.className = "sparetMenu";
+            curDiv.style.height = "100";
+            curDiv.style.backgroundImage = "url(" + imgArr[i].src + ")";
+        }else{
+            curDiv.className = "collapseMenu";
+        }
+
+        var titleDiv = curDiv.getElementsByTagName("div")[0];
+        titleDiv.setAttribute("markOrder",i);
+        titleDiv.onmouseover = function(){
+            this.setAttribute("overed","true");
+            var markOrder = this.getAttribute("markOrder");
+            var outDiv = this.parentNode;
+            var oldDiv,oldID = boxDiv.getAttribute("focusDiv");
+            if(null == oldID){
+                oldDiv = $("subMenu1");
+            }else{
+                oldDiv = $(oldID);
+            }
+            GiveMaxOrMinPic(boxDiv,outDiv,oldDiv,imgArr,markOrder,this);
+            SetRightCon(markOrder);
+        }
+        titleDiv.onmouseout = function(){
+            this.setAttribute("overed",false);
+        }
+    }
+}
+
+// 添加放大和缩小效果
+function GiveMaxOrMinPic(boxDiv,outDiv,oldDiv,imgArr,markOrder,oThis){
+    if(__RUNMINOVER && __RUNMAXOVER && oldDiv != outDiv){
+        boxDiv.setAttribute("focusDiv",outDiv.id);
+        resizeHeight(oldDiv,0);
+        oldDiv.className = "collapseMenu";
+
+        outDiv.className = "sparetMenu";
+        outDiv.style.backgroundImage = "url(" + imgArr[markOrder].src + ")";
+        resizeHeight(outDiv,1);
+    }else{
+        setTimeout(function(){
+            if(oThis.getAttribute("overed") == "true"){
+                GiveMaxOrMinPic(boxDiv,outDiv,oldDiv,imgArr,markOrder,oThis);
+            }
+        },__RUNRATE);
+    }
+}
+
+// 调整高度
+function resizeHeight(obj,order){
+    var oHeight = obj.getAttribute("oHeight");
+    if(order == 0){
+        if(null == oHeight){oHeight = 100;};
+        var runLarge = Math.abs((24 - parseInt(oHeight))/__RUNPARAMS) + 1;
+        var curHeihgt = parseInt(parseInt(oHeight) - runLarge);
+        obj.style.height = curHeihgt;
+        obj.setAttribute("oHeight",curHeihgt);
+        if(curHeihgt > 24){
+            setTimeout(function(){
+                resizeHeight(obj,order);
+            },__RUNRATE);
+            __RUNMINOVER = false;
+        }else{
+            __RUNMINOVER = true;
+        }
+    }else if(order == 1){
+        if(null == oHeight){oHeight = 24;};
+        var runLarge = Math.abs((100 - parseInt(oHeight))/__RUNPARAMS) + 1;
+        var curHeihgt = parseInt(parseInt(oHeight) + runLarge);
+        obj.style.height = curHeihgt;
+        obj.setAttribute("oHeight",curHeihgt);
+        if(curHeihgt < 100){
+            setTimeout(function(){
+                resizeHeight(obj,order);
+            },__RUNRATE);
+            __RUNMAXOVER = false
+        }else{
+            __RUNMAXOVER = true;
+        }
+    }
+}
+
+// 设置对应右侧内容
+function SetRightCon(order){
+    var conDiv = $("showContent");
+    var color = __COLORARR[order];
+    conDiv.style.backgroundColor = color;
+}
+
+window.onload = init;
+</script>
+
+<style type="text/css">
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+body {
+  background:#FFFFFF;
+}
+#boxDiv {
+  display:block;
+  width:235px;
+  float:left;
+}
+.subMenu {
+    height:24px;
+    background:url(files/subMenuBg_1.jpg);
+    font:bold 12px 宋体;
+    color:#FFF;
+    padding:6px 0px 0px 10px;
+    cursor:pointer;
+}
+.collapseMenu {
+  height:24px;
+  overflow:hidden;
+}
+.collapseMenu .subMenu {
+    background:url(files/subMenuBg_1.jpg);
+    height:24px;
+}
+.sparetMenu {
+  overflow:hidden;
+}
+.sparetMenu .subMenu {
+    background:transparent;
+    height:24px;
+}
+.subContent {
+    overflow:hidden;
+    cursor:default;
+    font:normal 12px 宋体;
+    padding:5px;
+    color:#FFF;
+    word-break:break-all;
+}
+#showContent {
+  display:block;
+  width:400px;
+  height:220px;
+  border:1px solid red;
+  cursor:default;
+  visibility:hidden;
+}
+</style>
+</head>
+
+<body>
+<div id="boxDiv">
+  <div id="subMenu1">
+      <div class="subMenu">This Land Is Mine</div>
+      <div class="subContent">From behind these walls hear your song.<br />Oh,sweet words...</div>
+  </div>
+  <div id="subMenu2">
+      <div class="subMenu">世界末日的某个角落</div>
+      <div class="subContent">阳光穿透,空气稀薄.</div>
+  </div>
+  <div id="subMenu3">
+      <div class="subMenu">陈胜吴广</div>
+      <div class="subContent">呼喊你,快给我站起来.<br />踏着我超度去天堂...</div>
+  </div>
+  <div id="subMenu4">
+      <div class="subMenu">完善夏天</div>
+      <div class="subContent">想用我的疯狂,换取你的留恋.<br />用燃烧证明你的美.</div>
+  </div>
+  <div id="subMenu5">
+      <div class="subMenu">You raise me up</div>
+      <div class="subContent">When i'm down and my soul so weary,When troubles come and my hear burned be,Then i'm still wait here in the silence,Until you come and sit a while with me.You raise me up ,so i can stand on the montains,You raise me up,to walk on stormy seas.</div>
+  </div>
+  <div id="subMenu6">
+      <div class="subMenu">直到最后那天</div>
+      <div class="subContent">我看盛开的鲜花在枯萎.</div>
+  </div>
+</div>
+<div id="showContent">
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+.gridTree {
+}
+.gridTree .mainTable {
+    border-collapse:collapse;
+    border:1px solid #D0D0D0;
+    width:100%;
+    background:#FFFFFF;
+}
+.gridTree .mainTable .title {
+    background: #FFFFFF url(../images/lessGridTitle.gif) repeat-x;
+    font:normal 12px Arial,宋体;
+    *work-break:keep-all;
+    white-space:noWrap;
+    height:23px;
+    line-height:120%;
+    border-bottom: 1px solid #D0D0D0;
+    cursor:default;
+}
+.gridTree .mainTable .contentTD {
+    font:normal 12px Arial,宋体;
+    line-height:120%;
+    border:1px solid #F0F0F0;
+    cursor:default;
+    height:20px;
+    background-image:url(../images/lessGridRow.gif);
+}
+.gridTree .mainTable .contentTD .contentTitleTD {
+    font:normal 12px Arial,宋体;
+    line-height:120%;
+    border:0px;
+    cursor:default;
+}
+.gridTree .mainTable .contentCB {
+    font:normal 12px Arial,宋体;
+    line-height:120%;
+    border:1px solid #F0F0F0;
+    cursor:default;
+    text-align:center;
+    background: url(../images/lessGridRow.gif);
+}
+.gridTree .icon {
+    cursor:default;
+    width:9px;
+    height:9px;
+    display:-moz-inline-block;
+}
+.gridTree .iconO {
+    background:url(../images/minus.gif) no-repeat -5px -6px;
+    cursor:default;
+    width:9px;
+    height:9px;
+    display:-moz-inline-block;
+    *position:relative;
+    *left:0px;
+    *top:2px;
+}
+.gridTree .iconC {
+    background:url(../images/plus.gif) no-repeat -5px -6px;
+    cursor:default;
+    width:9px;
+    height:9px;
+    display:-moz-inline-block;
+    *position:relative;
+    *left:0px;
+    *top:2px;
+}
+
+
+.gridTree .rowA {
+	  background:#FAFAFA;
+}
+.gridTree .rowB {
+	  background:#FFF;
+}
+.gridTree .rowC {
+	  background:#FFF url(../images/lessGridRow.gif);
+}
+.gridTree .titleCB {
+    width:15px;
+    background-image:url(../images/lessGridRow.gif);
+    font:normal 12px Arial,宋体;
+    line-height:120%;
+    border:1px solid #B6B6B6;
+    cursor:default;
+}
+.gridTree .cb {
+    width:13px;
+    height:13px;
+}
+.gridTree .Ipt {
+    width:95%;
+    height:14px;
+    font:normal 12px Arial,宋体;
+    border:1px solid #FF6600;
+}

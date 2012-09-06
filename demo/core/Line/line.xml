@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Response>
+    <LineInfo>
+        <YAXIS MaxValue="1200" MinValue="0" DefValue="720">
+          <![CDATA[核心负债依存度]]>
+        </YAXIS>
+        <LineAlarmColor>
+            <!-- 
+            这里的value指的是宽度 默认是以红，黄，绿顺序向上排列(其实绿色区的值没啥作用的。。。) ;
+            如果颜色是逆向的 可以在节点上加上color属性 值为16进制的颜色编码
+            那个区域顺序不变 颜色为自己指定区域颜色
+            默认值为  红色:color="0xFDD0D0"
+                      黄色:color="0xFFEAB0"
+                      绿色:color="0xDBF4D2"
+            -->
+            <RedValue value="465" />
+            <YellowValue value="575" />
+            <GreenValue value="0" />
+        </LineAlarmColor>
+    </LineInfo>
+</Response>

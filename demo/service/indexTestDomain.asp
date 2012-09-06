@@ -1,0 +1,42 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<%
+Option Explicit
+response.ContentType = "text/json"
+Dim str
+str = "<?xml version=""1.0"" encoding=""utf-8""?>"
+str = str + "	<Response>"
+str = str + "		<Data>"
+str = str + "			<Tree>"
+str = str + "				<TreeNode id=""1"" name=""控件列表"">"
+str = str + "            <!--<TreeNode id=""3"" name=""BoxLayer"" src=""core/boxLayer/Example.htm""></TreeNode>-->"
+str = str + "            <TreeNode id=""4"" name=""Calendar"" src=""core/Calendar/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""6"" name=""CommonSelect"" src=""core/commonSelect/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""7"" name=""DragLayer"" src=""core/dragLayer/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""19"" name=""DragLayer2"" src=""core/dragLayer2/resizePic.html""></TreeNode>"
+str = str + "            <TreeNode id=""9"" name=""FlashLine"" src=""core/Line/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""10"" name=""FlashMeter"" src=""core/Meter/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""21"" name=""FlashCpu"" src=""core/Cpu/cpu.htm""></TreeNode>"
+str = str + "            <TreeNode id=""20"" name=""FlashCpu2"" src=""core/cpuNode/cpu.htm""></TreeNode>"
+str = str + "            <TreeNode id=""11"" name=""ScrollTab"" src=""core/ScrollTab/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""12"" name=""SiderBar"" src=""core/SiderBar/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""13"" name=""SimpleGrid"" src=""core/SimpleGrid/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""22"" name=""GridTree"" src=""core/GridTree/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""14"" name=""SimpleTree"" src=""core/SimpleTree/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""16"" name=""VerticalTree"" src=""core/VerticalTree/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""15"" name=""SliderPicShow"" src=""core/SliderPicShow/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""8"" name=""ImitateFlashMenu"" src=""core/imitateFlashMenu/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""18"" name=""ImitateFlashMenu2"" src=""core/flashMenu2/duoziPen.htm""></TreeNode>"
+str = str + "            <TreeNode id=""17"" name=""TansferPic"" src=""core/flashNews/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""5"" name=""Clock"" src=""core/clock/Example.htm""></TreeNode>"
+str = str + "            <TreeNode id=""23"" name=""Flip Ex."" src=""core/flip/flip.htm""></TreeNode>"
+str = str + "            <TreeNode id=""24"" name=""Player"" src=""core/player/SoundDeal.html""></TreeNode>"
+str = str + "            <TreeNode id=""25"" name=""Sina WebIM"" src=""core/webim/call.html""></TreeNode>"
+'str = str + "            <TreeNode id=""26"" name=""AppleDrag"" src=""core/ifonedrag/testDrop.htm""></TreeNode>"
+str = str + "            <TreeNode id=""28"" name=""ChromeDrag"" src=""core/drag_chrome/testDrop.htm""></TreeNode>"
+str = str + "        </TreeNode>"
+str = str + "			</Tree>"
+str = str + "		</Data>"
+str = str + "	</Response>"
+
+response.write(str)
+%>

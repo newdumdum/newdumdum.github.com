@@ -1,0 +1,52 @@
+<!-- saved from url=(0013)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>  halloa  </title>
+</head>
+<body>
+<style type="text/css">
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    border:none;
+    background:#4682B4;
+    overflow:hidden;
+}
+</style>
+<script language="JavaScript">
+<!--
+var isInternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+// Handle all the FSCommand messages in a Flash movie.
+function photo_DoFSCommand(command, args) {
+	var photoObj = isInternetExplorer ? document.all.photo : document.photo;
+	//
+	// Place your code here.
+	//
+}
+// Hook for Internet Explorer.
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+	document.write('<script language=\"VBScript\"\>\n');
+	document.write('On Error Resume Next\n');
+	document.write('Sub photo_FSCommand(ByVal command, ByVal args)\n');
+	document.write('	Call photo_DoFSCommand(command, args)\n');
+	document.write('End Sub\n');
+	document.write('</script\>\n');
+}
+//-->
+</script>
+<!--url's used in the movie-->
+<!--text used in the movie-->
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" id="photo" width="100%" height="100%" align="middle">
+  <param name="allowScriptAccess" value="sameDomain" />
+  <param name="allowFullScreen" value="true" />
+  <param name="movie" value="photo.swf" />
+  <param name="quality" value="high" />
+  <param name="flashvars" value="serverUrl=demo/service/flashPhoto.asp&soundUrl=pageSound/jsr.htm" />
+  <param name="bgcolor" value="#4682B4" />
+  <embed flashvars="serverUrl=demo/service/flashPhoto.asp&soundUrl=pageSound/jsr.htm" src="photo.swf" quality="high" bgcolor="#4682B4" width="100%" height="100%" swLiveConnect=true id="photo" name="photo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+</body>
+</html>

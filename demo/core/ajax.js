@@ -49,7 +49,7 @@
           }
       }
 
-      this.http.open("POST", this.url, true);
+      this.http.open(this.method || "GET", this.url, true);
       this.http.setRequestHeader("REQUEST-TYPE","xmlhttp");
       //this.http.setRequestHeader("REFERER", this.url);
       this.http.setRequestHeader("CONTENT-TYPE","text/xml");

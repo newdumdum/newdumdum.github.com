@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> tree </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!-- ajax js 开始 -->
+  <script language="javascript" src="../ajax.js"></script>
+  <!-- ajax js 结束 -->
+
+  <!-- pulic Css 开始 -->
+  <link href="../public/css/pageInfo.css" type="text/css" rel="stylesheet" />
+  <!-- pulic Css 结束 -->
+
+  <!-- 简单树JS CSS 开始 -->
+  <script language="javascript" src="js/simpleTree.js"></script>
+  <link href="css/simpleTree.css" type="text/css" rel="stylesheet" />
+  <!-- 简单树JS CSS 结束 -->
+  <script language="javascript">
+  <!--
+    function init(){
+        var p = new ajax();
+        p.url = "data/tree.xml";
+        //p.url = "../../service/simpleTree.asp";
+        p.onresult = function(){
+            var data = this.text;
+            buildTree(data);
+        }
+        p.send();
+    }
+
+    function buildTree(data){
+        var str = data;
+        var treeObj = document.getElementById("tree");
+        var tree = new SimpleTree();
+        tree.container = treeObj;
+        tree.iconPath = treeObj.getAttribute("iconPath");
+        tree.dataStr = str;
+        tree.radioBox = true;
+        tree.updateBox = true;
+        tree.init();
+
+        tree.OnClick = function(){
+            var treeNode = this.selectedNode;
+            var codeID = treeNode.getAttribute("id");
+            alert(codeID);
+        }
+
+        
+        var treeObj2 = document.getElementById("tree2");
+        var tree2 = new SimpleTree();
+        tree2.container = treeObj2;
+        tree2.iconPath = treeObj2.getAttribute("iconPath");
+        tree2.dataStr = str;
+        tree2.checkBox = true;
+        tree2.updateBox = true;
+        tree2.init();
+
+        tree2.OnClick = function(){
+            var treeNode = this.selectedNode;
+            var codeID = treeNode.getAttribute("id");
+            //alert(codeID);
+        }
+    }
+
+    window.onload = init;
+  //-->
+  </script>
+  <style type="text/css">
+  body {
+      background:#FFFFFF;
+  }
+  </style>
+ </head>
+
+ <body scroll=no>
+    <div style="display:-moz-inline-block;width:50%;height:100%;float:right;">
+      <div id="tree2" iconPath="images/">
+      </div>
+    </div>
+    <div style="display:-moz-inline-block;width:50%;height:100%;border-right:1px solid #CCC;">
+      <div id="tree" iconPath="images/">
+      </div>
+    </div>
+ </body>
+</html>

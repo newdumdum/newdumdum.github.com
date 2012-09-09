@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Response>
+		<Data>
+			<Tree>
+				<TreeNode id="0" name="精品课程建设工程" src="pages/welcome.html">
+					<TreeNode id="1" name="课程负责人" _opened="false" src="pages/1.html">
+						<TreeNode id="1-1" name="基本信息" src="pages/1-1.html"></TreeNode>
+						<TreeNode id="1-2" name="教学情况" src="pages/1-2.html"></TreeNode>
+						<TreeNode id="1-3" name="学术研究" src="pages/1-3.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="2" name="主讲教师" _opened="false" src="pages/2.html">
+						<TreeNode id="2-1" name="主讲教师一" src="pages/2-1.html"></TreeNode>
+						<TreeNode id="2-2" name="主讲教师二" src="pages/2-2.html"></TreeNode>
+						<TreeNode id="2-3" name="主讲教师三" src="pages/2-3.html"></TreeNode>
+						<TreeNode id="2-4" name="主讲教师四" src="pages/2-4.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="3" name="教学队伍" _opened="false" src="pages/3.html">
+						<TreeNode id="3-1" name="人员构成" src="pages/3-1.html"></TreeNode>
+						<TreeNode id="3-2" name="教学队伍整体结构" src="pages/3-2.html"></TreeNode>
+						<TreeNode id="3-3" name="教学改革与教学研究" src="pages/3-3.html"></TreeNode>
+						<TreeNode id="3-4" name="师资培养" src="pages/3-4.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="4" name="课程描述" _opened="false" src="pages/4.html">
+						<TreeNode id="4-1" name="课程设置" src="pages/4-1.html"></TreeNode>
+						<TreeNode id="4-2" name="教学内容" src="pages/4-2.html"></TreeNode>
+						<TreeNode id="4-3" name="教学条件" src="pages/4-3.html"></TreeNode>
+						<TreeNode id="4-4" name="教学方法与教学手段" src="pages/4-4.html"></TreeNode>
+						<TreeNode id="4-5" name="教学效果" src="pages/4-5.html"></TreeNode>
+						<TreeNode id="4-6" name="学生作品" src="pages/4-6.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="5" name="自我评价" _opened="false" src="pages/5.html">
+						<TreeNode id="5-1" name="特色与创新" src="pages/5-1.html"></TreeNode>
+						<TreeNode id="5-2" name="课程地位" src="pages/5-2.html"></TreeNode>
+						<TreeNode id="5-3" name="目前还存在的不足" src="pages/5-3.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="6" name="教学资源" _opened="false" src="pages/6.html">
+						<TreeNode id="6-1" name="教学大纲" src="pages/6-1.html"></TreeNode>
+						<TreeNode id="6-2" name="授课教案" src="pages/6-2.html"></TreeNode>
+						<TreeNode id="6-3" name="教学课件" src="pages/6-3.html"></TreeNode>
+						<TreeNode id="6-4" name="课堂录像" src="pages/6-4.html"></TreeNode>
+						<TreeNode id="6-5" name="作业习题" src="pages/6-5.html"></TreeNode>
+						<TreeNode id="6-6" name="参考资料" src="pages/6-6.html"></TreeNode>
+						<TreeNode id="6-7" name="试题库" src="pages/6-7.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="7" name="课程建设规划" _opened="false" src="pages/7.html">
+						<TreeNode id="7-1" name="建设目标" src="pages/7-1.html"></TreeNode>
+						<TreeNode id="7-2" name="上网资源" src="pages/7-2.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="8" name="学校的政策措施" _opened="false" src="pages/8.html">
+						<TreeNode id="8-1" name="学校的政策措施" src="pages/8-1.html"></TreeNode>
+						<TreeNode id="8-2" name="后续支持措施" src="pages/8-2.html"></TreeNode>
+					</TreeNode>
+					<TreeNode id="9" name="说明栏" src="pages/9.html"/>
+				</TreeNode>
+			</Tree>
+		</Data>
+	</Response>

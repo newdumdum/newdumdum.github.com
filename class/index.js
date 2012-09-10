@@ -179,4 +179,5 @@
         $('right').style.width = document.documentElement.clientWidth - 6 - $('left').clientWidth - 7 + 'px';
     }
 
-    Handler.add(window,'load',init);
+    //Handler.add(window,'load',init);
+	init();

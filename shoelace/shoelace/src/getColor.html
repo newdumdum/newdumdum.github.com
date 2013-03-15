@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+        <title>颜色获取</title>
+		<script>
+		function getColor(str){
+			str = str.replace(/(^\s*)|(\s*$)/g, '');
+			var rgbReg = /^\s*rgb\s*\(\s*\d{1,3}\s*\,\s*\d{1,3}\s*\,\s*\d{1,3}\s*\)\s*$/i;
+			//var sixReg = /^\s*\#([a-zA-Z0-9]{3}|[a-zA-Z0-9]{6})\s*$/;
+			var sixRegA = /^\s*\#[a-zA-Z0-9]{3}\s*$/;
+			var sixRegB = /^\s*\#[a-zA-Z0-9]{6}\s*$/;
+			var arr = [];
+			
+			if(rgbReg.test(str)){ // 以RGB形式指定的颜色
+				nStr = str.split('(')[1].split(')')[0].split(',');
+				for(var i = 0 ; i < nStr.length ; i ++){
+					arr.push(nStr[i] / 1);
+				}
+				return arr;
+			}
+			
+			if(sixRegB.test(str)) { // 以16进制指定颜色 (6位)
+				var m = str.replace('#', '').match(/(\w|\d){2}/g);
+				
+				for(var i = 0 ; i < m.length; i ++){
+					arr.push(Number('0x' + m[i]).toString(10) / 1);
+				}
+				return arr;
+			}
+			
+			if(sixRegA.test(str)){ // 以16进制指定颜色(3位)
+				var cArr = str.replace('#', '').split('');
+				for(var i = 0 ; i < cArr.length ; i ++){
+					arr.push(Number('0x' + (cArr[i] + cArr[i])).toString(10) / 1);
+				}
+				return arr;
+			}
+			
+			return null;
+		}
+		</script>
+    </head>
+    <body>
+    	
+    </body>
+</html>

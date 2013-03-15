@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<list>
+		<item>
+			<!-- 对应的频道ID -->
+			<channelId>1</channelId>
+			<!-- 对应的频道名称 -->
+			<channel><![CDATA[CCTV-1]]></channel>
+			<!-- 节目的id, 唯一的, 可以采用uuid, 以便做订阅和评论时使用 -->
+			<id>5</id>
+			<!-- 节目名称 -->
+			<program><![CDATA[百家讲坛]]></program>
+			<!-- 节目播出的时间段 -->
+			<time><![CDATA[17:30分~19:00]]></time>
+			<!-- 节目评分 (1~5) -->
+			<score>4</score>
+			<!-- 节目评论数 -->
+			<score>1112</score>
+			<!-- 用户是否收藏了此节目, 1已收藏,0未收藏 -->
+			<stored>1</stored>
+		</item>
+		<item>
+			<!-- 对应的频道ID -->
+			<channelId>2</channelId>
+			<!-- 对应的频道名称 -->
+			<channel><![CDATA[CCTV-5]]></channel>
+			<id>6</id>
+			<program><![CDATA[百家讲坛]]></program>
+			<time><![CDATA[17:30分~19:00]]></time>
+			<score>5</score>
+			<score>333</score>
+			<stored>0</stored>
+		</item>
+	</list>
+</response>

@@ -1,0 +1,112 @@
+.widget {
+	position:relative;
+	left:0;
+	top:0;
+	display: inline-block;
+	margin: 8px 18px 8px 18px;
+	float:left;
+}
+.widget .widgetBox {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 8px;
+	background:-webkit-gradient(linear, center top, center bottom, from(rgba(229, 41, 13, 1)), to(rgba(141, 17, 0, 1)));
+	box-shadow:0 1px 4px rgba(0, 0, 0, .6);
+}
+.widget .image {
+	position:absolute;
+	width:70px;
+	height:70px;
+	left:0;
+	top:0;
+	background:url(../images/shoelace.png) no-repeat;
+}
+.widget .title {
+	height:18px;
+	text-align:center;
+	line-height:18px;
+	color:rgba(133, 140, 148, 1);
+	text-shadow: 0 1px rgba(255, 255, 255, 1);
+	font-weight:700;
+}
+.widget .text {
+	position:absolute;
+	left:0;
+	right:0;
+	width:70px;
+	height:70px;
+	font-size:24px;
+	color:#FFF;
+	line-height:77px;
+}
+.widget .message {
+	position:absolute;
+	right:-7px;
+	top:-7px;
+	height:20px;
+	border:1px solid rgba(88, 155, 38, 1);
+	border-radius:20px;
+	padding:0 7px;
+	background:-webkit-gradient(linear, center top, center bottom, from(rgba(167, 209, 86, 1)), color-stop(.5, rgba(123, 160, 52, 1)), to(rgba(91, 124, 27, 1)));
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+	color:#FFF;
+	line-height:20px;
+	text-shadow:0 -1px rgba(0, 0, 0, .4);
+}
+
+/* diffrent icon style */
+.widget .image.label {
+	background-position:-140px -166px;
+}
+
+.widget .image.activity {
+	background-position:0px -166px;
+}
+
+.widget .image.queue {
+	background-position:-70px -166px;
+}
+
+.widget .image.now {
+	background-position:0px -96px;
+}
+
+.widget .image.shows {
+	background-position:-70px -96px;
+}
+
+.widget .image.news {
+	background-position:-140px -96px;
+}
+/* retina icon style */
+@media all and (-webkit-min-device-pixel-ratio:2) {
+    .widget .image {
+		background:url(../images/shoelace_retina.png) no-repeat;
+		-webkit-background-size:500px 500px;
+	}
+	
+	.widget .image.label {
+		background-position:-161px -198px;
+	}
+	.widget .image.activity {
+		background-position:-4px -198px;
+	}
+	
+	.widget .image.queue {
+		background-position:-82px -198px;
+	}
+	
+	.widget .image.now {
+		background-position:-4px -119px;
+	}
+	
+	.widget .image.shows {
+		background-position:-82px -121px;
+	}
+	
+	.widget .image.news {
+		background-position:-161px -121px;
+	}
+}
+

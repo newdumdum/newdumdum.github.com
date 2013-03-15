@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<list>
+		<item id="1"><![CDATA[电视剧]]></item>
+		<item id="2"><![CDATA[电影]]></item>
+		<item id="3"><![CDATA[综艺]]></item>
+		<item id="4"><![CDATA[动漫]]></item>
+		<item id="5"><![CDATA[音乐]]></item>
+		<item id="6"><![CDATA[体育]]></item>
+		<item id="7"><![CDATA[科技]]></item>
+		<item id="8"><![CDATA[财经]]></item>
+		<item id="9"><![CDATA[时事]]></item>
+		<item id="10"><![CDATA[新闻]]></item>
+		<item id="11"><![CDATA[旅游]]></item>
+		<item id="12"><![CDATA[教育]]></item>
+		<item id="13"><![CDATA[时尚]]></item>
+		<item id="14"><![CDATA[女性]]></item>
+		<item id="15"><![CDATA[母婴]]></item>
+		<item id="16"><![CDATA[美食]]></item>
+	</list>
+</response>

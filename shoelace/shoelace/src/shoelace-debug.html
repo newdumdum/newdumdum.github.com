@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!--<link rel="apple-touch-icon-precomposed" href="resources/themes/default/images/shoelaceIcon.png" />-->
+		
+		<link rel="apple-touch-icon" sizes="72x72" href="resources/themes/default/images/ipadicon.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="resources/themes/default/images/retinaicon.png" />
+		
+        <title>鞋带儿</title>
+		<link rel="stylesheet" type="text/css" href="resources/themes/default/styles/shoelace.css" />
+		<link rel="stylesheet" type="text/css" href="resources/themes/default/styles/button.css" />
+		<link rel="stylesheet" type="text/css" href="resources/themes/default/styles/widget.css" />
+		<!-- base script strat -->
+        <script type="text/javascript" src="../../lib/ace.all.js"></script>
+        <script type="text/javascript" src="../../lib/core.js"></script>   
+        <script type="text/javascript" src="../../lib/storage.js"></script>
+		<!-- base script end -->
+        
+		<!-- localstore strat -->
+        <script type="text/javascript" src="modules/localstore-box.config.js"></script>
+        <script type="text/javascript" src="modules/localstore-box.js"></script>
+		<!-- localstore end -->
+		
+		<!-- XML start -->
+        <script type="text/javascript" src="components/xml.js"></script>
+		<!-- XML end -->
+		
+		<!-- UI Component start -->
+        <script type="text/javascript" src="components/widget.js"></script>
+        <script type="text/javascript" src="components/button.js"></script>
+		<!-- UI Component end -->
+        
+		<!-- net work strat -->
+        <script type="text/javascript" src="modules/net-box.config.js"></script>
+        <script type="text/javascript" src="modules/net-box.js"></script>
+		<!-- net work end -->
+        
+        <!-- ui start -->
+        <script type="text/javascript" src="modules/main-box.config.js"></script>
+        <script type="text/javascript" src="modules/main-box.js"></script>
+        
+        <script type="text/javascript" src="modules/home-box.config.js"></script>
+        <script type="text/javascript" src="modules/home-box.js"></script>
+        
+        <script type="text/javascript" src="modules/bar-box.config.js"></script>
+        <script type="text/javascript" src="modules/bar-box.js"></script>
+        
+        <script type="text/javascript" src="modules/user-box.config.js"></script>
+        <script type="text/javascript" src="modules/user-box.js"></script>
+        
+        <script type="text/javascript" src="modules/search-box.config.js"></script>
+        <script type="text/javascript" src="modules/search-box.js"></script>
+        
+        <script type="text/javascript" src="modules/channel-box.config.js"></script>
+        <script type="text/javascript" src="modules/channel-box.js"></script>
+        
+        <script type="text/javascript" src="modules/now-box.config.js"></script>
+        <script type="text/javascript" src="modules/now-box.js"></script>
+        
+        <script type="text/javascript" src="modules/program-box.config.js"></script>
+        <script type="text/javascript" src="modules/program-box.js"></script>
+        
+        <script type="text/javascript" src="modules/programdetail-box.config.js"></script>
+        <script type="text/javascript" src="modules/programdetail-box.js"></script>
+        
+        <script type="text/javascript" src="modules/area-box.config.js"></script>
+        <script type="text/javascript" src="modules/area-box.js"></script>
+        
+        <script type="text/javascript" src="modules/comment-box.config.js"></script>
+        <script type="text/javascript" src="modules/comment-box.js"></script>
+        
+        <script type="text/javascript" src="modules/news-box.config.js"></script>
+        <script type="text/javascript" src="modules/news-box.js"></script>
+        
+        <script type="text/javascript" src="modules/favorate-box.config.js"></script>
+        <script type="text/javascript" src="modules/favorate-box.js"></script>
+        
+        <script type="text/javascript" src="modules/label-box.config.js"></script>
+        <script type="text/javascript" src="modules/label-box.js"></script>
+        <!-- ui end -->
+    </head>
+    <body>
+    	<div class="box">
+    		<!-- navigate bar -->
+    		<div id="barBox">
+    		</div>
+    		
+    		<!-- search box -->
+    		<div id="searchBox">
+    			<input type="text" id="searchText" value="搜索" />
+    			<span id="searchClearButton"></span>
+    		</div>
+    		
+    		<!-- main box -->
+	    	<div id="mainBox" class="mainBox">
+	    		<div id="blockBox">
+	    		</div>
+	    	</div>
+	    	
+	    	<!-- search content box -->
+	    	<div id="searchContentBox" class="otherBox" style="display: none;">
+	    		<div id="searchType" class="miniTabBox">
+	    			<!--<div data-searchtype="all" class="miniTab checked">全部</div>-->
+	    			<div data-searchtype="channel" class="miniTab checked">频道</div>
+	    			<div data-searchtype="program" class="miniTab">节目</div>
+	    		</div>
+	    		<div id="searchResult" style="display:none;" onclick="">
+	    		</div>
+	    	</div>
+	    	
+	    	
+	    	<!-- user box -->
+	    	<div id="userBox" class="otherBox" style="display: none;">
+	    		<div class="otherContentBox" onclick="">
+		    		<div class="title">地区设置</div>
+		    		<div class="lengend">
+		    			<div class="item" data-item="table" data-boxName="设置" data-boxId="userBox" data-event="AreaBox-ShowAreaSelect" id="areaInfoBox">所在地区: <span id="areaInfoText"></span> <span class="arrow"></span></div>
+		    		</div>
+		    		
+		    		<div class="title">帐号设置</div>
+		    		<div class="lengend">
+		    			<div class="item" data-item="table" id="viewAccount">查看 <span class="arrow"></span></div>
+		    			<div class="item" data-item="table" id="editAccount">编辑 <span class="arrow"></span></div>
+		    		</div>
+		    		
+		    		<div class="title">分享设置</div>
+		    		<div class="lengend">
+		    			<div class="item" data-item="table" id="sinaBlog">新浪微博 <span class="arrow"></span></div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	
+	    	<!-- channel box -->
+	    	<div id="channalContentBox" class="otherBox" style="display: none;">
+	    		<div id="channalType" class="miniTabBox">
+	    			<div data-channeltype="all" class="miniTab checked">所有频道</div>
+	    			<div data-channeltype="center" class="miniTab">央视频道</div>
+	    			<div data-channeltype="local" class="miniTab">本地频道</div>
+	    		</div>
+	    		<div id="channelListBox" style="display:none;" onclick=""></div>
+	    	</div>
+	    	
+	    	<!-- now box -->
+	    	<div id="nowContentBox" class="otherBox" style="display: none;">
+	    		<div id="nowListBox" onclick=""></div>
+	    		<div id="nowDateBox" class="dateSelect"></div>
+	    		<div id="nowDateTipBox" style="display: none;">
+	    			<div class="tipBox" id="nowDateTipCotent"></div>
+	    			<div class="tipArrow"></div>
+	    		</div>
+	    	</div>
+	    	
+	    	<!-- program box -->
+	    	<div id="programBox" class="otherBox right" style="display: none;">
+	    		<div id="programListBox" style="display:none;" onclick=""></div>
+	    	</div>
+	    	
+	    	<!-- program detail box -->
+	    	<div id="programDetailBox" class="otherBox right" style="display: none;">
+	    		<div class="programDetailInfoBox">
+	    			<div class="programDetail">
+		    			<div id="programDetailInfo"></div>
+		    			<div class="splitLine">
+		    				<div class="lineShadow"></div>
+		    			</div>
+		    			<div class="programButtonBox">
+		    				<div id="shareButton" class="button">分享</div>
+		    				<div id="addButton" class="button">收藏</div>
+		    			</div>
+	    			</div>
+	    			<div id="commentListBox"></div>
+	    		</div>
+	    	</div>
+	    	
+	    	<!-- comment edit box -->
+	    	<div id="commentBox" class="otherBox right" style="display: none;">
+	    		<textarea id="commentText"></textarea>
+	    	</div>
+	    	
+	    	
+	    	<!-- province select box -->
+	    	<div id="provinceBox" class="otherBox right" style="display: none;">
+	    		<div class="tableListBox" onclick="">
+		    		<div class="tablelist">
+		    			<div class="title">省份选择</div>
+		    			<div id="provinceListBox" class="tableListContent">
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	
+	    	<!-- city select box -->
+	    	<div id="cityBox" class="otherBox right" style="display: none;">
+	    		<div class="tableListBox" onclick="">
+		    		<div class="tablelist">
+		    			<div class="title">城市选择</div>
+		    			<div id="cityListBox" class="tableListContent">
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	
+	    	
+	    	<!-- account box -->
+	    	<div id="accountBox" class="otherBox right" style="display: none;">
+	    	</div>
+	    	
+	    	
+	    	<!-- news box -->
+	    	<div id="newsBox" class="otherBox" style="display: none;">
+	    		<div id="newsListBox" onclick=""></div>
+	    	</div>
+	    	
+	    	
+	    	<!-- favorate box -->
+	    	<div id="favorateBox" class="otherBox" style="display: none;">
+	    		<div id="favorateListBox" onclick=""></div>
+	    	</div>
+	    	
+	    	
+	    	<!-- label box -->
+	    	<div id="labelBox" class="otherBox" style="display: none;">
+	    		<div id="labelListBox" onclick=""></div>
+	    	</div>
+		</div>
+		
+		<div id="messageBox" style="display:none">
+			
+		</div>
+		
+		<div id="loadingBox" style="display:none">
+			<div class="loadingDot"></div>
+		</div>
+    </body>
+</html>

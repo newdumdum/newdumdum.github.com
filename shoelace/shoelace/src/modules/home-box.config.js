@@ -30,6 +30,7 @@ application.Core.addConfig("HomeBox", {
 			,title: '收藏'
 			,id: 'favorate'
 			,command: 'FavorateBox-ShowList'
+			,message: '5'
 		},
 		{
 			image: {'background-position':'0px -96px'}

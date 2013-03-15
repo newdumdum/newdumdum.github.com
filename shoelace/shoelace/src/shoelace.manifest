@@ -1,0 +1,63 @@
+CACHE MANIFEST
+
+# VERSION 20130315 22:25
+
+# 直接缓存的文件
+CACHE:
+../../lib/ace.all.js
+../../lib/core.js
+../../lib/storage.js
+modules/localstore-box.config.js
+modules/localstore-box.js
+components/xml.js
+components/widget.js
+components/button.js
+modules/net-box.config.js
+modules/net-box.js
+modules/main-box.config.js
+modules/main-box.js
+modules/home-box.config.js
+modules/home-box.js
+modules/bar-box.config.js
+modules/bar-box.js
+modules/user-box.config.js
+modules/user-box.js
+modules/search-box.config.js
+modules/search-box.js
+modules/channel-box.config.js
+modules/channel-box.js
+modules/now-box.config.js
+modules/now-box.js
+modules/program-box.config.js
+modules/program-box.js
+modules/programdetail-box.config.js
+modules/programdetail-box.js
+modules/area-box.config.js
+modules/area-box.js
+modules/comment-box.config.js
+modules/comment-box.js
+modules/news-box.config.js
+modules/news-box.js
+modules/favorate-box.config.js
+modules/favorate-box.js
+modules/label-box.config.js
+modules/label-box.js
+
+
+resources/themes/default/styles/shoelace.css
+resources/themes/default/styles/button.css
+resources/themes/default/styles/widget.css
+
+
+resources/themes/default/images/ipadicon.png
+resources/themes/default/images/retinaicon.png
+resources/themes/default/images/shoelace_retina.png
+resources/themes/default/images/shoelace.png
+
+# 需要在时间在线的文件
+NETWORK:
+*
+
+# 替代方案
+FALLBACK:
+../../../offline/offline.html

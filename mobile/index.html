@@ -9,13 +9,33 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="images/ipadicon.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="images/retinaicon.png" />
 
-		<title>DumDum</title>
-		<link rel="stylesheet" type="text/css" href="mob.css" />	    
+		<title>Numb</title>
+		<link rel="stylesheet" type="text/css" href="mob.css" />
+		<script>
+		function playSound(){
+			document.querySelector("#audioCtrol").play();
+		}
+		</script>    
 	</head>
 	<body>
-		<audio controls="controls" autoplay="autoplay">
-			<source src="sound/numb.mp3" type="audio/mp3" />
-			Your browser does not support the audio element.
-		</audio>
+		<div class="btnBox">
+			<div id="play" onclick="playSound();">
+				<div>
+					<span></span>
+				</div>
+			</div>
+			<div id="pause">
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="audioBox">
+			<audio id="audioCtrol" controls="controls" preload="auto">
+				<source src="sound/numb.mp3" type="audio/mp3" />
+				Your browser does not support the audio element.
+			</audio>
+		</div>
 	</body>
 </html>

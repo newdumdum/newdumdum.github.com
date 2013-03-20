@@ -17,6 +17,7 @@ html,body{
 }
 </style>
 <script language="JavaScript">
+<!--
 var sUserAgent= navigator.userAgent.toLowerCase(); 
 var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
 var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os"; 
@@ -31,7 +32,6 @@ if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE 
   window.location.href= '/mobile/'; 
 }
 
-<!--
 var isInternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
 // Handle all the FSCommand messages in a Flash movie.
 function photo_DoFSCommand(command, args) {

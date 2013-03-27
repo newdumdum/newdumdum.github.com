@@ -6,20 +6,23 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		<link rel="apple-touch-icon" sizes="72x72" href="images/ipadicon.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="images/retinaicon.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="src/images/ipadicon.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="src/images/retinaicon.png" />
 
 		<title>Numb</title>
-		<link rel="stylesheet" type="text/css" href="mob.css" />
+		<link rel="stylesheet" type="text/css" href="src/mob.css" />
+		<script src="src/lib/zepto.min.js"></script>
 		<script>
-		function playSound(){
-			document.querySelector("#audioCtrol").play();
-		}
+		Zepto(function(){
+			$('#play').on('click', function(){
+				$("#audioCtrol")[0].play();
+			});
+		});
 		</script>    
 	</head>
 	<body>
 		<div class="btnBox">
-			<div id="play" onclick="playSound();">
+			<div id="play">
 				<div>
 					<span></span>
 				</div>
@@ -33,7 +36,7 @@
 		</div>
 		<div class="audioBox">
 			<audio id="audioCtrol" controls="controls" preload="auto">
-				<source src="sound/numb.mp3" type="audio/mp3" />
+				<source src="src/sound/numb.mp3" type="audio/mp3" />
 				Your browser does not support the audio element.
 			</audio>
 		</div>

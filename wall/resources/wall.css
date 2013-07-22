@@ -174,10 +174,20 @@ html, body {
 	margin-bottom: 0;
 	color: #FFF;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: 18px;
 	white-space: pre-wrap;
 	word-break: break-all;
 	text-overflow: ellipsis;
+}
+#picInfo .picInfoTitle {
+	height: 25px;
+}
+#picInfo .picName {
+	font-size: 14px;
+}
+#picInfo .artName {
+	font-size: 12px;
+	margin-left: 20px;
 }
 #picDetail {
 	position: absolute;

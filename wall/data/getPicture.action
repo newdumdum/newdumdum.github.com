@@ -7,6 +7,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -17,6 +18,7 @@
         "width": "260",
         "height": "96",
         "artistId": "2",
+        "artistName": "作家B",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -27,6 +29,7 @@
         "width": "256",
         "height": "122",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -37,6 +40,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -47,6 +51,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -57,6 +62,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -67,6 +73,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     },
     {
@@ -77,6 +84,7 @@
         "width": "212",
         "height": "141",
         "artistId": "1",
+        "artistName": "作家A",
         "productUrl": "http://xxx/xxx"
     }]
 }

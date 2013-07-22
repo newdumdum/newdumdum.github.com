@@ -219,7 +219,7 @@ var TOOL = (function(){
 	function updateInfo(info){
 		info = info || {};
 		var text = info.item.info || '';
-		$('#picInfo').html(subByte(text, 150, '...'));
+		$('#picInfo').html('<div class="picInfoTitle"><span class="picName">' + info.item.showName + '</span><span class="artName">' + info.item.artistName + '</span></div>' + subByte(text, 100, '...'));
 
 		if(text != ''){
 			$('#picDetail').show();

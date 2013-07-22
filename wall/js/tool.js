@@ -219,7 +219,16 @@ var TOOL = (function(){
 	function updateInfo(info){
 		info = info || {};
 		var text = info.item.info || '';
-		$('#picInfo').html(subByte(text, 190, '...'));
+		$('#picInfo').html(subByte(text, 150, '...'));
+
+		if(text != ''){
+			$('#picDetail').show();
+			$('#picDetail').click(function(){
+				window.open(info.item.productUrl);
+			});
+		}else{
+			$('#picDetail').hide();
+		}
 	}
 	function subByte(str, len, tail) {
 		if(len < 0 || getByteLength(str) <= len){

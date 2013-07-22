@@ -167,6 +167,7 @@ html, body {
 .picInfoBox {
 	height: 90px;
 	overflow: hidden;
+	position: relative;
 }
 #picInfo {
 	margin: 10px;
@@ -177,6 +178,19 @@ html, body {
 	white-space: pre-wrap;
 	word-break: break-all;
 	text-overflow: ellipsis;
+}
+#picDetail {
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+	width: 41px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #AE111D;
+	color: #FFF;
+	display: none;
 }
 
 .roomBox {

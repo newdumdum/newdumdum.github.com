@@ -1,0 +1,35 @@
+{
+    "list": [{
+        "showName": "雅致",
+        "east": "data/images/room/yz.png",
+        "eastWidth": "1000",
+        "eastHeight": "600",
+        "south": "data/images/room/yz.png",
+        "southWidth": "1000",
+        "southHeight": "600",
+        "west": "data/images/room/yz.png",
+        "westWidth": "1000",
+        "westHeight": "600",
+        "north": "data/images/room/yz.png",
+        "northWidth": "1000",
+        "northHeight": "600",
+		"thumbnail" : "data/images/room/yz_mini.png",
+        "front": "data/images/room/yz_front1.png,data/images/room/yz_front2.png,data/images/room/yz_front1.png,data/images/room/yz_front2.png"
+    },{
+        "showName": "卧室",
+        "east": "data/images/room/E.png",
+        "eastWidth": "1000",
+        "eastHeight": "600",
+        "south": "data/images/room/ws.png",
+        "southWidth": "1000",
+        "southHeight": "600",
+        "west": "data/images/room/W.png",
+        "westWidth": "1000",
+        "westHeight": "600",
+        "north": "data/images/room/N.png",
+        "northWidth": "1000",
+        "northHeight": "600",
+		"thumbnail" : "data/images/room/ws_mini.png",
+        "front": "data/images/room/ws_front2.png,data/images/room/ws_front1.png,data/images/room/ws_front1.png,data/images/room/ws_front2.png"
+    }]
+}

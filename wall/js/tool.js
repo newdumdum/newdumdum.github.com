@@ -108,15 +108,17 @@ var TOOL = (function(){
 			artFlag = false;
 		});
 
-		getArtist(categoryId, function(list){
-			fillArtist(list);
-		});
+		// getArtist(categoryId, function(list){
+		// 	fillArtist(list);
+		// });
 	}
 
 	function fillArtist(list, reset){
 		if(reset){
-			ARTID = 'all';
-			$('#artistSelect').html(list[0].showName);
+			// ARTID = 'all';
+			// $('#artistSelect').html(list[0].showName);
+			ARTID = '';
+			$('#artistSelect').html('选择画家');
 		}
 		$('#artistList').html('');
 		$.each(list, function(index, item){
@@ -153,11 +155,11 @@ var TOOL = (function(){
 	// 获取分类列表
 	function getCategory(callback){
 		NET.getCategory(function(data){
-			var all = {
-				showName: '全部分类'
-				,categoryId: 'all'
-			};
-			data.list.unshift(all);
+			// var all = {
+			// 	showName: '全部分类'
+			// 	,categoryId: 'all'
+			// };
+			// data.list.unshift(all);
 			callback && callback(data.list);
 		});
 	}
@@ -165,17 +167,20 @@ var TOOL = (function(){
 	// 获取作家列表
 	function getArtist(categoryId, callback){
 		NET.getArtist(categoryId, function(data){
-			var all = {
-				showName: '全部作家'
-				,artistId: 'all'
-			};
-			data.list.unshift(all);
+			// var all = {
+			// 	showName: '全部作家'
+			// 	,artistId: 'all'
+			// };
+			// data.list.unshift(all);
 			callback && callback(data.list);
 		});
 	}
 
 	// 获取画
 	function getPicture(categoryId, artistId, callback){
+		if(!artistId || !artistId){
+			return;
+		}
 		NET.getPicture(categoryId, artistId, function(data){
 			callback && callback(data.list);
 		});
@@ -423,7 +428,7 @@ var TOOL = (function(){
 	initBT();
 	initCategory();
 	initArtist();
-	initPicture();
+	// initPicture();
 	initRoom();
 	initFrameSwitch();
 	initPictureFrame();

@@ -5,7 +5,7 @@ var NET = (function(){
 
 	function getCategory(callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getCategory'
+			url: CONFIG.SERVER + 'getCategory.action'
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);
@@ -16,7 +16,7 @@ var NET = (function(){
 
 	function getArtist(categoryId, callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getArtist' + (categoryId ? '?categoryId=' + encodeURIComponent(categoryId) : '')
+			url: CONFIG.SERVER + 'getArtist.action' + (categoryId ? '?categoryId=' + encodeURIComponent(categoryId) : '')
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);
@@ -27,7 +27,7 @@ var NET = (function(){
 
 	function getPicture(categoryId, artistId, callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getPicture' + '?categoryId=' + encodeURIComponent(categoryId) + '&artistId=' + encodeURIComponent(artistId)
+			url: CONFIG.SERVER + 'getPicture.action' + '?categoryId=' + encodeURIComponent(categoryId) + '&artistId=' + encodeURIComponent(artistId)
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);
@@ -38,7 +38,7 @@ var NET = (function(){
 
 	function getRoom(callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getRoomInfo'
+			url: CONFIG.SERVER + 'getRoomInfo.action'
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);
@@ -49,7 +49,7 @@ var NET = (function(){
 
 	function getPictureFrame(callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getPictureFrame'
+			url: CONFIG.SERVER + 'getPictureFrame.action'
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);
@@ -60,7 +60,7 @@ var NET = (function(){
 
 	function getPictureById(id, callback){
 		$.ajax({
-			url: CONFIG.SERVER + 'getPictureById?id=' + id
+			url: CONFIG.SERVER + 'getPictureById.action?id=' + id
 		}).done(function(data){
 			if(typeof(data) == 'string'){
 				data = $.parseJSON(data);

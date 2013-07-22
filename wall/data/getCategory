@@ -1,0 +1,42 @@
+{
+    "list": [{
+        "showName": "分类A",
+        "categoryId": "1"
+    },
+    {
+        "showName": "分类B",
+        "categoryId": "2"
+    },
+    {
+        "showName": "分类C",
+        "categoryId": "3"
+    },
+    {
+        "showName": "分类D",
+        "categoryId": "4"
+    },
+    {
+        "showName": "分类E",
+        "categoryId": "5"
+    },
+    {
+        "showName": "分类F",
+        "categoryId": "6"
+    },
+    {
+        "showName": "分类G",
+        "categoryId": "7"
+    },
+    {
+        "showName": "分类H",
+        "categoryId": "8"
+    },
+    {
+        "showName": "分类I",
+        "categoryId": "9"
+    },
+    {
+        "showName": "分类J",
+        "categoryId": "10"
+    }]
+}

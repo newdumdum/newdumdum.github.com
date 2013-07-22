@@ -1,0 +1,38 @@
+{
+    "list": [{
+        "showName": "画家A",
+        "artistId": "1"
+    },
+    {
+        "showName": "画家B",
+        "artistId": "2"
+    },
+    {
+        "showName": "画家C",
+        "artistId": "3"
+    },
+    {
+        "showName": "画家D",
+        "artistId": "4"
+    },
+    {
+        "showName": "画家E",
+        "artistId": "5"
+    },
+    {
+        "showName": "画家F",
+        "artistId": "6"
+    },
+    {
+        "showName": "画家G",
+        "artistId": "7"
+    },
+    {
+        "showName": "画家H",
+        "artistId": "8"
+    },
+    {
+        "showName": "画家I",
+        "artistId": "9"
+    }]
+}

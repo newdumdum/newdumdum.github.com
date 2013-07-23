@@ -3,23 +3,67 @@
 */
 var ROOM = (function(){
 	var ROOM_OK_LISTENER = [];
-	var paper, room, picture, pictureFrame, curRoomInfo, curOrder = 1;
-	var transparentImage = 'resources/images/transparent.png';
-	var front, pictureDrag;
-	var zoomBase = 1, zoomMerge = 0.2;
+	var SWF;
+	var IS_SWF_READY = false;
+	var flashId = 'w3d';
+	var BEFORE_CACHE;
 	function init(){
-		paper = Raphael('room', 974, 600);
+		/**
+		* 添加主程序的SWF文件
+		*/
+		function addMainSwf(){      
+			var flashvars = {
+			};
+			var params = {
+				menu: "false",
+				scale: "noScale",
+				allowFullscreen: "true",
+				allowScriptAccess: "always",
+				bgcolor: "#E7E7E7"
+			};
+			var attributes = {
+				id: flashId
+			};
+			swfobject.embedSWF("resources/swf/wall.swf", "swfContainer", "974", "600", "11.0.0", "resources/swf/expressInstall.swf", flashvars, params, attributes); 
+		}
+
+		/**
+		* 获取flash对象
+		*/
+		function getFlash(mv) {
+			if (window.document[mv]) {
+				return window.document[mv];
+			}
+			if (navigator.appName.indexOf("Microsoft Internet")==-1) {
+				if (document.embeds && document.embeds[mv])
+				return document.embeds[mv]; 
+			} else {
+				return document.getElementById(mv);
+			} 	
+		}
+
+		addMainSwf();
+
+		window.FLASH_READY = function(){
+			SWF = getFlash(flashId);
+			IS_SWF_READY = true;
+			if(BEFORE_CACHE){
+				SWF.fillView(BEFORE_CACHE);
+				SWF.fillView(BEFORE_CACHE);
+			}
+			fireEvent('viewOk');
+		}
+
+		// 调试数据
+		window.FLASH_CONSOLE = function(str){
+			console.log(str);
+		}
 	}
 
 	function fillView(params){
-		zoomBase = 1;
-		curOrder = 1;
-		if(room){
-			room.remove();
-		}
 		var item = params.item;
 
-		curRoomInfo = [
+		var curRoomInfo = [
 			{
 				background: item.east
 				,width: item.eastWidth
@@ -44,162 +88,44 @@ var ROOM = (function(){
 		];
 
 		// 缓存图片
-		$.each(curRoomInfo, function(index, item){
-			doCache(item.background);
-			doCache(item.front);
-		});
+		// $.each(curRoomInfo, function(index, item){
+		// 	doCache(item.background);
+		// 	doCache(item.front);
+		// });
 
-		room = paper.image(curRoomInfo[curOrder].background, 0, 0, curRoomInfo[curOrder].width, curRoomInfo[curOrder].height);
-		front = paper.image(curRoomInfo[curOrder].front, 0, 0, curRoomInfo[curOrder].width, curRoomInfo[curOrder].height);
-		if(params.isFirst == 1){
-			fireEvent('viewOk');
+		if(IS_SWF_READY){
+			SWF.fillView(curRoomInfo);
+			SWF.fillView(curRoomInfo);
 		}
-		if(picture){
-			picture.toFront();
-		}
-		front.toFront();
-		if(pictureDrag){
-			pictureDrag.toFront();
-		}
+		BEFORE_CACHE = curRoomInfo;
 	}
 
 	function fillPicture(params){
-		if(picture){
-			picture.remove();
-		}
-		resetZoom();
 		var item = params.item;
-		doCache(item.pictureUrl);
-		picture = paper.image(item.pictureUrl, (curRoomInfo[curOrder].width - item.width) / 2, curRoomInfo[curOrder].height / 2 - item.height, item.width, item.height);
-		
-		if(!pictureDrag){
-			doCache(transparentImage);
-			pictureDrag = paper.image(transparentImage, (curRoomInfo[curOrder].width - item.width) / 2, curRoomInfo[curOrder].height / 2 - item.height, item.width, item.height);
-		}else{
-			pictureDrag.attr({
-				x: (curRoomInfo[curOrder].width - item.width) / 2
-				,y: curRoomInfo[curOrder].height / 2 - item.height
-				,width: item.width
-				,height: item.height
-			});
+		if(IS_SWF_READY){
+			SWF.fillPicture(item);
 		}
-		pictureDrag.attr({
-			'cursor': 'move'
-		});
-
-		var move = function(dx, dy){
-			this.attr({x: this.ox + dx, y: this.oy + dy});
-			picture.attr({x: this.ox + dx, y: this.oy + dy});
-		}
-		var dragger = function(){			
-			this.ox =  this.attr("x");
-			this.oy = this.attr("y");
-			this.animate({"fill-opacity": .2}, 500);
-		}
-		var up = function(){
-			this.animate({"fill-opacity": 0}, 500);
-		}
-		pictureDrag.drag(move, dragger, up);
-
-		front.toFront();
-		front.toFront();
-		pictureDrag.toFront();
 	}
 
 	function fillFrame(params){
-		if(!params){
-			return;
+		if(IS_SWF_READY){
+			SWF.fillPictureFrame(params);
 		}
-		//doCache();
 	}
 
 
 	function rotateView(argument) {
-		if(!room){
-			return;
+		if(IS_SWF_READY){
+			SWF.rotateView(argument);
 		}
-		resetZoom();
-
-		var oldInfo = curRoomInfo[curOrder];
-		if(argument < 0){
-			curOrder = curOrder - 1 < 0 ? 3 : curOrder - 1;
-		}else{
-			curOrder = curOrder + 1 > 3 ? 0 : curOrder + 1;
-		}
-
-
-		room.animate({
-			'transform': 't' + (argument > 0 ? '-' : '') + oldInfo.width + ',0'
-		}, 100, 'linear', function(){
-		});
-		var tmp = paper.image(curRoomInfo[curOrder].background, argument < 0 ? 0 - Number(curRoomInfo[curOrder].width) : oldInfo.width, 0, curRoomInfo[curOrder].width, curRoomInfo[curOrder].height);
-		if(picture){
-			picture.toFront();
-		}
-
-		tmp.animate({
-			'transform': 't' + (argument > 0 ? '-' : '') + curRoomInfo[curOrder].width + ',0'
-		}, 100, 'linear', function(){
-			room.remove();
-			tmp.remove();
-			room = paper.image(curRoomInfo[curOrder].background, 0, 0, curRoomInfo[curOrder].width, curRoomInfo[curOrder].height);
-			if(picture){
-				picture.toFront();
-			}
-			front.remove();
-			front = paper.image(curRoomInfo[curOrder].front, 0, 0, curRoomInfo[curOrder].width, curRoomInfo[curOrder].height);
-			front.toFront();
-			if(pictureDrag){
-				pictureDrag.toFront();
-			}
-		});
 	}
 
 	function zoomView(argument) {
-		// body...
-		if(!room){
-			return;
+		if(IS_SWF_READY){
+			SWF.zoomView(argument);
 		}
-		if(argument > 0){
-			zoomBase = zoomBase + zoomMerge;
-		}else{
-			zoomBase = zoomBase - zoomMerge;
-		}
-		zoomBase = zoomBase < 1 ? 1 : zoomBase;
-		zoomBase = zoomBase > 5 ? 5 : zoomBase;
-		room.animate({
-			'transform': 's'+ zoomBase + ',' + zoomBase
-		}, 300);
-		front.animate({
-			'transform': 's'+ zoomBase + ',' + zoomBase
-		}, 300);
-		picture.animate({
-			'transform': 's'+ zoomBase + ',' + zoomBase
-		}, 300);
-		pictureDrag.animate({
-			'transform': 's'+ zoomBase + ',' + zoomBase
-		}, 300);
 	}
 	function resetZoom(){
-		zoomBase = 1;
-		if(room){
-			room.animate({
-				'transform': 's1,1'
-			}, 300);
-			front.animate({
-				'transform': 's1,1'
-			}, 300);
-		}
-		if(picture){
-			picture.animate({
-				'transform': 's1,1'
-			}, 300);
-		}
-		if(pictureDrag){
-			pictureDrag.animate({
-				'transform': 's1,1'
-			}, 300);
-		}
 	}
 
 

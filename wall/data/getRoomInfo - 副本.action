@@ -31,21 +31,5 @@
         "northHeight": "600",
 		"thumbnail" : "data/images/room/ws_mini.png",
         "front": "data/images/room/ws_front2.png,data/images/room/ws_front1.png,data/images/room/ws_front1.png,data/images/room/ws_front2.png"
-    },{
-        "showName": "场景3",
-        "east": "data/images/room/view3.jpg",
-        "eastWidth": "1000",
-        "eastHeight": "600",
-        "south": "data/images/room/view3.jpg",
-        "southWidth": "1000",
-        "southHeight": "600",
-        "west": "data/images/room/view3.jpg",
-        "westWidth": "1000",
-        "westHeight": "600",
-        "north": "data/images/room/view3.jpg",
-        "northWidth": "1000",
-        "northHeight": "600",
-		"thumbnail" : "data/images/room/view3_mini.png",
-        "front": "data/images/room/front3.png,data/images/room/front3.png,data/images/room/front3.png,data/images/room/front3.png"
     }]
 }

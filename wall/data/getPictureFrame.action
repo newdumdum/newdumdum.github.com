@@ -1,43 +1,18 @@
 {
     "list": [{
         "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
+        "url": "data/images/pictureFrame/b-1.png",
+        "thumbnail": "data/images/pictureFrame/m1.png",
+		"merge": 6
     },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
+        "showName": "画框B",
+        "url": "data/images/pictureFrame/b-2.png",
+        "thumbnail": "data/images/pictureFrame/m2.png",
+		"merge": 6
     },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/1.png",
-        "thumbnail": "data/images/pictureFrame/1.png"
+        "showName": "画框C",
+        "url": "data/images/pictureFrame/b-3.png",
+        "thumbnail": "data/images/pictureFrame/m3.png",
+		"merge": 24
     }]
 }

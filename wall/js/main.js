@@ -29,6 +29,7 @@ var MAIN = (function(){
 			if(roomOK && picOK){
 				ROOM.fillPicture(picInfo);
 				TOOL.updateInfo(picInfo);
+				TOOL.fillPicture([picInfo.item]);
 			}
 		}
 	}

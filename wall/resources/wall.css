@@ -138,6 +138,12 @@ html, body {
 	border-bottom: 1px solid #FFF;
 	overflow: auto;
 }
+.picListBox.first {
+	background: url(images/first.png) 40px 20px no-repeat;
+}
+.picListBox.second {
+	background: url(images/second.png) 60px 20px no-repeat;
+}
 #picList {
 	margin: 5px 0 5px 5px;
 	overflow: hidden;

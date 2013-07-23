@@ -8,6 +8,7 @@ var TOOL = (function(){
 	var BORDER_MAP = {};
 	var CURRENT_FRAME_ID = null;
 	var IS_USE_FRAME = true;
+	var IS_FILL_PIC = false;
 
 	// 工具隐藏按钮功能
 	function initBT(){
@@ -119,6 +120,11 @@ var TOOL = (function(){
 			// $('#artistSelect').html(list[0].showName);
 			ARTID = '';
 			$('#artistSelect').html('选择画家');
+
+			if(!IS_FILL_PIC){
+				$('.picListBox').removeClass('first');
+				$('.picListBox').addClass('second');
+			}
 		}
 		$('#artistList').html('');
 		$.each(list, function(index, item){
@@ -187,6 +193,11 @@ var TOOL = (function(){
 	}
 
 	function fillPicture(list){
+		if(!IS_FILL_PIC){
+			$('.picListBox').removeClass('first');
+			$('.picListBox').removeClass('second');
+		}
+		IS_FILL_PIC = true;
 		$('#picList').html('');
 		$.each(list, function(index, item){
 			var id = (+new Date()) + '_' + Math.random() + '_' + index;
@@ -353,6 +364,7 @@ var TOOL = (function(){
 				var d = document.createElement('div');
 				d.className = 'borderItem';
 				d.setAttribute('data-id', id);
+				d.title = item.showName;
 				d.style.backgroundImage = 'url(' + item.thumbnail + ')';
 				d.innerHTML = '<span class="borderNode"></span>';
 				$('#borderList').append(d);
@@ -418,9 +430,10 @@ var TOOL = (function(){
 	// 向场景中设置画框
 	function setFrame(){
 		if(IS_USE_FRAME && CURRENT_FRAME_ID){
-			ROOM.fillFrame(BORDER_MAP[CURRENT_FRAME_ID]);
+			var info = BORDER_MAP[CURRENT_FRAME_ID];
+			ROOM.fillFrame({item: info.item, hide: 0});
 		}else{
-			ROOM.fillFrame(null);
+			ROOM.fillFrame({item: null, hide: 1});
 		}
 	}
 
@@ -445,5 +458,6 @@ var TOOL = (function(){
 
 	return {
 		updateInfo: updateInfo
+		,fillPicture: fillPicture
 	}
 })();

@@ -3,7 +3,7 @@
         "showName": "画框A",
         "url": "data/images/pictureFrame/b-1.png",
         "thumbnail": "data/images/pictureFrame/m1.png",
-		"merge": 6
+		"merge": 10
     },{
         "showName": "画框B",
         "url": "data/images/pictureFrame/b-2.png",

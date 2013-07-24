@@ -356,7 +356,7 @@ var TOOL = (function(){
 		NET.getPictureFrame(function(data){
 			var list = data.list;
 			$('#borderList').css({
-				'width': list.length * 73 + 'px'
+				'width': list.length * 71 + 'px'
 			});
 			$.each(list, function(index, item){
 				var id = (+new Date()) + '_' + Math.random() + '_' + index;

@@ -19,7 +19,8 @@ var ROOM = (function(){
 				scale: "noScale",
 				allowFullscreen: "true",
 				allowScriptAccess: "always",
-				bgcolor: "#E7E7E7"
+				bgcolor: "#E7E7E7",
+				wmode: "transparent"
 			};
 			var attributes = {
 				id: flashId

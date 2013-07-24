@@ -16,6 +16,7 @@ var TOOL = (function(){
 		var btFlag = false;
 		var layer = $('#tool');
 		var runOK = true;
+		var isIE = /msie/i.test(navigator.userAgent);
 
 		bt.click(function(){
 			if(!runOK){
@@ -26,7 +27,7 @@ var TOOL = (function(){
 			if(!btFlag){
 				layer.animate({
 					height: 20
-					,opacity: 0.3
+					,opacity: !isIE ? 0.3 : 1
 				}, 'fast', function(){
 					layer.hide();
 					runOK = true;

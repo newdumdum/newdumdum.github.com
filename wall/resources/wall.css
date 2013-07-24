@@ -33,7 +33,7 @@ html, body {
 .borderItem .borderNode,
 #direction {
 	background-image: url(images/wall.png);
-	_background-image: url(images/wall.gif);
+	_background-image: url(images/wall_ie6.gif);
 	background-repeat: no-repeat;
 }
 
@@ -119,6 +119,8 @@ html, body {
 }
 #categoryList, #artistList {
 	position: absolute;
+	left: 0;
+	top: 27px;
 	width: 110px;
 	height: 150px;
 	background-color: #727272;
@@ -142,11 +144,11 @@ html, body {
 }
 .picListBox.first {
 	background: url(images/first.png) 40px 20px no-repeat;
-	_background: url(images/first.gif) 40px 20px no-repeat;
+	_background: url(images/first_ie6.png) 40px 20px no-repeat;
 }
 .picListBox.second {
 	background: url(images/second.png) 60px 20px no-repeat;
-	_background: url(images/second.gif) 60px 20px no-repeat;
+	_background: url(images/second_ie6.png) 60px 20px no-repeat;
 }
 #picList {
 	margin: 5px 0 5px 5px;

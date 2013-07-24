@@ -33,6 +33,7 @@ html, body {
 .borderItem .borderNode,
 #direction {
 	background-image: url(images/wall.png);
+	_background-image: url(images/wall.gif);
 	background-repeat: no-repeat;
 }
 
@@ -124,6 +125,7 @@ html, body {
 	overflow: auto;
 	display: none;
 	z-index: 10;
+	zoom: 1;
 }
 .selectItem {
 
@@ -140,13 +142,17 @@ html, body {
 }
 .picListBox.first {
 	background: url(images/first.png) 40px 20px no-repeat;
+	_background: url(images/first.gif) 40px 20px no-repeat;
 }
 .picListBox.second {
 	background: url(images/second.png) 60px 20px no-repeat;
+	_background: url(images/second.gif) 60px 20px no-repeat;
 }
 #picList {
 	margin: 5px 0 5px 5px;
+	_margin: 3px 0 3px 3px;
 	overflow: hidden;
+	zoom: 1;
 }
 .picItem {
 	width: 78px;
@@ -156,6 +162,7 @@ html, body {
 	position: relative;
 	background-position: 1000px 1000px;
 	cursor: pointer;
+	display: inline-block;
 }
 .picItem.picHover {
 	background-position: -455px -295px;
@@ -254,6 +261,7 @@ html, body {
 	position: relative;
 	background-position: 1000px 1000px;
 	cursor: pointer;
+	display: inline-block;
 }
 .roomItem.roomHover {
 	background-position: -329px -298px;
@@ -332,6 +340,7 @@ html, body {
 	position: relative;
 	cursor: pointer;
 	background-position: center;
+	display: inline-block;
 }
 .borderItem.borderSelected {
 }

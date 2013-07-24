@@ -2,6 +2,10 @@
 * 主流程功能服务
 */
 var MAIN = (function(){
+	try {
+		document.execCommand('BackgroundImageCache', false, true);
+	} catch(ex) {}
+	
 	function getUrlParams(name){
 		var reg = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)");
 		var match = location.href.match(reg);

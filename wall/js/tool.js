@@ -387,6 +387,12 @@ var TOOL = (function(){
 					setFrame();
 				});
 
+				if(index == 0){
+					CURRENT_FRAME_ID = id;
+					$(d).addClass('borderSelected');
+					setFrame();
+				}
+
 				// $(d).mouseover(function(){
 				// 	$(this).addClass('borderHover');
 				// }).mouseout(function(){

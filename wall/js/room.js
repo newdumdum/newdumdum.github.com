@@ -7,6 +7,7 @@ var ROOM = (function(){
 	var IS_SWF_READY = false;
 	var flashId = 'w3d';
 	var BEFORE_CACHE;
+	var BEFORE_FRAME_CACHE;
 	function init(){
 		/**
 		* 添加主程序的SWF文件
@@ -50,7 +51,9 @@ var ROOM = (function(){
 			IS_SWF_READY = true;
 			if(BEFORE_CACHE){
 				SWF.fillView(BEFORE_CACHE);
-				SWF.fillView(BEFORE_CACHE);
+			}
+			if(BEFORE_FRAME_CACHE){
+				SWF.fillPictureFrame(BEFORE_FRAME_CACHE);
 			}
 			fireEvent('viewOk');
 		}
@@ -112,6 +115,7 @@ var ROOM = (function(){
 		if(IS_SWF_READY){
 			SWF.fillPictureFrame(params);
 		}
+		BEFORE_FRAME_CACHE = params;
 	}
 
 

@@ -14,7 +14,7 @@
         "northWidth": "1000",
         "northHeight": "600",
 		"thumbnail" : "data/images/room/yz_mini.png",
-        "front": "data/images/room/yz_front1.png,data/images/room/yz_front2.png,data/images/room/yz_front1.png,data/images/room/yz_front2.png"
+        "front": "data/images/room/yz_front.png,data/images/room/yz_front.png,data/images/room/yz_front.png,data/images/room/yz_front.png"
     },{
         "showName": "卧室",
         "east": "data/images/room/ws.png",
@@ -30,7 +30,7 @@
         "northWidth": "1000",
         "northHeight": "600",
 		"thumbnail" : "data/images/room/ws_mini.png",
-        "front": "data/images/room/ws_front2.png,data/images/room/ws_front1.png,data/images/room/ws_front1.png,data/images/room/ws_front2.png"
+        "front": "data/images/room/ws_front.png,data/images/room/ws_front.png,data/images/room/ws_front.png,data/images/room/ws_front.png"
     },{
         "showName": "场景3",
         "east": "data/images/room/view3.jpg",

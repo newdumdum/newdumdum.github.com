@@ -321,6 +321,12 @@ var TOOL = (function(){
 				}, 100);
 			}
 		});
+		$('#roomLeftArrow').hover(function(){
+			$(this).addClass('arrowOver');
+		}, function(){
+			$(this).removeClass('arrowOver');
+		});
+		
 		$('#roomRightArrow').click(function(){
 			var boxWidth = $('#romListBox').outerWidth();
 			var innerWidth = $('#romList').outerWidth();
@@ -334,6 +340,11 @@ var TOOL = (function(){
 					'left': 0 - toLeft
 				}, 100);
 			}
+		});
+		$('#roomRightArrow').hover(function(){
+			$(this).addClass('arrowOver');
+		}, function(){
+			$(this).removeClass('arrowOver');
 		});
 	}
 
@@ -418,6 +429,12 @@ var TOOL = (function(){
 				}, 100);
 			}
 		});
+		$('#borderLeftArrow').hover(function(){
+			$(this).addClass('arrowOver');
+		}, function(){
+			$(this).removeClass('arrowOver');
+		});
+
 		$('#borderRightArrow').click(function(){
 			var boxWidth = $('#borderListBox').outerWidth();
 			var innerWidth = $('#borderList').outerWidth();
@@ -431,6 +448,11 @@ var TOOL = (function(){
 					'left': 0 - toLeft
 				}, 100);
 			}
+		});
+		$('#borderRightArrow').hover(function(){
+			$(this).addClass('arrowOver');
+		}, function(){
+			$(this).removeClass('arrowOver');
 		});
 	}
 

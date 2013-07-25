@@ -143,8 +143,8 @@ html, body {
 .picListBox {
 	height: 164px;
 	width: 262px;
-	border-top: 1px solid #FFF;
-	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
 	overflow: auto;
 	position: relative;
 	z-index: 1;
@@ -229,7 +229,7 @@ html, body {
 
 .roomBox {
 	height: 73px;
-	border-top: 1px solid #FFF;
+	border-top: 1px solid #B4B4B4;
 	position: relative;
 }
 #romListBox {
@@ -254,6 +254,12 @@ html, body {
 	height: 22px;
 	cursor: pointer;
 	background-position: -499px -141px;
+	opacity: 0.6;
+	filter:Alpha(opacity=60);
+}
+#roomLeftArrow.arrowOver {
+	opacity: 1;
+	filter:Alpha(opacity=100);
 }
 #roomRightArrow {
 	position: absolute;
@@ -263,6 +269,12 @@ html, body {
 	height: 22px;
 	cursor: pointer;
 	background-position: -534px -141px;
+	opacity: 0.6;
+	filter:Alpha(opacity=60);
+}
+#roomRightArrow.arrowOver {
+	opacity: 1;
+	filter:Alpha(opacity=100);
 }
 .roomItem {
 	width: 71px;
@@ -305,7 +317,7 @@ html, body {
 }
 .borderBox {
 	height: 73px;
-	border-top: 1px solid #FFF;
+	border-top: 1px solid #B4B4B4;
 	position: relative;
 }
 #borderList {
@@ -333,6 +345,12 @@ html, body {
 	height: 22px;
 	cursor: pointer;
 	background-position: -499px -141px;
+	opacity: 0.6;
+	filter:Alpha(opacity=60);
+}
+#borderLeftArrow.arrowOver {
+	opacity: 1;
+	filter:Alpha(opacity=100);
 }
 #borderRightArrow {
 	position: absolute;
@@ -342,6 +360,12 @@ html, body {
 	height: 22px;
 	cursor: pointer;
 	background-position: -534px -141px;
+	opacity: 0.6;
+	filter:Alpha(opacity=60);
+}
+#borderRightArrow.arrowOver {
+	opacity: 1;
+	filter:Alpha(opacity=100);
 }
 .borderItem {
 	width: 65px;

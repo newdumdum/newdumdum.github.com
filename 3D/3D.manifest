@@ -1,0 +1,28 @@
+CACHE MANIFEST
+
+# VERSION 2013/07/26_11:12:05
+
+# 
+CACHE:
+3D.html
+js/jquery-1.10.2.min.js
+3D.js
+
+resources/3D.css
+resources/images/first.png
+resources/images/first_ie6.png
+resources/images/logo.jpg
+resources/images/second.png
+resources/images/second_ie6.png
+resources/images/transparent.png
+resources/images/wall.png
+resources/images/wall_ie6.gif
+
+
+# 
+NETWORK:
+*
+
+# 
+#FALLBACK:
+#../../../offline/offline.html

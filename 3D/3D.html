@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html manifest="3D.manifest">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>3D</title>
+		<link rel="stylesheet" type="text/css" href="resources/3D.css" />
+	</head>
+	<body scroll="no">
+		<div class="box">
+			<div id="room">
+				<div id="swfContainer">
+					<div style="text-align:center;padding-top:200px;">
+						<a href="http://www.adobe.com/go/getflashplayer"><img 
+			src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
+			alt="Get Adobe Flash player" /></a>
+					</div>
+				</div>
+			</div>
+			<div id="closeBT"></div>
+			<div id="tool">
+				<div class="toolBox">
+					<div class="row">选择作品...</div>
+					<div class="row">
+						<div class="itemBox item1">
+							<div id="categorySelect">选择分类</div>
+							<div id="categoryList"></div>
+						</div>
+						<div class="itemBox item2">
+							<div id="artistSelect">选择画家</div>
+							<div id="artistList"></div>
+						</div>
+					</div>
+					<div class="picListBox first">
+						<div id="picList"></div>
+					</div>
+					<div class="picInfoBox">
+						<div id="picInfo"></div>
+						<div id="picDetail">详情&gt;</div>
+					</div>
+					<div class="row">选择场景...</div>
+					<div class="roomBox">
+						<div id="roomLeftArrow"></div>
+						<div id="romListBox">
+							<div id="romList"></div>
+						</div>
+						<div id="roomRightArrow"></div>
+					</div>
+					<div class="row border"><div id="userBorder"></div><div>使用画框</div></div>
+					<div class="borderBox">
+						<div id="borderLeftArrow"></div>
+						<div id="borderListBox">
+							<div id="borderList"></div>
+						</div>
+						<div id="borderRightArrow"></div>
+					</div>
+				</div>
+			</div>
+			<div id="direction">
+				<div id="turnLeft"></div>
+				<div id="zoomIn"></div>
+				<div id="zoomOut"></div>
+				<div id="turnRight"></div>
+			</div>
+		</div>
+		<!-- Server Path -->
+		<script type="text/javascript">
+		var CONFIG = (function(){
+			return {
+				SERVER: "data/"
+			}	
+		})();
+		</script>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script src="3D.js"></script>
+	</body>
+</html>

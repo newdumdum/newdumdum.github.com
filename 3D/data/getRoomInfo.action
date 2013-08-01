@@ -1,6 +1,6 @@
 {
     "list": [{
-        "showName": "工作室",
+        "showName": "场景1",
         "east": "data/images/room/v_1_e.jpg",
         "eastWidth": "1000",
         "eastHeight": "600",
@@ -48,52 +48,20 @@
 	"thumbnail" : "data/images/room/view3_mini.png",
         "front": "data/images/room/v_3_f_e.png,data/images/room/v_3_f_s.png,data/images/room/v_3_f_w.png,data/images/room/v_3_f_n.png"
     },{
-        "showName": "雅致",
-        "east": "data/images/room/yz.png",
+        "showName": "场景4",
+        "east": "data/images/room/v_4_e.jpg",
         "eastWidth": "1000",
         "eastHeight": "600",
-        "south": "data/images/room/yz.png",
+        "south": "data/images/room/v_4_s.jpg",
         "southWidth": "1000",
         "southHeight": "600",
-        "west": "data/images/room/yz.png",
+        "west": "data/images/room/v_4_w.jpg",
         "westWidth": "1000",
         "westHeight": "600",
-        "north": "data/images/room/yz.png",
-        "northWidth": "1000",
-        "northHeight": "600",
-	"thumbnail" : "data/images/room/yz_mini.png",
-        "front": "data/images/room/yz_front.png,data/images/room/yz_front.png,data/images/room/yz_front.png,data/images/room/yz_front.png"
-    },{
-        "showName": "卧室",
-        "east": "data/images/room/ws.png",
-        "eastWidth": "1000",
-        "eastHeight": "600",
-        "south": "data/images/room/ws.png",
-        "southWidth": "1000",
-        "southHeight": "600",
-        "west": "data/images/room/ws.png",
-        "westWidth": "1000",
-        "westHeight": "600",
-        "north": "data/images/room/ws.png",
-        "northWidth": "1000",
-        "northHeight": "600",
-	"thumbnail" : "data/images/room/ws_mini.png",
-        "front": "data/images/room/ws_front.png,data/images/room/ws_front.png,data/images/room/ws_front.png,data/images/room/ws_front.png"
-    },{
-        "showName": "场景3",
-        "east": "data/images/room/view4.png",
-        "eastWidth": "1000",
-        "eastHeight": "600",
-        "south": "data/images/room/view4.png",
-        "southWidth": "1000",
-        "southHeight": "600",
-        "west": "data/images/room/view4.png",
-        "westWidth": "1000",
-        "westHeight": "600",
-        "north": "data/images/room/view4.png",
+        "north": "data/images/room/v_4_n.jpg",
         "northWidth": "1000",
         "northHeight": "600",
 	"thumbnail" : "data/images/room/view4_mini.png",
-        "front": "data/images/room/view4_front.png,data/images/room/view4_front.png,data/images/room/view4_front.png,data/images/room/view4_front.png"
+        "front": "data/images/room/v_4_f_e.png,data/images/room/v_4_f_s.png,data/images/room/v_4_f_w.png,data/images/room/v_4_f_n.png"
     }]
 }

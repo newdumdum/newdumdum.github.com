@@ -53,7 +53,7 @@
         "showName": "画框D",
         "url": "data/images/pictureFrame/b-4.png",
         "thumbnail": "data/images/pictureFrame/m4.jpg",
-	"merge": 21
+	"merge": 23
     },{
         "showName": "画框E",
         "url": "data/images/pictureFrame/b-5.png",
@@ -69,5 +69,10 @@
         "url": "data/images/pictureFrame/b-3.png",
         "thumbnail": "data/images/pictureFrame/m3.jpg",
 	"merge": 24
+    },{
+        "showName": "画框N",
+        "url": "data/images/pictureFrame/b-15.png",
+        "thumbnail": "data/images/pictureFrame/m15.jpg",
+	"merge": 5
     }]
 }

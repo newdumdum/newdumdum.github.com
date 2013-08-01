@@ -1,11 +1,11 @@
 CACHE MANIFEST
 
-# VERSION 2013/08/01_22:14:26
+# VERSION 2013/08/01_22:18:26
 
 # 
 CACHE:
 3D.html
-js/jquery-1.10.2.min.js
+http://libs.baidu.com/jquery/1.9.0/jquery.js
 3D.js
 
 resources/swf/wall.swf

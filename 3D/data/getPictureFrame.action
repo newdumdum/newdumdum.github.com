@@ -79,12 +79,6 @@
         "merge": 25
     },
     {
-        "showName": "画框N",
-        "url": "data/images/pictureFrame/b-14.png",
-        "thumbnail": "data/images/pictureFrame/m14.jpg",
-        "merge": 25
-    },
-    {
         "showName": "画框O",
         "url": "data/images/pictureFrame/b-15.png",
         "thumbnail": "data/images/pictureFrame/m15.jpg",

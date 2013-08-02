@@ -1,11 +1,11 @@
 {
-        "showName": "油画A",
-        "pictureUrl": "data/images/picture/1.png",
-		"thumbnail": "data/images/picture/m1.png",
-        "info": "李成连，河南省扶沟县人。<br/>擅长书法，主攻篆书、隶书、楷行草书。现为中国书画家协会会员，中国硬笔书法家协会会员，中国中原书画研究院高级院士，中国书画家龙岗联谊协会理事，河南周口叶区书法家协会会员，扶沟县书法家协会会员。被中国文联命名为“",
-        "width": "128",
-        "height": "85",
-        "artistId": "1",
-        "artistName": "作家A",
-        "productUrl": "http://www.baidu.com/"
+	"showName": "油画J",
+	"pictureUrl": "data/images/picture/10.png",
+	"thumbnail": "data/images/picture/m10.png",
+	"info": "李成连，河南省扶沟县人。擅长书法，主攻篆书、隶书、楷行草书。现为中国书画家协会会员，中国硬笔书法家协会会员，中国中原书画研究院高级院士，中国书画家龙岗联谊协会理事，河南周口叶区书法家协会会员，扶沟县书法家协会会员。被中国文联命名为“",
+	"width": "126",
+	"height": "98",
+	"artistId": "1",
+	"artistName": "作家J",
+	"productUrl": "http://www.baidu.com/"
 }

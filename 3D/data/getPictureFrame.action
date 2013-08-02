@@ -1,9 +1,14 @@
 {
     "list": [{
+        "showName": "画框B",
+        "url": "data/images/pictureFrame/b-2.png",
+        "thumbnail": "data/images/pictureFrame/m2.jpg",
+		"merge": 9
+    },{
         "showName": "画框H",
         "url": "data/images/pictureFrame/b-8.png",
         "thumbnail": "data/images/pictureFrame/m8.jpg",
-	"merge": 26
+		"merge": 26
     },{
         "showName": "画框I",
         "url": "data/images/pictureFrame/b-9.png",
@@ -14,21 +19,6 @@
         "url": "data/images/pictureFrame/b-10.png",
         "thumbnail": "data/images/pictureFrame/m10.jpg",
 	"merge": 25
-    },{
-        "showName": "画框F",
-        "url": "data/images/pictureFrame/b-6.png",
-        "thumbnail": "data/images/pictureFrame/m6.jpg",
-	"merge": 20
-    },{
-        "showName": "画框G",
-        "url": "data/images/pictureFrame/b-7.png",
-        "thumbnail": "data/images/pictureFrame/m7.jpg",
-	"merge": 23
-    },{
-        "showName": "画框A",
-        "url": "data/images/pictureFrame/b-1.png",
-        "thumbnail": "data/images/pictureFrame/m1.jpg",
-	"merge": 28
     },{
         "showName": "画框K",
         "url": "data/images/pictureFrame/b-11.png",
@@ -45,10 +35,20 @@
         "thumbnail": "data/images/pictureFrame/m13.jpg",
 	"merge": 25
     },{
-        "showName": "画框B",
-        "url": "data/images/pictureFrame/b-2.png",
-        "thumbnail": "data/images/pictureFrame/m2.jpg",
-	"merge": 9
+        "showName": "画框F",
+        "url": "data/images/pictureFrame/b-6.png",
+        "thumbnail": "data/images/pictureFrame/m6.jpg",
+	"merge": 20
+    },{
+        "showName": "画框G",
+        "url": "data/images/pictureFrame/b-7.png",
+        "thumbnail": "data/images/pictureFrame/m7.jpg",
+	"merge": 23
+    },{
+        "showName": "画框A",
+        "url": "data/images/pictureFrame/b-1.png",
+        "thumbnail": "data/images/pictureFrame/m1.jpg",
+	"merge": 28
     },{
         "showName": "画框D",
         "url": "data/images/pictureFrame/b-4.png",

@@ -1,5 +1,21 @@
 {
     "list": [{
+        "showName": "场景4",
+        "east": "data/images/room/v_4_e.jpg",
+        "eastWidth": "1000",
+        "eastHeight": "600",
+        "south": "data/images/room/v_4_s.jpg",
+        "southWidth": "1000",
+        "southHeight": "600",
+        "west": "data/images/room/v_4_w.jpg",
+        "westWidth": "1000",
+        "westHeight": "600",
+        "north": "data/images/room/v_4_n.jpg",
+        "northWidth": "1000",
+        "northHeight": "600",
+	"thumbnail" : "data/images/room/view4_mini.png",
+        "front": "data/images/room/v_4_f_e.png,data/images/room/v_4_f_s.png,data/images/room/v_4_f_w.png,data/images/room/v_4_f_n.png"
+    },{
         "showName": "场景1",
         "east": "data/images/room/v_1_e.jpg",
         "eastWidth": "1000",
@@ -47,21 +63,5 @@
         "northHeight": "600",
 	"thumbnail" : "data/images/room/view3_mini.png",
         "front": "data/images/room/v_3_f_e.png,data/images/room/v_3_f_s.png,data/images/room/v_3_f_w.png,data/images/room/v_3_f_n.png"
-    },{
-        "showName": "场景4",
-        "east": "data/images/room/v_4_e.jpg",
-        "eastWidth": "1000",
-        "eastHeight": "600",
-        "south": "data/images/room/v_4_s.jpg",
-        "southWidth": "1000",
-        "southHeight": "600",
-        "west": "data/images/room/v_4_w.jpg",
-        "westWidth": "1000",
-        "westHeight": "600",
-        "north": "data/images/room/v_4_n.jpg",
-        "northWidth": "1000",
-        "northHeight": "600",
-	"thumbnail" : "data/images/room/view4_mini.png",
-        "front": "data/images/room/v_4_f_e.png,data/images/room/v_4_f_s.png,data/images/room/v_4_f_w.png,data/images/room/v_4_f_n.png"
     }]
 }
